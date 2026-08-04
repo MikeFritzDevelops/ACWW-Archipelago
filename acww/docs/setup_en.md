@@ -21,7 +21,8 @@
 
 ## Creating a YAML
 
-- In the Archipelago Launcher, navigate to the "Options Creator" and click "Open" ![alt text](images/options_creator.png)
+ ![alt text](images/options_creator.png)
+- In the Archipelago Launcher, navigate to the "Options Creator" and click "Open"
 - Select "Animal Crossing: Wild World" in the left side bar.
 - Enter the player name that will be used in the Archipelago session.
 - Select the options desired via toggles and dropdown menus.
@@ -33,31 +34,36 @@
 
 - With all YAMLs for the intended game are in the Archipelago/Players folder, navigate to the Archipelago folder and find the "host.yaml" file.
 - Ensure the Players: value in host.yaml matches the number of YAML files in your Players folder.
-- In the Archipelago Launcher, navigate to find the "Generate" option and click "Open" ![alt text](images/generate.png)
+ ![alt text](images/generate.png)
+- In the Archipelago Launcher, navigate to find the "Generate" option and click "Open"
 - After the prompt completes, a .zip file will be installed to your Archipelago/output folder.
-- On Archipelago.gg/uploads, upload the .zip file from your Archipelago/output folder. ![alt text](images/host_game.png)
+ ![alt text](images/host_game.png)
+- On Archipelago.gg/uploads, upload the .zip file from your Archipelago/output folder.
 - Create New Room for this seed.
-- This Room page contains the /connect archipelago.gg:XXXXX where the XXXXX is your port for connecting to the multiworld game. ![alt text](images/room.png)
+ ![alt text](images/room.png)
+- This Room page contains the /connect archipelago.gg:XXXXX where the XXXXX is your port for connecting to the multiworld game.
 - Copy the archipelago.gg:XXXXX for pasting later, or manually type it in later.
 
 ## Launching the Game
 
 - Open EmuHawk.exe to launc the BizHawk emulator.
-- Under "File," select "Open ROM" ![alt text](images/open_rom.png)
+  ![alt text](images/open_rom.png)
+- Under "File," select "Open ROM" 
 - Select your Animal Crossing: Wild World NDS file.
 - Wait at the game's title screen before starting a new game.
 
 ## Connecting the Lua Connector
 
-- In the emulator's header, under "Tools" select Lua Console. 
   ![alt text](images/tools_lua.png)
+- In the emulator's header, under "Tools" select Lua Console. 
 - Select "Open Script" and select the connector_bizhawk_acww.lua file in the Archipelago/data/lua file path. ![alt text](images/lua.png)
 - With the lua script running, it will say it is "Looking for client..."
 - Keep the Lua Console open while playing. Closing it will disconnect the connector.
 
 ## Connecting to Archipelago
 
-- In the Archipelago Launcher, navigate and oepn the "Bizhawk Client" ![alt text](images/client.png)
+ ![alt text](images/client.png)
+- In the Archipelago Launcher, navigate and oepn the "Bizhawk Client"
 - At the top of the client, enter the server port (the archipelago.gg:XXXXX) that was generated for the seed and click "Connect"
 - In the command line, enter your slot name exactly as it appears in the generated multiworld.
 - The lua console should say "Client connected" and can be minimized (DO NOT CLOSE).
