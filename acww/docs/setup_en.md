@@ -72,7 +72,8 @@
 
 ## First-Time Setup
 
-- During the opening cutscene, Animal Crossing: Wild World initializes the in-game date using the system clock. Players must use the Master Controller to switch to one of their currently unlocked months before beginning normal gameplay to avoid accessing out-of-logic seasonal checks.
+- During the opening cutscene, Animal Crossing: Wild World initializes the in-game date using the system clock.
+- Once player gains control outside the town hall, players must use the Master Controller to switch to one of their currently unlocked months before beginning normal gameplay to avoid accessing out-of-logic seasonal checks.
 
 ## PopTracker (Optional)
 
