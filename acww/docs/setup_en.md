@@ -49,7 +49,8 @@
 
 ## Connecting the Lua Connector
 
-- In the emulator's header, under "Tools" select Lua Console. ![alt text](images/tools_lua.png)
+- In the emulator's header, under "Tools" select Lua Console. 
+  ![alt text](images/tools_lua.png)
 - Select "Open Script" and select the connector_bizhawk_acww.lua file in the Archipelago/data/lua file path. ![alt text](images/lua.png)
 - With the lua script running, it will say it is "Looking for client..."
 - Keep the Lua Console open while playing. Closing it will disconnect the connector.
