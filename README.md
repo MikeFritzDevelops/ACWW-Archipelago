@@ -136,11 +136,6 @@ For the complete roadmap, see ROADMAP.md.
 
 Mike Fritz
 
-### Special Thanks
-
-The Archipelago Multiworld community for the framework and documentation.
-Special thanks to everyone who participated in alpha testing and provided feedback.
-
 ### Inspiration
 
 After discovering Archipelago through Dark Souls Remastered, I quickly fell in love with the cooperative multiworld experience. Animal Crossing: Wild World was one of my favorite games growing up, and I wanted to experience it again through the unique progression and teamwork that Archipelago provides.
