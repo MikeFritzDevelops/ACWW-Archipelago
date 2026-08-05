@@ -22,7 +22,7 @@ class ExcludeHighRNGCatchProgression(DefaultOnToggle):
     Their matching Donate locations remain normal progression locations.
 
     Bugs: Bee, Birdwing Butterfly, Oak Silk Moth, Mole Cricket, Flea,
-    Dung Beetle, Pill Bug, Tarantula, and Scorpion.
+    Dung Beetle, Pill Bug, Snail, Spider, Tarantula, and Scorpion.
 
     Fish: Tuna, Blue Marlin, Ocean Sunfish, Hammerhead Shark, Shark, and
     Coelacanth.
@@ -88,16 +88,15 @@ class FourLeafCloverCheck(Toggle):
     display_name = "Four-Leaf Clover Check"
 
 
-class StarterKit(DefaultOnToggle):
+class StartWithTools(DefaultOnToggle):
     """
-    Gives the player a Fishing Rod, Net, and Shovel after the
-    introductory tutorial.
+    When enabled, the Fishing Rod, Net, and Shovel are provided immediately.
 
-    Until the tutorial flag is found, the client may provide these
-    tools during initial setup.
+    When disabled, players must obtain these tools normally from
+    Tom Nook's rotating shop inventory.
     """
 
-    display_name = "Starter Kit"
+    display_name = "Start with Tools"
 
 
 class StartingMonth(Choice):
@@ -183,7 +182,7 @@ class ACWWOptions(PerGameCommonOptions):
     four_leaf_clover_check: FourLeafCloverCheck
     museum_percentage_milestones: MuseumPercentageMilestones
 
-    starter_kit: StarterKit
+    start_with_tools: StartWithTools
     starting_month: StartingMonth
 
     goal: Goal

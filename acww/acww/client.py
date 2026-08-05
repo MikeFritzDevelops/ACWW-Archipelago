@@ -1,5 +1,4 @@
 from __future__ import annotations
-from . import memory_map
 
 from typing import TYPE_CHECKING
 
@@ -12,10 +11,10 @@ from NetUtils import ClientStatus
 from worlds._bizhawk.client import BizHawkClient
 from .items import (
     MONTHS,
-    PROGRESSIVE_TOOL_STAGES,
     item_table,
     received_item_data_by_ap_id,
 )
+from .rom_profiles import RomProfile, identify_rom_profile
 from .locations import (
     BUGS,
     FISH,
@@ -88,43 +87,25 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         ((48, 49, 50, 51), 2430),      # Ptera
     )
 
-    # Tutorial Finish Check
-    HOUSE_DEBT_ADDRESS = memory_map.HOUSE_DEBT_ADDRESS
-    POST_TUTORIAL_DEBT = memory_map.POST_TUTORIAL_HOUSE_DEBT
-
-    STARTER_LOCATION_IDS = {
-        2400,
-        2401,
-        2402,
-    }
-
-    BUG_COUNT = memory_map.BUG_COUNT
-    FISH_COUNT = memory_map.FISH_COUNT
-    FOSSIL_COUNT = memory_map.FOSSIL_COUNT
-    PAINTING_COUNT = memory_map.PAINTING_COUNT
-
-    JOURNAL_BASE_ADDRESS = memory_map.JOURNAL_BASE_ADDRESS
-    JOURNAL_READ_SIZE = memory_map.JOURNAL_READ_SIZE
-    JOURNAL_START_BIT = memory_map.JOURNAL_START_BIT
-
-    MUSEUM_BASE_ADDRESS = memory_map.MUSEUM_BASE_ADDRESS
-    MUSEUM_READ_SIZE = memory_map.MUSEUM_READ_SIZE
-
-    FOSSIL_MUSEUM_ADDRESS = memory_map.FOSSIL_MUSEUM_ADDRESS
-    FISH_MUSEUM_ADDRESS = memory_map.FISH_MUSEUM_ADDRESS
-    BUG_MUSEUM_ADDRESS = memory_map.BUG_MUSEUM_ADDRESS
-    PAINTING_MUSEUM_ADDRESS = memory_map.PAINTING_MUSEUM_ADDRESS
-
-    FISH_MUSEUM_START_INDEX = memory_map.FISH_MUSEUM_START_INDEX
-    PAINTING_MUSEUM_START_INDEX = memory_map.PAINTING_MUSEUM_START_INDEX
-
-    INVENTORY_BASE_ADDRESS = memory_map.INVENTORY_BASE_ADDRESS
-    INVENTORY_SLOT_COUNT = memory_map.INVENTORY_SLOT_COUNT
-    INVENTORY_SLOT_SIZE = memory_map.INVENTORY_SLOT_SIZE
-    EMPTY_INVENTORY_ITEM = memory_map.EMPTY_INVENTORY_ITEM_ID
+    rom_profile: RomProfile | None = None
 
 
     OVERLAY_UPDATE_INTERVAL_SECONDS = 1.0
+    INVENTORY_STABLE_SECONDS = 2.0
+
+    def _require_rom_profile(self) -> RomProfile:
+        profile = self.rom_profile
+
+        if profile is None:
+            raise RuntimeError(
+                "ACWW memory was accessed before ROM validation."
+            )
+
+        return profile
+
+    @property
+    def memory(self):
+        return self._require_rom_profile().memory
 
     @staticmethod
     def _count_range(
@@ -148,43 +129,43 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         bug_museum = self._count_range(
             completed_locations,
             self.BUG_MUSEUM_BASE_ID,
-            self.BUG_COUNT,
+            self.memory.bug_count,
         )
         fish_museum = self._count_range(
             completed_locations,
             self.FISH_MUSEUM_BASE_ID,
-            self.FISH_COUNT,
+            self.memory.fish_count,
         )
         fossil_museum = self._count_range(
             completed_locations,
             self.FOSSIL_MUSEUM_BASE_ID,
-            self.FOSSIL_COUNT,
+            self.memory.fossil_count,
         )
         painting_museum = self._count_range(
             completed_locations,
             self.PAINTING_MUSEUM_BASE_ID,
-            self.PAINTING_COUNT,
+            self.memory.painting_count,
         )
 
         enabled_bug_museum = self._count_range(
             enabled_locations,
             self.BUG_MUSEUM_BASE_ID,
-            self.BUG_COUNT,
+            self.memory.bug_count,
         )
         enabled_fish_museum = self._count_range(
             enabled_locations,
             self.FISH_MUSEUM_BASE_ID,
-            self.FISH_COUNT,
+            self.memory.fish_count,
         )
         enabled_fossil_museum = self._count_range(
             enabled_locations,
             self.FOSSIL_MUSEUM_BASE_ID,
-            self.FOSSIL_COUNT,
+            self.memory.fossil_count,
         )
         enabled_painting_museum = self._count_range(
             enabled_locations,
             self.PAINTING_MUSEUM_BASE_ID,
-            self.PAINTING_COUNT,
+            self.memory.painting_count,
         )
 
         museum_current = (
@@ -218,21 +199,21 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
             return (
                 "All Bugs",
                 bug_museum,
-                enabled_bug_museum or self.BUG_COUNT,
+                enabled_bug_museum or self.memory.bug_count,
             )
 
         if goal_key == "all_fish":
             return (
                 "All Fish",
                 fish_museum,
-                enabled_fish_museum or self.FISH_COUNT,
+                enabled_fish_museum or self.memory.fish_count,
             )
 
         if goal_key == "all_fossils":
             return (
                 "All Fossils",
                 fossil_museum,
-                enabled_fossil_museum or self.FOSSIL_COUNT,
+                enabled_fossil_museum or self.memory.fossil_count,
             )
 
         if goal_key == "completed_museum":
@@ -263,63 +244,63 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         bug_catches = self._count_range(
             completed_locations,
             self.BUG_CATCH_BASE_ID,
-            self.BUG_COUNT,
+            self.memory.bug_count,
         )
         fish_catches = self._count_range(
             completed_locations,
             self.FISH_CATCH_BASE_ID,
-            self.FISH_COUNT,
+            self.memory.fish_count,
         )
         bug_museum = self._count_range(
             completed_locations,
             self.BUG_MUSEUM_BASE_ID,
-            self.BUG_COUNT,
+            self.memory.bug_count,
         )
         fish_museum = self._count_range(
             completed_locations,
             self.FISH_MUSEUM_BASE_ID,
-            self.FISH_COUNT,
+            self.memory.fish_count,
         )
         fossil_museum = self._count_range(
             completed_locations,
             self.FOSSIL_MUSEUM_BASE_ID,
-            self.FOSSIL_COUNT,
+            self.memory.fossil_count,
         )
         painting_museum = self._count_range(
             completed_locations,
             self.PAINTING_MUSEUM_BASE_ID,
-            self.PAINTING_COUNT,
+            self.memory.painting_count,
         )
 
         enabled_bug_catches = self._count_range(
             enabled_locations,
             self.BUG_CATCH_BASE_ID,
-            self.BUG_COUNT,
+            self.memory.bug_count,
         )
         enabled_fish_catches = self._count_range(
             enabled_locations,
             self.FISH_CATCH_BASE_ID,
-            self.FISH_COUNT,
+            self.memory.fish_count,
         )
         enabled_bug_museum = self._count_range(
             enabled_locations,
             self.BUG_MUSEUM_BASE_ID,
-            self.BUG_COUNT,
+            self.memory.bug_count,
         )
         enabled_fish_museum = self._count_range(
             enabled_locations,
             self.FISH_MUSEUM_BASE_ID,
-            self.FISH_COUNT,
+            self.memory.fish_count,
         )
         enabled_fossil_museum = self._count_range(
             enabled_locations,
             self.FOSSIL_MUSEUM_BASE_ID,
-            self.FOSSIL_COUNT,
+            self.memory.fossil_count,
         )
         enabled_painting_museum = self._count_range(
             enabled_locations,
             self.PAINTING_MUSEUM_BASE_ID,
-            self.PAINTING_COUNT,
+            self.memory.painting_count,
         )
 
         checked_count = len(completed_locations & enabled_locations)
@@ -680,9 +661,9 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         """
         Return permanently reclaimable physical resources received from AP.
 
-        Fruit and environment items are treated as permanent unlocks. Once
-        received, the Lua master controller may create replacement copies in
-        empty inventory slots whenever the player needs them.
+        Fruit, environment items, and Golden Tools are treated as permanent
+        unlocks. Once received, the Lua master controller may create replacement
+        copies in empty inventory slots whenever the player needs them.
         """
         claimables_by_name: dict[str, dict[str, int | str]] = {}
 
@@ -697,6 +678,7 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
             if item_data.get("category") not in {
                 "fruit",
                 "environment",
+                "golden_tool",
             }:
                 continue
 
@@ -788,7 +770,7 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
             for offset in range(
                 0,
                 len(inventory_data),
-                self.INVENTORY_SLOT_SIZE,
+                self.memory.inventory_slot_size,
             )
             if len(inventory_data[offset:offset + 2]) == 2
         }
@@ -910,27 +892,27 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         return {
             "bugs": checked_indexes(
                 self.BUG_CATCH_BASE_ID,
-                self.BUG_COUNT,
+                self.memory.bug_count,
             ),
             "fish": checked_indexes(
                 self.FISH_CATCH_BASE_ID,
-                self.FISH_COUNT,
+                self.memory.fish_count,
             ),
             "museum_bugs": checked_indexes(
                 self.BUG_MUSEUM_BASE_ID,
-                self.BUG_COUNT,
+                self.memory.bug_count,
             ),
             "museum_fish": checked_indexes(
                 self.FISH_MUSEUM_BASE_ID,
-                self.FISH_COUNT,
+                self.memory.fish_count,
             ),
             "museum_fossils": checked_indexes(
                 self.FOSSIL_MUSEUM_BASE_ID,
-                self.FOSSIL_COUNT,
+                self.memory.fossil_count,
             ),
             "museum_paintings": checked_indexes(
                 self.PAINTING_MUSEUM_BASE_ID,
-                self.PAINTING_COUNT,
+                self.memory.painting_count,
             ),
         }
 
@@ -942,7 +924,14 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         reclaimable_specimens: list[dict[str, int | str]],
         restore_payload: dict[str, list[int]],
     ) -> None:
+        profile = self._require_rom_profile()
+
         controller_state = {
+            "rom_profile": {
+                "key": profile.key,
+                "display_name": profile.display_name,
+                "memory": profile.memory.to_lua_payload(),
+            },
             "unlocked_months": list(unlocked_months),
             "claimables": [
                 dict(claimable)
@@ -1118,15 +1107,14 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         state_data[state_key] = max(0, cursor)
         self._write_delivery_state_file(state_data)
 
-    @classmethod
     def _inventory_contains_item(
-        cls,
+        self,
         inventory_data: bytes,
         item_id: int,
     ) -> bool:
         """Return whether one inventory slot contains the given item ID."""
-        for slot_index in range(cls.INVENTORY_SLOT_COUNT):
-            offset = slot_index * cls.INVENTORY_SLOT_SIZE
+        for slot_index in range(self.memory.inventory_slot_count):
+            offset = slot_index * self.memory.inventory_slot_size
 
             slot_item_id = int.from_bytes(
                 inventory_data[offset:offset + 2],
@@ -1138,30 +1126,124 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
 
         return False
 
-    @classmethod
     def _find_empty_inventory_slot(
-        cls,
+        self,
         inventory_data: bytes,
     ) -> int | None:
-        for slot_index in range(cls.INVENTORY_SLOT_COUNT):
-            offset = slot_index * cls.INVENTORY_SLOT_SIZE
+        for slot_index in range(self.memory.inventory_slot_count):
+            offset = slot_index * self.memory.inventory_slot_size
 
             item_id = int.from_bytes(
                 inventory_data[offset:offset + 2],
                 byteorder="little",
             )
 
-            if item_id == cls.EMPTY_INVENTORY_ITEM:
+            if item_id == self.memory.empty_inventory_item_id:
                 return slot_index
 
         return None
+
+    async def _ensure_starting_tools(
+        self,
+        ctx: "BizHawkClientContext",
+        inventory_data: bytes,
+    ) -> bool:
+        """
+        Insert any missing Start with Tools items into empty inventory slots.
+
+        Returns True when at least one item was written. The watcher should end
+        that pass afterward because inventory_data is only a snapshot from the
+        start of the pass.
+        """
+        starting_tool_names = (
+            "Shovel",
+            "Fishing Rod",
+            "Net",
+        )
+
+        inventory_item_ids = {
+            int.from_bytes(
+                inventory_data[offset:offset + 2],
+                byteorder="little",
+            )
+            for offset in range(
+                0,
+                len(inventory_data),
+                self.memory.inventory_slot_size,
+            )
+            if len(inventory_data[offset:offset + 2]) == 2
+        }
+
+        empty_slots = [
+            slot_index
+            for slot_index in range(self.memory.inventory_slot_count)
+            if int.from_bytes(
+                inventory_data[
+                    slot_index * self.memory.inventory_slot_size:
+                    (slot_index + 1) * self.memory.inventory_slot_size
+                ],
+                byteorder="little",
+            ) == self.memory.empty_inventory_item_id
+        ]
+
+        writes: list[tuple[int, bytes, str]] = []
+        delivered_names: list[str] = []
+
+        for item_name in starting_tool_names:
+            item_data = item_table.get(item_name)
+            game_item_id = (
+                item_data.get("game_id")
+                if item_data
+                else None
+            )
+
+            if game_item_id is None:
+                continue
+
+            game_item_id = int(game_item_id)
+
+            if game_item_id in inventory_item_ids:
+                continue
+
+            if not empty_slots:
+                break
+
+            slot_index = empty_slots.pop(0)
+            slot_address = (
+                self.memory.inventory_base_address
+                + slot_index * self.memory.inventory_slot_size
+            )
+
+            writes.append(
+                (
+                    slot_address,
+                    game_item_id.to_bytes(2, byteorder="little"),
+                    self.memory.memory_domain,
+                )
+            )
+            inventory_item_ids.add(game_item_id)
+            delivered_names.append(item_name)
+
+        if not writes:
+            return False
+
+        await bizhawk.write(
+            ctx.bizhawk_ctx,
+            writes,
+        )
+
+        print(
+            "Provided Start with Tools loadout:",
+            ", ".join(delivered_names),
+        )
+
+        return True
 
     async def validate_rom(
         self,
         ctx: "BizHawkClientContext",
     ) -> bool:
-        """
-        Accept only Animal Crossing: Wild World USA Rev 1.
+        """Identify and activate the memory profile for the loaded ROM.
 
         Nintendo DS header:
             0x00-0x0B: internal title
@@ -1185,15 +1267,19 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         game_code = header[0x0C:0x10]
         revision = header[0x1E]
 
-        if game_code != b"ADME":
+        profile = identify_rom_profile(
+            internal_title,
+            game_code,
+            revision,
+        )
+
+        if profile is None:
             return False
 
-        if revision != 1:
-            return False
+        self.rom_profile = profile
+        self._controller_state_sent_to_lua = None
 
-        # Optional extra protection. We primarily trust the unique game code.
-        if not internal_title.startswith(b"ANIMAL"):
-            return False
+        print(f"Detected ACWW ROM profile: {profile.display_name}")
 
         ctx.game = self.game
         ctx.items_handling = 0b111
@@ -1201,13 +1287,13 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
 
         return True
 
-    @staticmethod
     def _journal_flag_is_set(
+        self,
         journal_data: bytes,
         global_index: int,
     ) -> bool:
         absolute_bit = (
-            AnimalCrossingWildWorldClient.JOURNAL_START_BIT
+            self.memory.journal_start_bit
             + global_index
         )
 
@@ -1219,9 +1305,8 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
             & (1 << bit_index)
         ) != 0
 
-    @classmethod
     def _museum_nibble(
-        cls,
+        self,
         museum_data: bytes,
         section_address: int,
         absolute_index: int,
@@ -1242,7 +1327,7 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
 
         group_address = section_address + (group_index * 4)
         relative_address = (
-            group_address - cls.MUSEUM_BASE_ADDRESS
+            group_address - self.memory.museum_base_address
         )
 
         group_value = int.from_bytes(
@@ -1256,14 +1341,13 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
 
         return (group_value >> shift) & 0x0F
 
-    @classmethod
     def _museum_entry_is_donated(
-        cls,
+        self,
         museum_data: bytes,
         section_address: int,
         absolute_index: int,
     ) -> bool:
-        return cls._museum_nibble(
+        return self._museum_nibble(
             museum_data,
             section_address,
             absolute_index,
@@ -1277,7 +1361,7 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         unique_bug_count = 0
         unique_fish_count = 0
 
-        for bug_index in range(self.BUG_COUNT):
+        for bug_index in range(self.memory.bug_count):
             if self._journal_flag_is_set(
                 journal_data,
                 bug_index,
@@ -1288,8 +1372,8 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                     self.BUG_CATCH_BASE_ID + bug_index
                 )
 
-        for fish_index in range(self.FISH_COUNT):
-            global_index = self.BUG_COUNT + fish_index
+        for fish_index in range(self.memory.fish_count):
+            global_index = self.memory.bug_count + fish_index
 
             if self._journal_flag_is_set(
                 journal_data,
@@ -1326,10 +1410,10 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         donated_fossil_count = 0
         donated_painting_count = 0
 
-        for bug_index in range(self.BUG_COUNT):
+        for bug_index in range(self.memory.bug_count):
             if self._museum_entry_is_donated(
                 museum_data,
-                self.BUG_MUSEUM_ADDRESS,
+                self.memory.bug_museum_address,
                 bug_index,
             ):
                 donated_bug_count += 1
@@ -1338,15 +1422,15 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                     self.BUG_MUSEUM_BASE_ID + bug_index
                 )
 
-        for fish_index in range(self.FISH_COUNT):
+        for fish_index in range(self.memory.fish_count):
             absolute_index = (
-                self.FISH_MUSEUM_START_INDEX
+                self.memory.fish_museum_start_index
                 + fish_index
             )
 
             if self._museum_entry_is_donated(
                 museum_data,
-                self.FISH_MUSEUM_ADDRESS,
+                self.memory.fish_museum_address,
                 absolute_index,
             ):
                 donated_fish_count += 1
@@ -1357,10 +1441,10 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
 
         donated_fossil_indexes: set[int] = set()
 
-        for fossil_index in range(self.FOSSIL_COUNT):
+        for fossil_index in range(self.memory.fossil_count):
             if self._museum_entry_is_donated(
                 museum_data,
-                self.FOSSIL_MUSEUM_ADDRESS,
+                self.memory.fossil_museum_address,
                 fossil_index,
             ):
                 donated_fossil_count += 1
@@ -1381,16 +1465,16 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                 completed_locations.add(location_id)
 
         for painting_index in range(
-            self.PAINTING_COUNT
+            self.memory.painting_count
         ):
             absolute_index = (
-                self.PAINTING_MUSEUM_START_INDEX
+                self.memory.painting_museum_start_index
                 + painting_index
             )
 
             if self._museum_entry_is_donated(
                 museum_data,
-                self.PAINTING_MUSEUM_ADDRESS,
+                self.memory.painting_museum_address,
                 absolute_index,
             ):
                 donated_painting_count += 1
@@ -1430,13 +1514,13 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         )
 
         museum_total = (
-            self.BUG_COUNT if enabled_bug_museum else 0
+            self.memory.bug_count if enabled_bug_museum else 0
         ) + (
-            self.FISH_COUNT if enabled_fish_museum else 0
+            self.memory.fish_count if enabled_fish_museum else 0
         ) + (
-            self.FOSSIL_COUNT if enabled_fossil_museum else 0
+            self.memory.fossil_count if enabled_fossil_museum else 0
         ) + (
-            self.PAINTING_COUNT if enabled_painting_museum else 0
+            self.memory.painting_count if enabled_painting_museum else 0
         )
 
         interval = int(
@@ -1519,6 +1603,8 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
             "_previous_unlocked_claimables",
             "_previous_reclaimable_specimens",
             "_acww_goal_status_sent",
+            "_last_inventory_snapshot",
+            "_inventory_stable_since",
             "printed_starter_debug",
         )
 
@@ -1542,32 +1628,83 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         self._reset_slot_session_state(ctx)
 
         try:
-            journal_data, museum_data, inventory_data, debt_data = await bizhawk.read(
+            (
+                journal_data,
+                museum_data,
+                inventory_data,
+                house_debt_data,
+            ) = await bizhawk.read(
                 ctx.bizhawk_ctx,
                 [
                     (
-                        self.JOURNAL_BASE_ADDRESS,
-                        self.JOURNAL_READ_SIZE,
-                        memory_map.MEMORY_DOMAIN
+                        self.memory.journal_base_address,
+                        self.memory.journal_read_size,
+                        self.memory.memory_domain
                     ),
                     (
-                        self.MUSEUM_BASE_ADDRESS,
-                        self.MUSEUM_READ_SIZE,
-                        memory_map.MEMORY_DOMAIN
+                        self.memory.museum_base_address,
+                        self.memory.museum_read_size,
+                        self.memory.memory_domain
                     ),
                     (
-                        self.INVENTORY_BASE_ADDRESS,
-                        self.INVENTORY_SLOT_COUNT
-                        * self.INVENTORY_SLOT_SIZE,
-                        memory_map.MEMORY_DOMAIN
+                        self.memory.inventory_base_address,
+                        self.memory.inventory_slot_count
+                        * self.memory.inventory_slot_size,
+                        self.memory.memory_domain
                     ),
                     (
-                        self.HOUSE_DEBT_ADDRESS,
+                        self.memory.house_debt_address,
                         2,
-                        memory_map.MEMORY_DOMAIN
+                        self.memory.memory_domain,
                     ),
                 ],
             )
+
+            house_debt = int.from_bytes(
+                house_debt_data,
+                byteorder="little",
+            )
+
+            now = time.monotonic()
+            previous_inventory_snapshot = getattr(
+                self,
+                "_last_inventory_snapshot",
+                None,
+            )
+
+            if inventory_data != previous_inventory_snapshot:
+                self._last_inventory_snapshot = inventory_data
+                self._inventory_stable_since = now
+
+            inventory_stable_since = getattr(
+                self,
+                "_inventory_stable_since",
+                now,
+            )
+            inventory_is_stable = (
+                now - inventory_stable_since
+                >= self.INVENTORY_STABLE_SECONDS
+            )
+
+            start_with_tools = bool(
+                ctx.slot_data.get("start_with_tools", False)
+            )
+
+            if (
+                start_with_tools
+                and house_debt < self.memory.initial_house_debt
+            ):
+                starting_tools_written = (
+                    await self._ensure_starting_tools(
+                        ctx,
+                        inventory_data,
+                    )
+                )
+
+                if starting_tools_written:
+                    # The inventory snapshot is now stale. Continue normal
+                    # processing on the next watcher pass.
+                    return
 
             completed_locations = (
                 self._collect_journal_locations(
@@ -1578,42 +1715,6 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                     museum_data,
                 )
             )
-
-            current_debt = int.from_bytes(
-                debt_data,
-                byteorder="little",
-            )
-
-            if not hasattr(self, "printed_starter_debug"):
-                self.printed_starter_debug = True
-                print("Current debt:", current_debt)
-                print("Slot data:", ctx.slot_data)
-                print(
-                    "Starter IDs enabled:",
-                    self.STARTER_LOCATION_IDS.issubset(
-                        set(
-                            ctx.slot_data.get(
-                                "enabled_locations",
-                                [],
-                            )
-                        )
-                    )
-                    if ctx.slot_data
-                    else False
-                )
-
-            starter_kit_enabled = bool(
-                ctx.slot_data
-                and ctx.slot_data.get("starter_kit", False)
-            )
-
-            if (
-                starter_kit_enabled
-                and current_debt <= self.POST_TUTORIAL_DEBT
-            ):
-                completed_locations.update(
-                    self.STARTER_LOCATION_IDS
-                )
 
             if self._inventory_contains_item(
                 inventory_data,
@@ -1775,37 +1876,16 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                 game_item_id = item_data.get("game_id")
                 item_category = item_data.get("category")
 
-                # Progressive Shovel/Rod/Net each have two received stages:
-                # copy 1 = normal tool, copy 2+ = golden tool.
-                #
-                # Count directly from the server's received-item history rather
-                # than a transient local counter. This remains correct after
-                # reconnects and when the persisted delivery cursor resumes in
-                # the middle of the item list.
-                if (
-                    item_category == "progressive_tool"
-                    and item_name in PROGRESSIVE_TOOL_STAGES
-                ):
-                    received_stage_count = sum(
-                        1
-                        for prior_item in ctx.items_received[
-                            : self.delivery_cursor + 1
-                        ]
-                        if prior_item.item == network_item.item
-                    )
-
-                    stages = PROGRESSIVE_TOOL_STAGES[item_name]
-                    stage_index = min(
-                        received_stage_count - 1,
-                        len(stages) - 1,
-                    )
-                    game_item_id = stages[stage_index]
-
+                if item_category == "starting_tool":
                     print(
-                        f"Resolved {item_name} stage "
-                        f"{received_stage_count} to game item "
-                        f"0x{game_item_id:04X}"
+                        f"Starting loadout item already handled: {item_name}"
                     )
+                    self.delivery_cursor += 1
+                    self._save_delivery_cursor(
+                        ctx,
+                        self.delivery_cursor,
+                    )
+                    continue
 
                 if game_item_id is None:
                     print(
@@ -1826,6 +1906,14 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                     )
                     continue
 
+                if not inventory_is_stable:
+                    # The game may be in the middle of catching, picking up,
+                    # dropping, selling, or otherwise changing inventory.
+                    # Keep the delivery cursor on this physical item and retry
+                    # only after the inventory has remained unchanged for two
+                    # full seconds.
+                    break
+
                 empty_slot = self._find_empty_inventory_slot(
                     inventory_data
                 )
@@ -1836,8 +1924,8 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                     break
 
                 slot_address = (
-                    self.INVENTORY_BASE_ADDRESS
-                    + empty_slot * self.INVENTORY_SLOT_SIZE
+                    self.memory.inventory_base_address
+                    + empty_slot * self.memory.inventory_slot_size
                 )
 
                 await bizhawk.write(
@@ -1849,7 +1937,7 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                                 2,
                                 byteorder="little",
                             ),
-                            memory_map.MEMORY_DOMAIN,
+                            self.memory.memory_domain,
                         )
                     ],
                 )

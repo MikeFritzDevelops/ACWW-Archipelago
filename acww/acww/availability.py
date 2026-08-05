@@ -116,13 +116,13 @@ BUG_AVAILABILITY: dict[str, Availability] = {
     "Snail": Availability(
         month_range(4, 9),
         notes=("Requires rain; weather is not yet progression-gated.",),
+        high_rng=True
     ),
     "Cricket": Availability(month_range(9, 11)),
     "Bell Cricket": Availability(month_range(9, 10)),
     "Grasshopper": Availability(month_range(7, 9)),
     "Mole Cricket": Availability(
         month_range(11, 3),
-        required_items=frozenset({"Progressive Shovel"}),
         notes=("Underground; dig it up before catching it.",),
         high_rng=True,
     ),
@@ -175,7 +175,6 @@ BUG_AVAILABILITY: dict[str, Availability] = {
     ),
     "Pill Bug": Availability(
         ALL_MONTHS,
-        required_items=frozenset({"Progressive Shovel"}),
         notes=("Hit rocks with a shovel.",),
         high_rng=True,
     ),
@@ -192,6 +191,7 @@ BUG_AVAILABILITY: dict[str, Availability] = {
     "Spider": Availability(
         month_range(3, 11),
         notes=("Shake trees.",),
+        high_rng=True
     ),
     "Tarantula": Availability(
         month_range(6, 8),
@@ -393,9 +393,6 @@ def can_catch_bug(
     bug_name: str,
 ) -> bool:
     """Return whether AP logic considers the bug naturally catchable."""
-    if not state.has("Progressive Net", player):
-        return False
-
     return _meets_availability_requirements(
         state,
         player,
@@ -409,9 +406,6 @@ def can_catch_fish(
     fish_name: str,
 ) -> bool:
     """Return whether AP logic considers the fish naturally catchable."""
-    if not state.has("Progressive Fishing Rod", player):
-        return False
-
     return _meets_availability_requirements(
         state,
         player,

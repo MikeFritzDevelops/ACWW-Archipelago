@@ -431,38 +431,21 @@ local function draw_acww_notification()
 end
 
 
--- ACWW forward-only time controller.
--- The AP client sends only unlocked months. The dropdown is rebuilt whenever
--- that list changes, so unavailable months never appear.
-local ACWW_CLOCK_OFFSET_ADDRESS = 0x021ED304
-local ACWW_TIME_STRUCT_ADDRESS = 0x021D72EC
+-- Version-specific addresses are supplied by the Python client after it
+-- identifies the loaded ROM. The Lua connector contains no ROM-specific
+-- addresses, so new revisions only require a new Python profile.
+local acww_rom_profile = nil
+local acww_memory = nil
 
--- Inventory layout through the ARM9 System Bus.
-local ACWW_INVENTORY_BASE_ADDRESS = 0x021D8E7E
-local ACWW_INVENTORY_SLOT_COUNT = 15
-local ACWW_INVENTORY_SLOT_SIZE = 2
-local ACWW_EMPTY_INVENTORY_ITEM = 0xFFF1
+local function acww_require_memory_profile()
+    if type(acww_memory) ~= "table" then
+        error(
+            "ACWW memory profile has not been supplied by the client."
+        )
+    end
 
--- Outdoor town-object table used by the Wild World v1.1 weed-removal
--- Action Replay code. Each entry is a 16-bit object ID.
-local ACWW_TOWN_OBJECT_BASE_ADDRESS = 0x021E36A4
-local ACWW_TOWN_OBJECT_SLOT_COUNT = 0x1000
-local ACWW_FIRST_WEED_OBJECT_ID = 0x001C
-local ACWW_LAST_WEED_OBJECT_ID = 0x0025
-local ACWW_EMPTY_TOWN_OBJECT_ID = 0xFFF1
-
--- Save-data addresses through the ARM9 System Bus.
--- memory_map.py stores Main RAM offsets, so add 0x02000000 for bus access.
-local ACWW_JOURNAL_BASE_ADDRESS = 0x021D8F39
-local ACWW_JOURNAL_START_BIT = 1
-local ACWW_BUG_COUNT = 56
-
-local ACWW_FOSSIL_MUSEUM_ADDRESS = 0x021ED0A0
-local ACWW_FISH_MUSEUM_ADDRESS = 0x021ED0B8
-local ACWW_BUG_MUSEUM_ADDRESS = 0x021ED0D8
-local ACWW_PAINTING_MUSEUM_ADDRESS = 0x021ED0F4
-local ACWW_FISH_MUSEUM_START_INDEX = 6
-local ACWW_PAINTING_MUSEUM_START_INDEX = 2
+    return acww_memory
+end
 
 local ACWW_MONTH_NAMES = {
     "Jan",
@@ -493,6 +476,12 @@ local ACWW_RECLAIMABLE_RESOURCES = {
     {name = "Blue Roses", game_id = 0x148A},
     {name = "Coconut", game_id = 0x1548},
     {name = "Spoiled Turnips", game_id = 0x154A},
+    {name = "Golden Shovel", game_id = 0x136A, unique = true},
+    {name = "Golden Axe", game_id = 0x1373, unique = true},
+    {name = "Golden Fishing Rod", game_id = 0x1375, unique = true},
+    {name = "Golden Net", game_id = 0x1377, unique = true},
+    {name = "Golden Watering Can", game_id = 0x1379, unique = true},
+    {name = "Golden Slingshot", game_id = 0x137B, unique = true},
 }
 
 local acww_unlocked_months = {}
@@ -580,28 +569,28 @@ local function acww_read_game_time()
     return {
         year = acww_normalize_year(
             memory.read_u32_le(
-                ACWW_TIME_STRUCT_ADDRESS + 0x00,
+                acww_require_memory_profile()["time_struct_address"] + 0x00,
                 arm9
             )
         ),
         month = memory.read_u32_le(
-            ACWW_TIME_STRUCT_ADDRESS + 0x04,
+            acww_require_memory_profile()["time_struct_address"] + 0x04,
             arm9
         ),
         day = memory.read_u32_le(
-            ACWW_TIME_STRUCT_ADDRESS + 0x08,
+            acww_require_memory_profile()["time_struct_address"] + 0x08,
             arm9
         ),
         hour = memory.read_u32_le(
-            ACWW_TIME_STRUCT_ADDRESS + 0x10,
+            acww_require_memory_profile()["time_struct_address"] + 0x10,
             arm9
         ),
         minute = memory.read_u32_le(
-            ACWW_TIME_STRUCT_ADDRESS + 0x14,
+            acww_require_memory_profile()["time_struct_address"] + 0x14,
             arm9
         ),
         second = memory.read_u32_le(
-            ACWW_TIME_STRUCT_ADDRESS + 0x18,
+            acww_require_memory_profile()["time_struct_address"] + 0x18,
             arm9
         ),
     }
@@ -632,7 +621,7 @@ local function acww_read_offset()
 
     return acww_u32_to_s32(
         memory.read_u32_le(
-            ACWW_CLOCK_OFFSET_ADDRESS,
+            acww_require_memory_profile()["clock_offset_address"],
             arm7
         )
     )
@@ -650,7 +639,7 @@ local function acww_write_offset(value)
     end
 
     memory.write_u32_le(
-        ACWW_CLOCK_OFFSET_ADDRESS,
+        acww_require_memory_profile()["clock_offset_address"],
         acww_s32_to_u32(value),
         arm7
     )
@@ -995,17 +984,17 @@ local function acww_find_empty_inventory_slot()
         )
     end
 
-    for slot_index = 0, ACWW_INVENTORY_SLOT_COUNT - 1 do
+    for slot_index = 0, acww_require_memory_profile()["inventory_slot_count"] - 1 do
         local slot_address =
-            ACWW_INVENTORY_BASE_ADDRESS
-            + slot_index * ACWW_INVENTORY_SLOT_SIZE
+            acww_require_memory_profile()["inventory_base_address"]
+            + slot_index * acww_require_memory_profile()["inventory_slot_size"]
 
         local item_id = memory.read_u16_le(
             slot_address,
             inventory_domain
         )
 
-        if item_id == ACWW_EMPTY_INVENTORY_ITEM then
+        if item_id == acww_require_memory_profile()["empty_inventory_item_id"] then
             return slot_index, inventory_domain
         end
     end
@@ -1023,10 +1012,10 @@ local function acww_inventory_contains_item(game_item_id)
         )
     end
 
-    for slot_index = 0, ACWW_INVENTORY_SLOT_COUNT - 1 do
+    for slot_index = 0, acww_require_memory_profile()["inventory_slot_count"] - 1 do
         local slot_address =
-            ACWW_INVENTORY_BASE_ADDRESS
-            + slot_index * ACWW_INVENTORY_SLOT_SIZE
+            acww_require_memory_profile()["inventory_base_address"]
+            + slot_index * acww_require_memory_profile()["inventory_slot_size"]
 
         if memory.read_u16_le(slot_address, inventory_domain)
             == game_item_id then
@@ -1047,8 +1036,8 @@ local function acww_claim_item(item_name, game_item_id)
         end
 
         local slot_address =
-            ACWW_INVENTORY_BASE_ADDRESS
-            + slot_index * ACWW_INVENTORY_SLOT_SIZE
+            acww_require_memory_profile()["inventory_base_address"]
+            + slot_index * acww_require_memory_profile()["inventory_slot_size"]
 
         memory.write_u16_le(
             slot_address,
@@ -1091,11 +1080,11 @@ local function acww_set_journal_bit(
     global_index
 )
     local absolute_bit =
-        ACWW_JOURNAL_START_BIT + global_index
+        acww_require_memory_profile()["journal_start_bit"] + global_index
     local byte_offset = math.floor(absolute_bit / 8)
     local bit_index = absolute_bit % 8
     local address =
-        ACWW_JOURNAL_BASE_ADDRESS + byte_offset
+        acww_require_memory_profile()["journal_base_address"] + byte_offset
 
     local current = memory.read_u8(address, arm9)
     local mask = bit.lshift(1, bit_index)
@@ -1175,7 +1164,7 @@ local function acww_restore_ap_progress()
         ) do
             if acww_set_journal_bit(
                 arm9,
-                ACWW_BUG_COUNT + fish_index
+                acww_require_memory_profile()["bug_count"] + fish_index
             ) then
                 restored_journal = restored_journal + 1
             end
@@ -1185,28 +1174,28 @@ local function acww_restore_ap_progress()
             {
                 indexes =
                     acww_restore_progress.museum_bugs,
-                address = ACWW_BUG_MUSEUM_ADDRESS,
+                address = acww_require_memory_profile()["bug_museum_address"],
                 start_index = 0,
             },
             {
                 indexes =
                     acww_restore_progress.museum_fish,
-                address = ACWW_FISH_MUSEUM_ADDRESS,
+                address = acww_require_memory_profile()["fish_museum_address"],
                 start_index =
-                    ACWW_FISH_MUSEUM_START_INDEX,
+                    acww_require_memory_profile()["fish_museum_start_index"],
             },
             {
                 indexes =
                     acww_restore_progress.museum_fossils,
-                address = ACWW_FOSSIL_MUSEUM_ADDRESS,
+                address = acww_require_memory_profile()["fossil_museum_address"],
                 start_index = 0,
             },
             {
                 indexes =
                     acww_restore_progress.museum_paintings,
-                address = ACWW_PAINTING_MUSEUM_ADDRESS,
+                address = acww_require_memory_profile()["painting_museum_address"],
                 start_index =
-                    ACWW_PAINTING_MUSEUM_START_INDEX,
+                    acww_require_memory_profile()["painting_museum_start_index"],
             },
         }
 
@@ -1259,9 +1248,9 @@ local function acww_remove_all_weeds()
 
         local removed_count = 0
 
-        for slot_index = 0, ACWW_TOWN_OBJECT_SLOT_COUNT - 1 do
+        for slot_index = 0, acww_require_memory_profile()["town_object_slot_count"] - 1 do
             local object_address =
-                ACWW_TOWN_OBJECT_BASE_ADDRESS + slot_index * 2
+                acww_require_memory_profile()["town_object_base_address"] + slot_index * 2
 
             local object_id = memory.read_u16_le(
                 object_address,
@@ -1269,12 +1258,12 @@ local function acww_remove_all_weeds()
             )
 
             if (
-                object_id >= ACWW_FIRST_WEED_OBJECT_ID
-                and object_id <= ACWW_LAST_WEED_OBJECT_ID
+                object_id >= acww_require_memory_profile()["first_weed_object_id"]
+                and object_id <= acww_require_memory_profile()["last_weed_object_id"]
             ) then
                 memory.write_u16_le(
                     object_address,
-                    ACWW_EMPTY_TOWN_OBJECT_ID,
+                    acww_require_memory_profile()["empty_town_object_id"],
                     arm9
                 )
 
@@ -1533,8 +1522,8 @@ local function acww_reclaim_selected_specimen()
         end
 
         local slot_address =
-            ACWW_INVENTORY_BASE_ADDRESS
-            + slot_index * ACWW_INVENTORY_SLOT_SIZE
+            acww_require_memory_profile()["inventory_base_address"]
+            + slot_index * acww_require_memory_profile()["inventory_slot_size"]
 
         memory.write_u16_le(
             slot_address,
@@ -1718,7 +1707,7 @@ local function acww_create_time_form()
 
     forms.label(
         acww_time_form,
-        "Reclaimable Resources",
+        "Reclaimable Resources and Golden Tools",
         10,
         280,
         220,
@@ -1734,12 +1723,24 @@ local function acww_create_time_form()
         local button_y = 305 + row * 34
         local item_name = resource.name
         local game_item_id = resource.game_id
+        local unique_item = resource.unique == true
 
         local button = forms.button(
             acww_time_form,
             item_name,
             function()
                 if acww_claimables_by_name[item_name] then
+                    if (
+                        unique_item
+                        and acww_inventory_contains_item(game_item_id)
+                    ) then
+                        forms.settext(
+                            acww_status_label,
+                            item_name .. " is already in your inventory."
+                        )
+                        return
+                    end
+
                     acww_claim_item(
                         item_name,
                         game_item_id
@@ -2185,6 +2186,18 @@ request_handlers = {
             type(req["state"]) == "table"
             and req["state"]
             or {}
+
+        local profile = state["rom_profile"]
+
+        if (
+            type(profile) ~= "table"
+            or type(profile["memory"]) ~= "table"
+        ) then
+            error("SET_ACWW_STATE did not include a ROM memory profile.")
+        end
+
+        acww_rom_profile = profile
+        acww_memory = profile["memory"]
 
         acww_set_unlocked_months(
             state["unlocked_months"]

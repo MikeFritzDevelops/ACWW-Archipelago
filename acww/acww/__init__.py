@@ -21,7 +21,7 @@ from .items import (
     item_name_to_id,
     item_table,
     month_item_names,
-    progressive_tool_item_names,
+    starting_tool_item_names,
 )
 from .locations import (
     BUGS,
@@ -41,7 +41,6 @@ from .locations import (
     museum_percentage_milestone_locations,
     painting_milestone_locations,
     painting_museum_locations,
-    starter_kit_locations,
 )
 from .options import ACWWOptions
 
@@ -175,9 +174,6 @@ class AnimalCrossingWildWorldWorld(World):
             if self.options.painting_milestones:
                 enabled.update(painting_milestone_locations)
 
-        if self.options.starter_kit:
-            enabled.update(starter_kit_locations)
-
         if self.options.four_leaf_clover_check:
             enabled.update(four_leaf_clover_locations)
 
@@ -234,26 +230,6 @@ class AnimalCrossingWildWorldWorld(World):
         )
         town.locations.append(goal_location)
 
-        # The tutorial grants stage one of the three progressive tools.
-        if self.options.starter_kit:
-            locked_starter_items = {
-                "Complete Tutorial - Fishing Rod":
-                    "Progressive Fishing Rod",
-                "Complete Tutorial - Net":
-                    "Progressive Net",
-                "Complete Tutorial - Shovel":
-                    "Progressive Shovel",
-            }
-
-            for location_name, item_name in locked_starter_items.items():
-                location = self.multiworld.get_location(
-                    location_name,
-                    self.player,
-                )
-                location.place_locked_item(
-                    self.create_item(item_name)
-                )
-
         enter_town = Entrance(
             self.player,
             "Start Game",
@@ -280,37 +256,25 @@ class AnimalCrossingWildWorldWorld(World):
         """
         Build the randomized museum-speedrun pool.
 
-        Progression consists of tool upgrades, month unlocks, and physical
-        museum specimens, and required bug-environment items. Filler
+        Progression consists of month unlocks, physical museum specimens,
+        and required bug-environment items. Filler
         consists of fruits, clothing, and Bells.
         """
         enabled_locations = self.get_enabled_locations()
 
-        locked_location_count = (
-            len(starter_kit_locations)
-            if self.options.starter_kit
-            else 0
-        )
-
-        randomized_location_count = (
-            len(enabled_locations)
-            - locked_location_count
-        )
+        randomized_location_count = len(enabled_locations)
 
         item_names: list[str] = []
 
-        # With the starter kit, stage one is locked to the tutorial and one
-        # randomized copy remains for the golden upgrade. Without it, both
-        # progressive copies must be randomized.
-        progressive_copy_count = (
-            1 if self.options.starter_kit else 2
-        )
+        # Normal tools are optional precollected convenience items. When this
+        # option is disabled, the player obtains them normally from Tom Nook.
+        if self.options.start_with_tools:
+            for item_name in starting_tool_item_names:
+                self.multiworld.push_precollected(
+                    self.create_item(item_name)
+                )
 
-        for item_name in progressive_tool_item_names:
-            item_names.extend(
-                [item_name] * progressive_copy_count
-            )
-
+        # Every golden tool remains an independent useful randomized reward.
         item_names.extend(golden_tool_item_names)
 
         # The configured starting month is granted immediately and excluded
@@ -384,14 +348,10 @@ class AnimalCrossingWildWorldWorld(World):
         for item_name, count in required_environment_counts.items():
             item_names.extend([item_name] * count)
 
-        filler_count = randomized_location_count - len(item_names)
-
-        if filler_count < 0:
-            raise ValueError(
-                "The enabled ACWW item pool contains more required items "
-                "than randomized locations. Enable more checks or reduce "
-                "the required item categories."
-            )
+        filler_count = max(
+            0,
+            randomized_location_count - len(item_names),
+        )
 
         clothing_count = min(
             round(
@@ -405,6 +365,7 @@ class AnimalCrossingWildWorldWorld(World):
 
         bell_count = filler_count - clothing_count
 
+
         # Clothing is unique within a seed. Bell bags may repeat.
         item_names.extend(
             self.random.sample(
@@ -417,12 +378,6 @@ class AnimalCrossingWildWorldWorld(World):
             self.random.choice(bell_item_names)
             for _ in range(bell_count)
         )
-
-        if len(item_names) != randomized_location_count:
-            raise ValueError(
-                "ACWW item-pool size does not match the number of "
-                "randomized locations."
-            )
 
         self.multiworld.itempool += [
             self.create_item(name)
@@ -440,7 +395,7 @@ class AnimalCrossingWildWorldWorld(World):
             "enabled_locations": sorted(
                 self.get_enabled_locations().values()
             ),
-            "starter_kit": bool(self.options.starter_kit),
+            "start_with_tools": bool(self.options.start_with_tools),
             "four_leaf_clover_check": bool(
                 self.options.four_leaf_clover_check
             ),

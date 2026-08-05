@@ -16,7 +16,7 @@ NamedGameItem = tuple[str, int]
 # Archipelago item-ID ranges
 # ---------------------------------------------------------------------------
 
-PROGRESSIVE_TOOL_AP_BASE = 3000
+STARTING_TOOL_AP_BASE = 3000
 GOLDEN_TOOL_AP_BASE = 3100
 
 BUG_ITEM_AP_BASE = 4000
@@ -101,46 +101,36 @@ def add_virtual_items(
 
 
 # ---------------------------------------------------------------------------
-# Progressive tutorial tools
+# Optional starting tools
 # ---------------------------------------------------------------------------
 
-# The tutorial locations should award the first copy of each progressive item.
-# A later randomized copy upgrades that tool to its golden version.
-PROGRESSIVE_TOOLS: list[NamedGameItem] = [
-    ("Progressive Shovel", 0x1369),
-    ("Progressive Fishing Rod", 0x1374),
-    ("Progressive Net", 0x1376),
+# These physical items are precollected only when Start with Tools is enabled.
+# They never enter the randomized item pool and are not used by AP logic.
+STARTING_TOOLS: list[NamedGameItem] = [
+    ("Shovel", 0x1369),
+    ("Fishing Rod", 0x1374),
+    ("Net", 0x1376),
 ]
 
-PROGRESSIVE_TOOL_STAGES: dict[str, tuple[int, ...]] = {
-    "Progressive Shovel": (
-        0x1369,  # Shovel
-        0x136A,  # Golden Shovel
-    ),
-    "Progressive Fishing Rod": (
-        0x1374,  # Fishing Rod
-        0x1375,  # Golden Fishing Rod
-    ),
-    "Progressive Net": (
-        0x1376,  # Net
-        0x1377,  # Golden Net
-    ),
-}
-
 add_named_items(
-    PROGRESSIVE_TOOLS,
-    ap_id_base=PROGRESSIVE_TOOL_AP_BASE,
-    classification=ItemClassification.progression,
-    category="progressive_tool",
+    STARTING_TOOLS,
+    ap_id_base=STARTING_TOOL_AP_BASE,
+    classification=ItemClassification.useful,
+    category="starting_tool",
 )
 
 
 # ---------------------------------------------------------------------------
-# Remaining golden tools
+# Golden tools
 # ---------------------------------------------------------------------------
 
+# Golden tools are useful randomized rewards. Unlike the old progressive-tool
+# model, every golden tool is represented by its own independent AP item.
 GOLDEN_TOOLS: list[NamedGameItem] = [
+    ("Golden Shovel", 0x136A),
     ("Golden Axe", 0x1373),
+    ("Golden Fishing Rod", 0x1375),
+    ("Golden Net", 0x1377),
     ("Golden Watering Can", 0x1379),
     ("Golden Slingshot", 0x137B),
 ]
@@ -588,10 +578,10 @@ received_item_data_by_ap_id = {
 }
 
 
-progressive_tool_item_names = [
+starting_tool_item_names = [
     name
     for name, data in item_table.items()
-    if data["category"] == "progressive_tool"
+    if data["category"] == "starting_tool"
 ]
 
 golden_tool_item_names = [

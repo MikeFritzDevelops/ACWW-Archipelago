@@ -3,6 +3,7 @@ from __future__ import annotations
 import math
 from typing import TYPE_CHECKING, Callable
 
+from Options import OptionError
 from worlds.generic.Rules import add_rule
 
 from .availability import (
@@ -449,8 +450,11 @@ def set_acww_rules(
         donation_predicates,
     )
 
-    if not donation_predicates:
-        raise ValueError(
+    if (
+        world.options.goal.current_key == "museum_percentage"
+        and not donation_predicates
+    ):
+        raise OptionError(
             "The Museum Percentage goal requires at least one enabled "
             "museum donation category."
         )
