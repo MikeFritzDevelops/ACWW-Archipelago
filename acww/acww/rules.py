@@ -39,7 +39,7 @@ def _bug_donation_predicate(
 ) -> AccessPredicate:
     return lambda state: (
         state.has(f"Bug: {bug_name}", world.player)
-        and can_catch_bug(state, world.player, bug_name)
+        or can_catch_bug(state, world.player, bug_name)
     )
 
 
@@ -49,7 +49,7 @@ def _fish_donation_predicate(
 ) -> AccessPredicate:
     return lambda state: (
         state.has(f"Fish: {fish_name}", world.player)
-        and can_catch_fish(state, world.player, fish_name)
+        or can_catch_fish(state, world.player, fish_name)
     )
 
 
