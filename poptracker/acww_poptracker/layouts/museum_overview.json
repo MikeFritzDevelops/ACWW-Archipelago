@@ -1,0 +1,37 @@
+{
+  "museum_overview_layout": {
+    "type": "dock",
+    "dropshadow": true,
+    "content": [
+      {
+        "type": "group",
+        "header": "Museum Progress",
+        "dock": "left",
+        "margin": "8,8,8,8",
+        "content": {
+          "type": "itemgrid",
+          "item_size": "390,220",
+          "item_margin": "10,10",
+          "h_alignment": "center",
+          "item_h_alignment": "center",
+          "rows": [
+            [
+              "museum_progress_bugs",
+              "museum_progress_fish"
+            ],
+            [
+              "museum_progress_art",
+              "museum_progress_fossils"
+            ]
+          ]
+        }
+      },
+      {
+        "type": "map",
+        "maps": [
+          "Museum Scene"
+        ]
+      }
+    ]
+  }
+}

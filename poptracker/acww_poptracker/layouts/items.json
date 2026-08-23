@@ -1,0 +1,103 @@
+{
+  "items_layout": {
+    "type": "itemgrid",
+    "item_size": "64,48",
+    "item_margin": "2,2",
+    "h_alignment": "center",
+    "item_h_alignment": "center",
+    "rows": [
+      [
+        "golden_shovel",
+        "golden_axe",
+        "golden_fishing_rod",
+        "golden_net",
+        "golden_watering_can",
+        "golden_slingshot"
+      ]
+    ]
+  },
+  "months_layout": {
+    "type": "array",
+    "orientation": "horizontal",
+    "h_alignment": "center",
+    "v_alignment": "center",
+    "content": [
+      {
+        "type": "item",
+        "item": "month_january"
+      },
+      {
+        "type": "item",
+        "item": "month_february"
+      },
+      {
+        "type": "item",
+        "item": "month_march"
+      },
+      {
+        "type": "item",
+        "item": "month_april"
+      },
+      {
+        "type": "item",
+        "item": "month_may"
+      },
+      {
+        "type": "item",
+        "item": "month_june"
+      },
+      {
+        "type": "item",
+        "item": "month_july"
+      },
+      {
+        "type": "item",
+        "item": "month_august"
+      },
+      {
+        "type": "item",
+        "item": "month_september"
+      },
+      {
+        "type": "item",
+        "item": "month_october"
+      },
+      {
+        "type": "item",
+        "item": "month_november"
+      },
+      {
+        "type": "item",
+        "item": "month_december"
+      }
+    ],
+    "item_size": "72,48",
+    "item_margin": "2,2"
+  },
+  "resources_layout": {
+    "type": "itemgrid",
+    "item_size": "72,48",
+    "item_margin": "2,2",
+    "h_alignment": "center",
+    "item_h_alignment": "center",
+    "rows": [
+      [
+        "resource_apple",
+        "resource_orange",
+        "resource_pear",
+        "resource_peach",
+        "resource_cherry",
+        "resource_coconut",
+        "resource_spoiled_turnips"
+      ],
+      [
+        "resource_red_roses",
+        "resource_white_roses",
+        "resource_pink_roses",
+        "resource_purple_roses",
+        "resource_black_roses",
+        "resource_blue_roses"
+      ]
+    ]
+  }
+}

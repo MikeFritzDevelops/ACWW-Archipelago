@@ -1,0 +1,8456 @@
+[
+  {
+    "name": "Bug Donations: Common Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 197,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Common Butterfly",
+        "access_rules": [
+          "received_bug_common_butterfly",
+          "$canCatchBugCommonButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Yellow Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 390,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Yellow Butterfly",
+        "access_rules": [
+          "received_bug_yellow_butterfly",
+          "$canCatchBugYellowButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Tiger Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 583,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Tiger Butterfly",
+        "access_rules": [
+          "received_bug_tiger_butterfly",
+          "$canCatchBugTigerButterfly,[$hasTigerButterflyResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Peacock Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 776,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Peacock Butterfly",
+        "access_rules": [
+          "received_bug_peacock_butterfly",
+          "$canCatchBugPeacockButterfly,[$hasPeacockButterflyResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Monarch Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 969,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Monarch Butterfly",
+        "access_rules": [
+          "received_bug_monarch_butterfly",
+          "$canCatchBugMonarchButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Emperor Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1162,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Emperor Butterfly",
+        "access_rules": [
+          "received_bug_emperor_butterfly",
+          "$canCatchBugEmperorButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Agrias Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1355,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Agrias Butterfly",
+        "access_rules": [
+          "received_bug_agrias_butterfly",
+          "$canCatchBugAgriasButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Birdwing Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1548,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Birdwing Butterfly",
+        "access_rules": [
+          "received_bug_birdwing_butterfly",
+          "$canCatchBugBirdwingButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Moth",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 197,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Moth",
+        "access_rules": [
+          "received_bug_moth",
+          "$canCatchBugMoth"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Oak Silk Moth",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 390,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Oak Silk Moth",
+        "access_rules": [
+          "received_bug_oak_silk_moth",
+          "$canCatchBugOakSilkMoth"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Honeybee",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 583,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Honeybee",
+        "access_rules": [
+          "received_bug_honeybee",
+          "$canCatchBugHoneybee"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Bee",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 776,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Bee",
+        "access_rules": [
+          "received_bug_bee",
+          "$canCatchBugBee"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Long Locust",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 969,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Long Locust",
+        "access_rules": [
+          "received_bug_long_locust",
+          "$canCatchBugLongLocust"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Migratory Locust",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1162,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Migratory Locust",
+        "access_rules": [
+          "received_bug_migratory_locust",
+          "$canCatchBugMigratoryLocust"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Mantis",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1355,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Mantis",
+        "access_rules": [
+          "received_bug_mantis",
+          "$canCatchBugMantis"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Orchid Mantis",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1548,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Orchid Mantis",
+        "access_rules": [
+          "received_bug_orchid_mantis",
+          "$canCatchBugOrchidMantis,[$hasOrchidMantisResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Brown Cicada",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 197,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Brown Cicada",
+        "access_rules": [
+          "received_bug_brown_cicada",
+          "$canCatchBugBrownCicada"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Robust Cicada",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 390,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Robust Cicada",
+        "access_rules": [
+          "received_bug_robust_cicada",
+          "$canCatchBugRobustCicada"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Walker Cicada",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 583,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Walker Cicada",
+        "access_rules": [
+          "received_bug_walker_cicada",
+          "$canCatchBugWalkerCicada"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Evening Cicada",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 776,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Evening Cicada",
+        "access_rules": [
+          "received_bug_evening_cicada",
+          "$canCatchBugEveningCicada"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Lantern Fly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 969,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Lantern Fly",
+        "access_rules": [
+          "received_bug_lantern_fly",
+          "$canCatchBugLanternFly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Red Dragonfly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1162,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Red Dragonfly",
+        "access_rules": [
+          "received_bug_red_dragonfly",
+          "$canCatchBugRedDragonfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Darner Dragonfly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1355,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Darner Dragonfly",
+        "access_rules": [
+          "received_bug_darner_dragonfly",
+          "$canCatchBugDarnerDragonfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Banded Dragonfly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1548,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Banded Dragonfly",
+        "access_rules": [
+          "received_bug_banded_dragonfly",
+          "$canCatchBugBandedDragonfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Ant",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 197,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Ant",
+        "access_rules": [
+          "received_bug_ant",
+          "[$hasAntResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Pondskater",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 390,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Pondskater",
+        "access_rules": [
+          "received_bug_pondskater",
+          "$canCatchBugPondskater"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Snail",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 583,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Snail",
+        "access_rules": [
+          "received_bug_snail",
+          "$canCatchBugSnail"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Cricket",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 776,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Cricket",
+        "access_rules": [
+          "received_bug_cricket",
+          "$canCatchBugCricket"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Bell Cricket",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 969,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Bell Cricket",
+        "access_rules": [
+          "received_bug_bell_cricket",
+          "$canCatchBugBellCricket"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Grasshopper",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1162,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Grasshopper",
+        "access_rules": [
+          "received_bug_grasshopper",
+          "$canCatchBugGrasshopper"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Mole Cricket",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1355,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Mole Cricket",
+        "access_rules": [
+          "received_bug_mole_cricket",
+          "$canCatchBugMoleCricket"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Walkingstick",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1548,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Walkingstick",
+        "access_rules": [
+          "received_bug_walkingstick",
+          "$canCatchBugWalkingstick"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Ladybug",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 197,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Ladybug",
+        "access_rules": [
+          "received_bug_ladybug",
+          "$canCatchBugLadybug"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Fruit Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 390,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Fruit Beetle",
+        "access_rules": [
+          "received_bug_fruit_beetle",
+          "$canCatchBugFruitBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Scarab Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 583,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Scarab Beetle",
+        "access_rules": [
+          "received_bug_scarab_beetle",
+          "$canCatchBugScarabBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Dung Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 776,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Dung Beetle",
+        "access_rules": [
+          "received_bug_dung_beetle",
+          "$canCatchBugDungBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Goliath Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 969,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Goliath Beetle",
+        "access_rules": [
+          "received_bug_goliath_beetle",
+          "$canCatchBugGoliathBeetle,[$hasCoconutResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Firefly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1162,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Firefly",
+        "access_rules": [
+          "received_bug_firefly",
+          "$canCatchBugFirefly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Jewel Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1355,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Jewel Beetle",
+        "access_rules": [
+          "received_bug_jewel_beetle",
+          "$canCatchBugJewelBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Longhorn Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1548,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Longhorn Beetle",
+        "access_rules": [
+          "received_bug_longhorn_beetle",
+          "$canCatchBugLonghornBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Saw Stag Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 197,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Saw Stag Beetle",
+        "access_rules": [
+          "received_bug_saw_stag_beetle",
+          "$canCatchBugSawStagBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Stag Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 390,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Stag Beetle",
+        "access_rules": [
+          "received_bug_stag_beetle",
+          "$canCatchBugStagBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Giant Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 583,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Giant Beetle",
+        "access_rules": [
+          "received_bug_giant_beetle",
+          "$canCatchBugGiantBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Rainbow Stag Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 776,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Rainbow Stag Beetle",
+        "access_rules": [
+          "received_bug_rainbow_stag_beetle",
+          "$canCatchBugRainbowStagBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Dynastid Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 969,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Dynastid Beetle",
+        "access_rules": [
+          "received_bug_dynastid_beetle",
+          "$canCatchBugDynastidBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Atlas Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1162,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Atlas Beetle",
+        "access_rules": [
+          "received_bug_atlas_beetle",
+          "$canCatchBugAtlasBeetle,[$hasCoconutResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Elephant Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1355,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Elephant Beetle",
+        "access_rules": [
+          "received_bug_elephant_beetle",
+          "$canCatchBugElephantBeetle,[$hasCoconutResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Hercules Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1548,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Hercules Beetle",
+        "access_rules": [
+          "received_bug_hercules_beetle",
+          "$canCatchBugHerculesBeetle,[$hasCoconutResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Flea",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 197,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Flea",
+        "access_rules": [
+          "received_bug_flea",
+          "$canCatchBugFlea"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Pill Bug",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 390,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Pill Bug",
+        "access_rules": [
+          "received_bug_pill_bug",
+          "$canCatchBugPillBug"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Mosquito",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 583,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Mosquito",
+        "access_rules": [
+          "received_bug_mosquito",
+          "$canCatchBugMosquito"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Fly",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 776,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Fly",
+        "access_rules": [
+          "received_bug_fly",
+          "[$hasFlyResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Cockroach",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 969,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Cockroach",
+        "access_rules": [
+          "received_bug_cockroach",
+          "$canCatchBugCockroach"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Spider",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1162,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Spider",
+        "access_rules": [
+          "received_bug_spider",
+          "$canCatchBugSpider"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Tarantula",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1355,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Tarantula",
+        "access_rules": [
+          "received_bug_tarantula",
+          "$canCatchBugTarantula"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Donations: Scorpion",
+    "map_locations": [
+      {
+        "map": "Bug Donations",
+        "x": 1548,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Scorpion",
+        "access_rules": [
+          "received_bug_scorpion",
+          "$canCatchBugScorpion"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Bitterling",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 197,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Bitterling",
+        "access_rules": [
+          "received_fish_bitterling",
+          "$canCatchFishBitterling"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Pale Chub",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 390,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Pale Chub",
+        "access_rules": [
+          "received_fish_pale_chub",
+          "$canCatchFishPaleChub"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Crucian Carp",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 583,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Crucian Carp",
+        "access_rules": [
+          "received_fish_crucian_carp",
+          "$canCatchFishCrucianCarp"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Dace",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 776,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Dace",
+        "access_rules": [
+          "received_fish_dace",
+          "$canCatchFishDace"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Barbel Steed",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 969,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Barbel Steed",
+        "access_rules": [
+          "received_fish_barbel_steed",
+          "$canCatchFishBarbelSteed"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Carp",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1162,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Carp",
+        "access_rules": [
+          "received_fish_carp",
+          "$canCatchFishCarp"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Koi",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1355,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Koi",
+        "access_rules": [
+          "received_fish_koi",
+          "$canCatchFishKoi"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Goldfish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1548,
+        "y": 52
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Goldfish",
+        "access_rules": [
+          "received_fish_goldfish",
+          "$canCatchFishGoldfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Popeyed Goldfish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 197,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Popeyed Goldfish",
+        "access_rules": [
+          "received_fish_popeyed_goldfish",
+          "$canCatchFishPopeyedGoldfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Killifish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 390,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Killifish",
+        "access_rules": [
+          "received_fish_killifish",
+          "$canCatchFishKillifish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Crawfish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 583,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Crawfish",
+        "access_rules": [
+          "received_fish_crawfish",
+          "$canCatchFishCrawfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Frog",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 776,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Frog",
+        "access_rules": [
+          "received_fish_frog",
+          "$canCatchFishFrog"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Freshwater Goby",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 969,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Freshwater Goby",
+        "access_rules": [
+          "received_fish_freshwater_goby",
+          "$canCatchFishFreshwaterGoby"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Loach",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1162,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Loach",
+        "access_rules": [
+          "received_fish_loach",
+          "$canCatchFishLoach"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Catfish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1355,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Catfish",
+        "access_rules": [
+          "received_fish_catfish",
+          "$canCatchFishCatfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Eel",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1548,
+        "y": 175
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Eel",
+        "access_rules": [
+          "received_fish_eel",
+          "$canCatchFishEel"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Giant Snakehead",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 197,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Giant Snakehead",
+        "access_rules": [
+          "received_fish_giant_snakehead",
+          "$canCatchFishGiantSnakehead"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Bluegill",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 390,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Bluegill",
+        "access_rules": [
+          "received_fish_bluegill",
+          "$canCatchFishBluegill"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Yellow Perch",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 583,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Yellow Perch",
+        "access_rules": [
+          "received_fish_yellow_perch",
+          "$canCatchFishYellowPerch"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Black Bass",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 776,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Black Bass",
+        "access_rules": [
+          "received_fish_black_bass",
+          "$canCatchFishBlackBass"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Pond Smelt",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 969,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Pond Smelt",
+        "access_rules": [
+          "received_fish_pond_smelt",
+          "$canCatchFishPondSmelt"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Sweetfish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1162,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Sweetfish",
+        "access_rules": [
+          "received_fish_sweetfish",
+          "$canCatchFishSweetfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Cherry Salmon",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1355,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Cherry Salmon",
+        "access_rules": [
+          "received_fish_cherry_salmon",
+          "$canCatchFishCherrySalmon"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Char",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1548,
+        "y": 298
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Char",
+        "access_rules": [
+          "received_fish_char",
+          "$canCatchFishChar"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Rainbow Trout",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 197,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Rainbow Trout",
+        "access_rules": [
+          "received_fish_rainbow_trout",
+          "$canCatchFishRainbowTrout"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Stringfish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 390,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Stringfish",
+        "access_rules": [
+          "received_fish_stringfish",
+          "$canCatchFishStringfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Salmon",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 583,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Salmon",
+        "access_rules": [
+          "received_fish_salmon",
+          "$canCatchFishSalmon"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: King Salmon",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 776,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate King Salmon",
+        "access_rules": [
+          "received_fish_king_salmon",
+          "$canCatchFishKingSalmon"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Guppy",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 969,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Guppy",
+        "access_rules": [
+          "received_fish_guppy",
+          "$canCatchFishGuppy"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Angelfish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1162,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Angelfish",
+        "access_rules": [
+          "received_fish_angelfish",
+          "$canCatchFishAngelfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Piranha",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1355,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Piranha",
+        "access_rules": [
+          "received_fish_piranha",
+          "$canCatchFishPiranha"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Arowana",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1548,
+        "y": 421
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Arowana",
+        "access_rules": [
+          "received_fish_arowana",
+          "$canCatchFishArowana"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Dorado",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 197,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Dorado",
+        "access_rules": [
+          "received_fish_dorado",
+          "$canCatchFishDorado"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Gar",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 390,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Gar",
+        "access_rules": [
+          "received_fish_gar",
+          "$canCatchFishGar"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Arapaima",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 583,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Arapaima",
+        "access_rules": [
+          "received_fish_arapaima",
+          "$canCatchFishArapaima"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Sea Butterfly",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 776,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Sea Butterfly",
+        "access_rules": [
+          "received_fish_sea_butterfly",
+          "$canCatchFishSeaButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Jellyfish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 969,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Jellyfish",
+        "access_rules": [
+          "received_fish_jellyfish",
+          "$canCatchFishJellyfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Seahorse",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1162,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Seahorse",
+        "access_rules": [
+          "received_fish_seahorse",
+          "$canCatchFishSeahorse"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Clownfish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1355,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Clownfish",
+        "access_rules": [
+          "received_fish_clownfish",
+          "$canCatchFishClownfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Zebra Turkeyfish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1548,
+        "y": 544
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Zebra Turkeyfish",
+        "access_rules": [
+          "received_fish_zebra_turkeyfish",
+          "$canCatchFishZebraTurkeyfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Pufferfish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 197,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Pufferfish",
+        "access_rules": [
+          "received_fish_pufferfish",
+          "$canCatchFishPufferfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Horse Mackerel",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 390,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Horse Mackerel",
+        "access_rules": [
+          "received_fish_horse_mackerel",
+          "$canCatchFishHorseMackerel"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Barred Knifejaw",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 583,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Barred Knifejaw",
+        "access_rules": [
+          "received_fish_barred_knifejaw",
+          "$canCatchFishBarredKnifejaw"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Sea Bass",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 776,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Sea Bass",
+        "access_rules": [
+          "received_fish_sea_bass",
+          "$canCatchFishSeaBass"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Red Snapper",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 969,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Red Snapper",
+        "access_rules": [
+          "received_fish_red_snapper",
+          "$canCatchFishRedSnapper"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Dab",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1162,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Dab",
+        "access_rules": [
+          "received_fish_dab",
+          "$canCatchFishDab"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Olive Flounder",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1355,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Olive Flounder",
+        "access_rules": [
+          "received_fish_olive_flounder",
+          "$canCatchFishOliveFlounder"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Squid",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1548,
+        "y": 667
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Squid",
+        "access_rules": [
+          "received_fish_squid",
+          "$canCatchFishSquid"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Octopus",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 197,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Octopus",
+        "access_rules": [
+          "received_fish_octopus",
+          "$canCatchFishOctopus"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Football Fish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 390,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Football Fish",
+        "access_rules": [
+          "received_fish_football_fish",
+          "$canCatchFishFootballFish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Tuna",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 583,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Tuna",
+        "access_rules": [
+          "received_fish_tuna",
+          "$canCatchFishTuna"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Blue Marlin",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 776,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Blue Marlin",
+        "access_rules": [
+          "received_fish_blue_marlin",
+          "$canCatchFishBlueMarlin"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Ocean Sunfish",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 969,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Ocean Sunfish",
+        "access_rules": [
+          "received_fish_ocean_sunfish",
+          "$canCatchFishOceanSunfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Hammerhead Shark",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1162,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Hammerhead Shark",
+        "access_rules": [
+          "received_fish_hammerhead_shark",
+          "$canCatchFishHammerheadShark"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Shark",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1355,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Shark",
+        "access_rules": [
+          "received_fish_shark",
+          "$canCatchFishShark"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Donations: Coelacanth",
+    "map_locations": [
+      {
+        "map": "Fish Donations",
+        "x": 1548,
+        "y": 790
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Coelacanth",
+        "access_rules": [
+          "received_fish_coelacanth",
+          "$canCatchFishCoelacanth"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Common Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 197,
+        "y": 52
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 507,
+        "y": 271
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 507,
+        "y": 271
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 432,
+        "y": 270
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 421,
+        "y": 241
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 282,
+        "y": 241
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Common Butterfly",
+        "access_rules": [
+          "$canCatchBugCommonButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Yellow Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 390,
+        "y": 52
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 968,
+        "y": 271
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 968,
+        "y": 271
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 806,
+        "y": 270
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 701,
+        "y": 241
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 561,
+        "y": 241
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Yellow Butterfly",
+        "access_rules": [
+          "$canCatchBugYellowButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Tiger Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 583,
+        "y": 52
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 1413,
+        "y": 271
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 1413,
+        "y": 271
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 1166,
+        "y": 270
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 981,
+        "y": 241
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 281,
+        "y": 242
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 371,
+        "y": 241
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 841,
+        "y": 241
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Tiger Butterfly",
+        "access_rules": [
+          "$canCatchBugTigerButterfly,[$hasTigerButterflyResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Peacock Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 776,
+        "y": 52
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 1858,
+        "y": 271
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 1858,
+        "y": 271
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 1526,
+        "y": 270
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1260,
+        "y": 242
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 561,
+        "y": 241
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 615,
+        "y": 240
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1121,
+        "y": 242
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Peacock Butterfly",
+        "access_rules": [
+          "$canCatchBugPeacockButterfly,[$hasPeacockButterflyResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Monarch Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 969,
+        "y": 52
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 282,
+        "y": 384
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 395,
+        "y": 251
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 395,
+        "y": 251
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Monarch Butterfly",
+        "access_rules": [
+          "$canCatchBugMonarchButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Emperor Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1162,
+        "y": 52
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1540,
+        "y": 238
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 841,
+        "y": 241
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 860,
+        "y": 240
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1400,
+        "y": 238
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Emperor Butterfly",
+        "access_rules": [
+          "$canCatchBugEmperorButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Agrias Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1355,
+        "y": 52
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1820,
+        "y": 238
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1121,
+        "y": 240
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1104,
+        "y": 240
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1680,
+        "y": 238
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Agrias Butterfly",
+        "access_rules": [
+          "$canCatchBugAgriasButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Birdwing Butterfly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1548,
+        "y": 52
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 1886,
+        "y": 267
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 421,
+        "y": 384
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1400,
+        "y": 236
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1348,
+        "y": 236
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1960,
+        "y": 241
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Birdwing Butterfly",
+        "access_rules": [
+          "$canCatchBugBirdwingButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Moth",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 197,
+        "y": 175
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 806,
+        "y": 806
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 701,
+        "y": 384
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1680,
+        "y": 236
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1592,
+        "y": 236
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 561,
+        "y": 384
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Moth",
+        "access_rules": [
+          "$canCatchBugMoth"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Oak Silk Moth",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 390,
+        "y": 175
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 981,
+        "y": 384
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1960,
+        "y": 236
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1836,
+        "y": 236
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 841,
+        "y": 384
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Oak Silk Moth",
+        "access_rules": [
+          "$canCatchBugOakSilkMoth"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Honeybee",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 583,
+        "y": 175
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 507,
+        "y": 477
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 507,
+        "y": 477
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 433,
+        "y": 437
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1260,
+        "y": 385
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1400,
+        "y": 382
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1348,
+        "y": 363
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Honeybee",
+        "access_rules": [
+          "$canCatchBugHoneybee"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Bee",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 776,
+        "y": 175
+      },
+      {
+        "map": "Bug Journal - January",
+        "x": 1240,
+        "y": 276
+      },
+      {
+        "map": "Bug Journal - February",
+        "x": 1240,
+        "y": 276
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 968,
+        "y": 477
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 968,
+        "y": 477
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 806,
+        "y": 437
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1540,
+        "y": 383
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1680,
+        "y": 380
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1592,
+        "y": 362
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1680,
+        "y": 382
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 1168,
+        "y": 251
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 1168,
+        "y": 251
+      },
+      {
+        "map": "Bug Journal - December",
+        "x": 1240,
+        "y": 276
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Bee",
+        "access_rules": [
+          "$canCatchBugBee"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Long Locust",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 969,
+        "y": 175
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 862,
+        "y": 995
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 282,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 398,
+        "y": 447
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 398,
+        "y": 447
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Long Locust",
+        "access_rules": [
+          "$canCatchBugLongLocust"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Migratory Locust",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1162,
+        "y": 175
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1106,
+        "y": 995
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 561,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 783,
+        "y": 446
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 783,
+        "y": 446
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Migratory Locust",
+        "access_rules": [
+          "$canCatchBugMigratoryLocust"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Mantis",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1355,
+        "y": 175
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1350,
+        "y": 993
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 839,
+        "y": 816
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 1169,
+        "y": 447
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 1169,
+        "y": 447
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Mantis",
+        "access_rules": [
+          "$canCatchBugMantis"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Orchid Mantis",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1548,
+        "y": 175
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1594,
+        "y": 998
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1119,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 1555,
+        "y": 447
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 1555,
+        "y": 447
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Orchid Mantis",
+        "access_rules": [
+          "$canCatchBugOrchidMantis,[$hasOrchidMantisResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Brown Cicada",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 197,
+        "y": 298
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 281,
+        "y": 385
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 371,
+        "y": 366
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Brown Cicada",
+        "access_rules": [
+          "$canCatchBugBrownCicada"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Robust Cicada",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 390,
+        "y": 298
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 561,
+        "y": 384
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 615,
+        "y": 365
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Robust Cicada",
+        "access_rules": [
+          "$canCatchBugRobustCicada"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Walker Cicada",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 583,
+        "y": 298
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 841,
+        "y": 382
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 859,
+        "y": 364
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1121,
+        "y": 385
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Walker Cicada",
+        "access_rules": [
+          "$canCatchBugWalkerCicada"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Evening Cicada",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 776,
+        "y": 298
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1121,
+        "y": 382
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1104,
+        "y": 363
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Evening Cicada",
+        "access_rules": [
+          "$canCatchBugEveningCicada"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Lantern Fly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 969,
+        "y": 298
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1820,
+        "y": 383
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1400,
+        "y": 526
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1348,
+        "y": 489
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1400,
+        "y": 527
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Lantern Fly",
+        "access_rules": [
+          "$canCatchBugLanternFly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Red Dragonfly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1162,
+        "y": 298
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1400,
+        "y": 382
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 781,
+        "y": 251
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 781,
+        "y": 251
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Red Dragonfly",
+        "access_rules": [
+          "$canCatchBugRedDragonfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Darner Dragonfly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1355,
+        "y": 298
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1820,
+        "y": 526
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 281,
+        "y": 528
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 371,
+        "y": 491
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Darner Dragonfly",
+        "access_rules": [
+          "$canCatchBugDarnerDragonfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Banded Dragonfly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1548,
+        "y": 298
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 561,
+        "y": 528
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 615,
+        "y": 491
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Banded Dragonfly",
+        "access_rules": [
+          "$canCatchBugBandedDragonfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Ant",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 197,
+        "y": 421
+      },
+      {
+        "map": "Bug Journal - January",
+        "x": 594,
+        "y": 278
+      },
+      {
+        "map": "Bug Journal - February",
+        "x": 594,
+        "y": 278
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 1413,
+        "y": 477
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 1413,
+        "y": 477
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 1166,
+        "y": 437
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 421,
+        "y": 527
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1960,
+        "y": 382
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1836,
+        "y": 363
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1960,
+        "y": 382
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 1554,
+        "y": 251
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 1554,
+        "y": 251
+      },
+      {
+        "map": "Bug Journal - December",
+        "x": 594,
+        "y": 278
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Ant",
+        "access_rules": [
+          "[$hasAntResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Pondskater",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 390,
+        "y": 421
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 1526,
+        "y": 790
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 701,
+        "y": 528
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1121,
+        "y": 524
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1104,
+        "y": 487
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1120,
+        "y": 528
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Pondskater",
+        "access_rules": [
+          "$canCatchBugPondskater"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Snail",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 583,
+        "y": 421
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 1625,
+        "y": 914
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 1166,
+        "y": 790
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 981,
+        "y": 957
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 561,
+        "y": 959
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 493,
+        "y": 867
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1400,
+        "y": 671
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Snail",
+        "access_rules": [
+          "$canCatchBugSnail"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Cricket",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 776,
+        "y": 421
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 283,
+        "y": 527
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 1168,
+        "y": 641
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 1168,
+        "y": 641
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Cricket",
+        "access_rules": [
+          "$canCatchBugCricket"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Bell Cricket",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 969,
+        "y": 421
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 561,
+        "y": 528
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 1554,
+        "y": 641
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Bell Cricket",
+        "access_rules": [
+          "$canCatchBugBellCricket"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Grasshopper",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1162,
+        "y": 421
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 282,
+        "y": 957
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 614,
+        "y": 993
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1399,
+        "y": 815
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Grasshopper",
+        "access_rules": [
+          "$canCatchBugGrasshopper"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Mole Cricket",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1355,
+        "y": 421
+      },
+      {
+        "map": "Bug Journal - January",
+        "x": 1887,
+        "y": 554
+      },
+      {
+        "map": "Bug Journal - February",
+        "x": 1887,
+        "y": 554
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 1858,
+        "y": 477
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 1858,
+        "y": 477
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 1526,
+        "y": 437
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 1554,
+        "y": 641
+      },
+      {
+        "map": "Bug Journal - December",
+        "x": 1887,
+        "y": 554
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Mole Cricket",
+        "access_rules": [
+          "$canCatchBugMoleCricket"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Walkingstick",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1548,
+        "y": 421
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 841,
+        "y": 524
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 859,
+        "y": 487
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 841,
+        "y": 528
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 1940,
+        "y": 447
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 1940,
+        "y": 447
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Walkingstick",
+        "access_rules": [
+          "$canCatchBugWalkingstick"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Ladybug",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 197,
+        "y": 544
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 507,
+        "y": 696
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 507,
+        "y": 696
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 433,
+        "y": 614
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 981,
+        "y": 528
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 395,
+        "y": 642
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Ladybug",
+        "access_rules": [
+          "$canCatchBugLadybug"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Fruit Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 390,
+        "y": 544
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1121,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1104,
+        "y": 741
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1121,
+        "y": 671
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Fruit Beetle",
+        "access_rules": [
+          "$canCatchBugFruitBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Scarab Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 583,
+        "y": 544
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1400,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1348,
+        "y": 741
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Scarab Beetle",
+        "access_rules": [
+          "$canCatchBugScarabBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Dung Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 776,
+        "y": 544
+      },
+      {
+        "map": "Bug Journal - January",
+        "x": 594,
+        "y": 558
+      },
+      {
+        "map": "Bug Journal - February",
+        "x": 594,
+        "y": 558
+      },
+      {
+        "map": "Bug Journal - December",
+        "x": 594,
+        "y": 558
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Dung Beetle",
+        "access_rules": [
+          "$canCatchBugDungBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Goliath Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 969,
+        "y": 544
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1540,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1400,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1348,
+        "y": 616
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 561,
+        "y": 671
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Goliath Beetle",
+        "access_rules": [
+          "$canCatchBugGoliathBeetle,[$hasCoconutResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Firefly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1162,
+        "y": 544
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1540,
+        "y": 528
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Firefly",
+        "access_rules": [
+          "$canCatchBugFirefly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Jewel Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1355,
+        "y": 544
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1680,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1592,
+        "y": 741
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Jewel Beetle",
+        "access_rules": [
+          "$canCatchBugJewelBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Longhorn Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1548,
+        "y": 544
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1260,
+        "y": 528
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 281,
+        "y": 814
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 371,
+        "y": 740
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Longhorn Beetle",
+        "access_rules": [
+          "$canCatchBugLonghornBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Saw Stag Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 197,
+        "y": 667
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1960,
+        "y": 674
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1836,
+        "y": 618
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Saw Stag Beetle",
+        "access_rules": [
+          "$canCatchBugSawStagBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Stag Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 390,
+        "y": 667
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 701,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 561,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 615,
+        "y": 616
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Stag Beetle",
+        "access_rules": [
+          "$canCatchBugStagBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Giant Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 583,
+        "y": 667
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 841,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 859,
+        "y": 741
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Giant Beetle",
+        "access_rules": [
+          "$canCatchBugGiantBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Rainbow Stag Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 776,
+        "y": 667
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 421,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 281,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 371,
+        "y": 616
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 282,
+        "y": 671
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Rainbow Stag Beetle",
+        "access_rules": [
+          "$canCatchBugRainbowStagBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Dynastid Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 969,
+        "y": 667
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1960,
+        "y": 818
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1836,
+        "y": 744
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Dynastid Beetle",
+        "access_rules": [
+          "$canCatchBugDynastidBeetle"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Atlas Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1162,
+        "y": 667
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 981,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 841,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 860,
+        "y": 616
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Atlas Beetle",
+        "access_rules": [
+          "$canCatchBugAtlasBeetle,[$hasCoconutResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Elephant Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1355,
+        "y": 667
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1260,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1121,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1104,
+        "y": 616
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Elephant Beetle",
+        "access_rules": [
+          "$canCatchBugElephantBeetle,[$hasCoconutResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Hercules Beetle",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1548,
+        "y": 667
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1820,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1680,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1592,
+        "y": 616
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Hercules Beetle",
+        "access_rules": [
+          "$canCatchBugHerculesBeetle,[$hasCoconutResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Flea",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 197,
+        "y": 790
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 968,
+        "y": 695
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 968,
+        "y": 695
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 806,
+        "y": 614
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 421,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1960,
+        "y": 528
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1836,
+        "y": 491
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1960,
+        "y": 526
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 1045,
+        "y": 837
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 399,
+        "y": 642
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Flea",
+        "access_rules": [
+          "$canCatchBugFlea"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Pill Bug",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 390,
+        "y": 790
+      },
+      {
+        "map": "Bug Journal - January",
+        "x": 1240,
+        "y": 833
+      },
+      {
+        "map": "Bug Journal - February",
+        "x": 1240,
+        "y": 833
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 1413,
+        "y": 695
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 1413,
+        "y": 695
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 1166,
+        "y": 614
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 981,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 841,
+        "y": 959
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 738,
+        "y": 867
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1680,
+        "y": 671
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 781,
+        "y": 642
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 781,
+        "y": 642
+      },
+      {
+        "map": "Bug Journal - December",
+        "x": 1240,
+        "y": 833
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Pill Bug",
+        "access_rules": [
+          "$canCatchBugPillBug"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Mosquito",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 583,
+        "y": 790
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1540,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1121,
+        "y": 959
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 982,
+        "y": 867
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1960,
+        "y": 671
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Mosquito",
+        "access_rules": [
+          "$canCatchBugMosquito"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Fly",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 776,
+        "y": 790
+      },
+      {
+        "map": "Bug Journal - January",
+        "x": 1240,
+        "y": 554
+      },
+      {
+        "map": "Bug Journal - February",
+        "x": 1240,
+        "y": 554
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 1858,
+        "y": 695
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 1858,
+        "y": 695
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 1526,
+        "y": 614
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1260,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1680,
+        "y": 525
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1592,
+        "y": 489
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1680,
+        "y": 526
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 1941,
+        "y": 251
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 1941,
+        "y": 251
+      },
+      {
+        "map": "Bug Journal - December",
+        "x": 1240,
+        "y": 554
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Fly",
+        "access_rules": [
+          "[$hasFlyResource]"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Cockroach",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 969,
+        "y": 790
+      },
+      {
+        "map": "Bug Journal - January",
+        "x": 1887,
+        "y": 277
+      },
+      {
+        "map": "Bug Journal - February",
+        "x": 1887,
+        "y": 277
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 968,
+        "y": 914
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 740,
+        "y": 914
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 1886,
+        "y": 437
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 701,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 561,
+        "y": 815
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 615,
+        "y": 741
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 841,
+        "y": 670
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 1941,
+        "y": 642
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 1941,
+        "y": 642
+      },
+      {
+        "map": "Bug Journal - December",
+        "x": 1887,
+        "y": 277
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Cockroach",
+        "access_rules": [
+          "$canCatchBugCockroach"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Spider",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1162,
+        "y": 790
+      },
+      {
+        "map": "Bug Journal - March",
+        "x": 1413,
+        "y": 914
+      },
+      {
+        "map": "Bug Journal - April",
+        "x": 1182,
+        "y": 914
+      },
+      {
+        "map": "Bug Journal - May",
+        "x": 1886,
+        "y": 607
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1820,
+        "y": 816
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1400,
+        "y": 959
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1226,
+        "y": 867
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1680,
+        "y": 816
+      },
+      {
+        "map": "Bug Journal - October",
+        "x": 1434,
+        "y": 837
+      },
+      {
+        "map": "Bug Journal - November",
+        "x": 1168,
+        "y": 837
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Spider",
+        "access_rules": [
+          "$canCatchBugSpider"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Tarantula",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1355,
+        "y": 790
+      },
+      {
+        "map": "Bug Journal - June",
+        "x": 1260,
+        "y": 957
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1680,
+        "y": 957
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1470,
+        "y": 865
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Tarantula",
+        "access_rules": [
+          "$canCatchBugTarantula"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bug Journal: Scorpion",
+    "map_locations": [
+      {
+        "map": "Bug Journal",
+        "x": 1548,
+        "y": 790
+      },
+      {
+        "map": "Bug Journal - July",
+        "x": 1960,
+        "y": 962
+      },
+      {
+        "map": "Bug Journal - August",
+        "x": 1714,
+        "y": 870
+      },
+      {
+        "map": "Bug Journal - September",
+        "x": 1960,
+        "y": 815
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Scorpion",
+        "access_rules": [
+          "$canCatchBugScorpion"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Bitterling",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 197,
+        "y": 52
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 387,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 387,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 844,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 388,
+        "y": 252
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Bitterling",
+        "access_rules": [
+          "$canCatchFishBitterling"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Pale Chub",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 390,
+        "y": 52
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 760,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 760,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 760,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 760,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 706,
+        "y": 254
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 292,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 292,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 292,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 292,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 430,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 430,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 761,
+        "y": 252
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Pale Chub",
+        "access_rules": [
+          "$canCatchFishPaleChub"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Crucian Carp",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 583,
+        "y": 52
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1134,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1134,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1134,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1134,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 982,
+        "y": 254
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 568,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 568,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 568,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 568,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 706,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 706,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1135,
+        "y": 252
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Crucian Carp",
+        "access_rules": [
+          "$canCatchFishCrucianCarp"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Dace",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 776,
+        "y": 52
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1508,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1508,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1508,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1508,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1258,
+        "y": 254
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 844,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 844,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 844,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 844,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 982,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 982,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1509,
+        "y": 252
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Dace",
+        "access_rules": [
+          "$canCatchFishDace"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Barbel Steed",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 969,
+        "y": 52
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1881,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1881,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1881,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1881,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1534,
+        "y": 254
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1121,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1121,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1121,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1121,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1259,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1259,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1883,
+        "y": 252
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Barbel Steed",
+        "access_rules": [
+          "$canCatchFishBarbelSteed"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Carp",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1162,
+        "y": 52
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 387,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 387,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 387,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 387,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1810,
+        "y": 254
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1397,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1397,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1397,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1397,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1535,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1535,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 388,
+        "y": 397
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Carp",
+        "access_rules": [
+          "$canCatchFishCarp"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Koi",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1355,
+        "y": 52
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 760,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 760,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 760,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 760,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 429,
+        "y": 384
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 291,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 291,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 291,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 291,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 429,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 429,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 761,
+        "y": 397
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Koi",
+        "access_rules": [
+          "$canCatchFishKoi"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Goldfish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1548,
+        "y": 52
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1134,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1134,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1134,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1134,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 706,
+        "y": 384
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 567,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 567,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 567,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 567,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 705,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 705,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1135,
+        "y": 397
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Goldfish",
+        "access_rules": [
+          "$canCatchFishGoldfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Popeyed Goldfish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 197,
+        "y": 175
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1508,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1508,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1508,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1508,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 982,
+        "y": 384
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 843,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 843,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 843,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 843,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 981,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 981,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1509,
+        "y": 397
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Popeyed Goldfish",
+        "access_rules": [
+          "$canCatchFishPopeyedGoldfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Killifish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 390,
+        "y": 175
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 760,
+        "y": 685
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 843,
+        "y": 680
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 750,
+        "y": 675
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 422,
+        "y": 675
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 422,
+        "y": 675
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Killifish",
+        "access_rules": [
+          "$canCatchFishKillifish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Crawfish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 583,
+        "y": 175
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1134,
+        "y": 685
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1119,
+        "y": 680
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1026,
+        "y": 675
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 699,
+        "y": 675
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 699,
+        "y": 675
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1397,
+        "y": 669
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Crawfish",
+        "access_rules": [
+          "$canCatchFishCrawfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Frog",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 776,
+        "y": 175
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1396,
+        "y": 680
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1303,
+        "y": 675
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 975,
+        "y": 675
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 975,
+        "y": 675
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Frog",
+        "access_rules": [
+          "$canCatchFishFrog"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Freshwater Goby",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 969,
+        "y": 175
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1881,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1881,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1881,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1881,
+        "y": 398
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1258,
+        "y": 384
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1119,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1119,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1119,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1119,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1258,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1258,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1883,
+        "y": 397
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Freshwater Goby",
+        "access_rules": [
+          "$canCatchFishFreshwaterGoby"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Loach",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1162,
+        "y": 175
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 387,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 387,
+        "y": 253
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 430,
+        "y": 254
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Loach",
+        "access_rules": [
+          "$canCatchFishLoach"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Catfish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1355,
+        "y": 175
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1396,
+        "y": 514
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 844,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 844,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 844,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 844,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 982,
+        "y": 506
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Catfish",
+        "access_rules": [
+          "$canCatchFishCatfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Eel",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1548,
+        "y": 175
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 292,
+        "y": 637
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1949,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1949,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1121,
+        "y": 637
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Eel",
+        "access_rules": [
+          "$canCatchFishEel"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Giant Snakehead",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 197,
+        "y": 298
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1949,
+        "y": 504
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 568,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 568,
+        "y": 505
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Giant Snakehead",
+        "access_rules": [
+          "$canCatchFishGiantSnakehead"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Bluegill",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 390,
+        "y": 298
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 387,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 387,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 387,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 387,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1534,
+        "y": 384
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1396,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1396,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1396,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1396,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1534,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1534,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 388,
+        "y": 540
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Bluegill",
+        "access_rules": [
+          "$canCatchFishBluegill"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Yellow Perch",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 583,
+        "y": 298
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 760,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 760,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 760,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1258,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1120,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 761,
+        "y": 540
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Yellow Perch",
+        "access_rules": [
+          "$canCatchFishYellowPerch"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Black Bass",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 776,
+        "y": 298
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1134,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1134,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1134,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1134,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 568,
+        "y": 514
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1672,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1672,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1672,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1672,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1810,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1810,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1135,
+        "y": 540
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Black Bass",
+        "access_rules": [
+          "$canCatchFishBlackBass"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Pond Smelt",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 969,
+        "y": 298
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1508,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1508,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1509,
+        "y": 540
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Pond Smelt",
+        "access_rules": [
+          "$canCatchFishPondSmelt"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Sweetfish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1162,
+        "y": 298
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 292,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 292,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 291,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 430,
+        "y": 506
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Sweetfish",
+        "access_rules": [
+          "$canCatchFishSweetfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Cherry Salmon",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1355,
+        "y": 298
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1508,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1508,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 844,
+        "y": 514
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 292,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 568,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 706,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 568,
+        "y": 505
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Cherry Salmon",
+        "access_rules": [
+          "$canCatchFishCherrySalmon"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Char",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1548,
+        "y": 298
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1881,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1881,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1120,
+        "y": 514
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 568,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1948,
+        "y": 504
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1534,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1396,
+        "y": 505
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Char",
+        "access_rules": [
+          "$canCatchFishChar"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Rainbow Trout",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 197,
+        "y": 421
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 760,
+        "y": 685
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 387,
+        "y": 685
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1672,
+        "y": 514
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1121,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 293,
+        "y": 637
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1810,
+        "y": 504
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1672,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Rainbow Trout",
+        "access_rules": [
+          "$canCatchFishRainbowTrout"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Stringfish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 390,
+        "y": 421
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1881,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1881,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1883,
+        "y": 540
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Stringfish",
+        "access_rules": [
+          "$canCatchFishStringfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Salmon",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 583,
+        "y": 421
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 569,
+        "y": 637
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Salmon",
+        "access_rules": [
+          "$canCatchFishSalmon"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: King Salmon",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 776,
+        "y": 421
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 845,
+        "y": 637
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch King Salmon",
+        "access_rules": [
+          "$canCatchFishKingSalmon"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Guppy",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 969,
+        "y": 421
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 760,
+        "y": 541
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1811,
+        "y": 384
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1673,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1673,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1673,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1673,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1811,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1811,
+        "y": 243
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Guppy",
+        "access_rules": [
+          "$canCatchFishGuppy"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Angelfish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1162,
+        "y": 421
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1534,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1396,
+        "y": 846
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1396,
+        "y": 846
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1396,
+        "y": 846
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1396,
+        "y": 846
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1258,
+        "y": 976
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Angelfish",
+        "access_rules": [
+          "$canCatchFishAngelfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Piranha",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1355,
+        "y": 421
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1397,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1397,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1397,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1396,
+        "y": 505
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Piranha",
+        "access_rules": [
+          "$canCatchFishPiranha"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Arowana",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1548,
+        "y": 421
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1673,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1673,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1673,
+        "y": 505
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1672,
+        "y": 505
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Arowana",
+        "access_rules": [
+          "$canCatchFishArowana"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Dorado",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 197,
+        "y": 544
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1949,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1949,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1949,
+        "y": 243
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1949,
+        "y": 243
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Dorado",
+        "access_rules": [
+          "$canCatchFishDorado"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Gar",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 390,
+        "y": 544
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1948,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1948,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1948,
+        "y": 374
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1948,
+        "y": 374
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Gar",
+        "access_rules": [
+          "$canCatchFishGar"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Arapaima",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 583,
+        "y": 544
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1121,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1121,
+        "y": 506
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1120,
+        "y": 506
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Arapaima",
+        "access_rules": [
+          "$canCatchFishArapaima"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Sea Butterfly",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 776,
+        "y": 544
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 387,
+        "y": 728
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 387,
+        "y": 728
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 387,
+        "y": 728
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Sea Butterfly",
+        "access_rules": [
+          "$canCatchFishSeaButterfly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Jellyfish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 969,
+        "y": 544
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 291,
+        "y": 975
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Jellyfish",
+        "access_rules": [
+          "$canCatchFishJellyfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Seahorse",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1162,
+        "y": 544
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1508,
+        "y": 685
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1396,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1396,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1396,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1396,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1396,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1534,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1120,
+        "y": 722
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Seahorse",
+        "access_rules": [
+          "$canCatchFishSeahorse"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Clownfish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1355,
+        "y": 544
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1508,
+        "y": 973
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1120,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1120,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1120,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1120,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1120,
+        "y": 976
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Clownfish",
+        "access_rules": [
+          "$canCatchFishClownfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Zebra Turkeyfish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1548,
+        "y": 544
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1134,
+        "y": 973
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 844,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 844,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 844,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 844,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 844,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 982,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 982,
+        "y": 976
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Zebra Turkeyfish",
+        "access_rules": [
+          "$canCatchFishZebraTurkeyfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Pufferfish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 197,
+        "y": 667
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1672,
+        "y": 714
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1672,
+        "y": 714
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 568,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 706,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 706,
+        "y": 976
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Pufferfish",
+        "access_rules": [
+          "$canCatchFishPufferfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Horse Mackerel",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 390,
+        "y": 667
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 760,
+        "y": 728
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 760,
+        "y": 728
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 760,
+        "y": 829
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 760,
+        "y": 829
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 706,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 568,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 568,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 568,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 568,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 706,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 706,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 692,
+        "y": 728
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Horse Mackerel",
+        "access_rules": [
+          "$canCatchFishHorseMackerel"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Barred Knifejaw",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 583,
+        "y": 667
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 387,
+        "y": 829
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 387,
+        "y": 829
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 430,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 291,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 291,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 291,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 291,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 430,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 430,
+        "y": 845
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Barred Knifejaw",
+        "access_rules": [
+          "$canCatchFishBarredKnifejaw"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Sea Bass",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 776,
+        "y": 667
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1134,
+        "y": 728
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1134,
+        "y": 728
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1134,
+        "y": 829
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1134,
+        "y": 829
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 982,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 844,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 844,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 844,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 844,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 982,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 982,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 997,
+        "y": 728
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Sea Bass",
+        "access_rules": [
+          "$canCatchFishSeaBass"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Red Snapper",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 969,
+        "y": 667
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1508,
+        "y": 728
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1508,
+        "y": 728
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1508,
+        "y": 829
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1508,
+        "y": 829
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1258,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1120,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1120,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1120,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1120,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1258,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1258,
+        "y": 845
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1303,
+        "y": 728
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Red Snapper",
+        "access_rules": [
+          "$canCatchFishRedSnapper"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Dab",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1162,
+        "y": 667
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1881,
+        "y": 728
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1881,
+        "y": 728
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1881,
+        "y": 829
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1881,
+        "y": 829
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1534,
+        "y": 846
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1534,
+        "y": 846
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1608,
+        "y": 728
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Dab",
+        "access_rules": [
+          "$canCatchFishDab"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Olive Flounder",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1355,
+        "y": 667
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 387,
+        "y": 873
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 387,
+        "y": 873
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 387,
+        "y": 974
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 387,
+        "y": 974
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1810,
+        "y": 844
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1672,
+        "y": 844
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1672,
+        "y": 844
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1672,
+        "y": 844
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1672,
+        "y": 844
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1810,
+        "y": 844
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1810,
+        "y": 844
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1913,
+        "y": 728
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Olive Flounder",
+        "access_rules": [
+          "$canCatchFishOliveFlounder"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Squid",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1548,
+        "y": 667
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 760,
+        "y": 873
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 760,
+        "y": 873
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 760,
+        "y": 974
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 760,
+        "y": 974
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 568,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 568,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 568,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 568,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 692,
+        "y": 872
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Squid",
+        "access_rules": [
+          "$canCatchFishSquid"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Octopus",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 197,
+        "y": 790
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1508,
+        "y": 685
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1881,
+        "y": 685
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 291,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 291,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 291,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 291,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 430,
+        "y": 975
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 430,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 387,
+        "y": 872
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Octopus",
+        "access_rules": [
+          "$canCatchFishOctopus"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Football Fish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 390,
+        "y": 790
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1134,
+        "y": 873
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1134,
+        "y": 873
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1134,
+        "y": 974
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1257,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 997,
+        "y": 872
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Football Fish",
+        "access_rules": [
+          "$canCatchFishFootballFish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Tuna",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 583,
+        "y": 790
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1508,
+        "y": 873
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1508,
+        "y": 873
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1508,
+        "y": 974
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1534,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1303,
+        "y": 872
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Tuna",
+        "access_rules": [
+          "$canCatchFishTuna"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Blue Marlin",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 776,
+        "y": 790
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1397,
+        "y": 714
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1397,
+        "y": 714
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1672,
+        "y": 716
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Blue Marlin",
+        "access_rules": [
+          "$canCatchFishBlueMarlin"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Ocean Sunfish",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 969,
+        "y": 790
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1949,
+        "y": 715
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1949,
+        "y": 715
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1949,
+        "y": 715
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1949,
+        "y": 715
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Ocean Sunfish",
+        "access_rules": [
+          "$canCatchFishOceanSunfish"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Hammerhead Shark",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1162,
+        "y": 790
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1949,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1949,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1949,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1949,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1949,
+        "y": 976
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Hammerhead Shark",
+        "access_rules": [
+          "$canCatchFishHammerheadShark"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Shark",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1355,
+        "y": 790
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1948,
+        "y": 846
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1948,
+        "y": 846
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1948,
+        "y": 846
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1948,
+        "y": 846
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Shark",
+        "access_rules": [
+          "$canCatchFishShark"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fish Journal: Coelacanth",
+    "map_locations": [
+      {
+        "map": "Fish Journal",
+        "x": 1548,
+        "y": 790
+      },
+      {
+        "map": "Fish Journal - January",
+        "x": 1881,
+        "y": 873
+      },
+      {
+        "map": "Fish Journal - February",
+        "x": 1881,
+        "y": 873
+      },
+      {
+        "map": "Fish Journal - March",
+        "x": 1881,
+        "y": 974
+      },
+      {
+        "map": "Fish Journal - April",
+        "x": 1881,
+        "y": 974
+      },
+      {
+        "map": "Fish Journal - May",
+        "x": 1672,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - June",
+        "x": 1672,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - July",
+        "x": 1672,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - August",
+        "x": 1672,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - September",
+        "x": 1672,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - October",
+        "x": 1810,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - November",
+        "x": 1810,
+        "y": 976
+      },
+      {
+        "map": "Fish Journal - December",
+        "x": 1608,
+        "y": 872
+      }
+    ],
+    "sections": [
+      {
+        "name": "Catch Coelacanth",
+        "access_rules": [
+          "$canCatchFishCoelacanth"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Amber",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 147,
+        "y": 41
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Amber"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Ammonite",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 304,
+        "y": 41
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Ammonite"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Dino Droppings",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 461,
+        "y": 41
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Dino Droppings"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Dinosaur Egg",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 618,
+        "y": 41
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Dinosaur Egg"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Fern Fossil",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 775,
+        "y": 41
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Fern Fossil"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Dinosaur Track",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 932,
+        "y": 41
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Dinosaur Track"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Archaeopteryx",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1089,
+        "y": 41
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Archaeopteryx"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Peking Man",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1246,
+        "y": 41
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Peking Man"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Shark Tooth",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1403,
+        "y": 41
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Shark Tooth"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Trilobite",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1560,
+        "y": 41
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Trilobite"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: T-rex Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 101,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate T-rex Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: T-rex Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 198,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate T-rex Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: T-rex Tail",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 295,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate T-rex Tail"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Tricera Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 415,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Tricera Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Tricera Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 512,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Tricera Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Tricera Tail",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 609,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Tricera Tail"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Mammoth Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 778,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Mammoth Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Mammoth Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 924,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Mammoth Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Ankylo Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1043,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Ankylo Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Ankylo Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1140,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Ankylo Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Ankylo Tail",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1237,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Ankylo Tail"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Apato Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1357,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Apato Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Apato Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1454,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Apato Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Apato Tail",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1551,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Apato Tail"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Dimetrodon Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 101,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Dimetrodon Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Dimetrodon Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 198,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Dimetrodon Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Dimetrodon Tail",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 295,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Dimetrodon Tail"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Iguanodon Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 415,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Iguanodon Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Iguanodon Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 512,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Iguanodon Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Iguanodon Tail",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 609,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Iguanodon Tail"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Sabertooth Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 778,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Sabertooth Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Sabertooth Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 924,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Sabertooth Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Pachy Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1043,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Pachy Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Pachy Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1140,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Pachy Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Pachy Tail",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1237,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Pachy Tail"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Parasaur Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1357,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Parasaur Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Parasaur Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1454,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Parasaur Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Parasaur Tail",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1551,
+        "y": 504
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Parasaur Tail"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Seismo Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 150,
+        "y": 738
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Seismo Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Seismo Chest",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 296,
+        "y": 738
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Seismo Chest"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Seismo Hip",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 150,
+        "y": 825
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Seismo Hip"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Seismo Tail",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 296,
+        "y": 825
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Seismo Tail"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Plesio Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 415,
+        "y": 738
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Plesio Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Plesio Neck",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 512,
+        "y": 738
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Plesio Neck"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Plesio Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 609,
+        "y": 738
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Plesio Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Stego Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 729,
+        "y": 738
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Stego Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Stego Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 826,
+        "y": 738
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Stego Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Stego Tail",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 923,
+        "y": 738
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Stego Tail"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Ptera Skull",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1092,
+        "y": 738
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Ptera Skull"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Ptera Torso",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1238,
+        "y": 738
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Ptera Torso"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Ptera Left Wing",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1092,
+        "y": 825
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Ptera Left Wing"
+      }
+    ]
+  },
+  {
+    "name": "Fossil Donations: Ptera Right Wing",
+    "map_locations": [
+      {
+        "map": "Fossil Donations",
+        "x": 1238,
+        "y": 825
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Ptera Right Wing"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Dainty Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 310,
+        "y": 53
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Dainty Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Solemn Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 617,
+        "y": 53
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Solemn Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Quaint Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 924,
+        "y": 53
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Quaint Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Basic Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 1231,
+        "y": 53
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Basic Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Famous Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 1538,
+        "y": 53
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Famous Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Perfect Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 310,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Perfect Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Amazing Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 617,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Amazing Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Nice Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 924,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Nice Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Moving Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 1231,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Moving Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Common Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 1538,
+        "y": 270
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Common Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Flowery Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 310,
+        "y": 487
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Flowery Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Warm Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 617,
+        "y": 487
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Warm Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Rare Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 924,
+        "y": 487
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Rare Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Fine Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 1231,
+        "y": 487
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Fine Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Scary Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 1538,
+        "y": 487
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Scary Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Lovely Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 310,
+        "y": 704
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Lovely Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Strange Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 617,
+        "y": 704
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Strange Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Worthy Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 924,
+        "y": 704
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Worthy Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Calm Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 1231,
+        "y": 704
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Calm Painting"
+      }
+    ]
+  },
+  {
+    "name": "Painting Donations: Opulent Painting",
+    "map_locations": [
+      {
+        "map": "Painting Donations",
+        "x": 1538,
+        "y": 704
+      }
+    ],
+    "sections": [
+      {
+        "name": "Donate Opulent Painting"
+      }
+    ]
+  }
+]

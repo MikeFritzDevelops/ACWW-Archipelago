@@ -25,6 +25,24 @@ MONTH_NAMES: tuple[str, ...] = (
 )
 
 
+FLOWER_RESOURCE_ITEMS: FrozenSet[str] = frozenset({
+    "Red Roses",
+    "White Roses",
+    "Pink Roses",
+    "Purple Roses",
+    "Black Roses",
+    "Blue Roses",
+})
+
+# Barren Town's guaranteed AP tree resources. Fruit is intentionally not used
+# as the logical tree unlock: Sapling/Cedar Sapling are the deterministic
+# habitat progression resources for ordinary tree-dependent bugs.
+TREE_RESOURCE_ITEMS: FrozenSet[str] = frozenset({
+    "Sapling",
+    "Cedar Sapling",
+})
+
+
 @dataclass(frozen=True)
 class Availability:
     """Logical requirements for naturally obtaining one creature."""
@@ -32,6 +50,8 @@ class Availability:
     months: FrozenSet[int]
     required_items: FrozenSet[str] = frozenset()
     any_item_groups: tuple[FrozenSet[str], ...] = ()
+    requires_flowers: bool = False
+    requires_trees: bool = False
     notes: tuple[str, ...] = ()
     high_rng: bool = False
 
@@ -52,13 +72,20 @@ def month_range(start: int, end: int) -> FrozenSet[int]:
 
 
 BUG_AVAILABILITY: dict[str, Availability] = {
-    "Common Butterfly": Availability(month_range(3, 9)),
-    "Yellow Butterfly": Availability(month_range(3, 9)),
+    "Common Butterfly": Availability(
+        month_range(3, 9),
+        requires_flowers=True,
+    ),
+    "Yellow Butterfly": Availability(
+        month_range(3, 9),
+        requires_flowers=True,
+    ),
     "Tiger Butterfly": Availability(
         month_range(3, 9),
         any_item_groups=(
             frozenset({"Red Roses", "Pink Roses"}),
         ),
+        requires_flowers=True,
         notes=("Near red or pink flowers.",),
     ),
     "Peacock Butterfly": Availability(
@@ -70,40 +97,75 @@ BUG_AVAILABILITY: dict[str, Availability] = {
                 "Black Roses",
             }),
         ),
+        requires_flowers=True,
         notes=("Near blue, purple, or black flowers.",),
     ),
-    "Monarch Butterfly": Availability(month_range(9, 11)),
-    "Emperor Butterfly": Availability(month_range(6, 9)),
-    "Agrias Butterfly": Availability(month_range(6, 9)),
+    "Monarch Butterfly": Availability(
+        month_range(9, 11),
+        requires_flowers=True,
+    ),
+    "Emperor Butterfly": Availability(
+        month_range(6, 9),
+        requires_flowers=True,
+    ),
+    "Agrias Butterfly": Availability(
+        month_range(6, 9),
+        requires_flowers=True,
+    ),
     "Birdwing Butterfly": Availability(
         month_range(3, 9),
+        requires_flowers=True,
         notes=("Very rare.",),
         high_rng=True,
     ),
     "Moth": Availability(month_range(3, 9)),
     "Oak Silk Moth": Availability(
         month_range(6, 8),
+        requires_trees=True,
         high_rng=True,
     ),
-    "Honeybee": Availability(month_range(3, 9)),
+    "Honeybee": Availability(
+        month_range(3, 9),
+        requires_flowers=True,
+    ),
     "Bee": Availability(
         ALL_MONTHS,
+        requires_trees=True,
         notes=("Shake trees; difficult catch setup in Wild World.",),
         high_rng=True,
     ),
     "Long Locust": Availability(month_range(8, 11)),
     "Migratory Locust": Availability(month_range(8, 11)),
-    "Mantis": Availability(month_range(8, 11)),
+    "Mantis": Availability(
+        month_range(8, 11),
+        requires_flowers=True,
+    ),
     "Orchid Mantis": Availability(
         month_range(8, 11),
         required_items=frozenset({"White Roses"}),
+        requires_flowers=True,
         notes=("On white flowers.",),
     ),
-    "Brown Cicada": Availability(month_range(7, 8)),
-    "Robust Cicada": Availability(month_range(7, 8)),
-    "Walker Cicada": Availability(month_range(7, 8)),
-    "Evening Cicada": Availability(month_range(7, 8)),
-    "Lantern Fly": Availability(month_range(6, 9)),
+    "Brown Cicada": Availability(
+        month_range(7, 8),
+        requires_trees=True,
+    ),
+    "Robust Cicada": Availability(
+        month_range(7, 8),
+        requires_trees=True,
+    ),
+    "Walker Cicada": Availability(
+        month_range(7, 8),
+        requires_trees=True,
+    ),
+    "Evening Cicada": Availability(
+        month_range(7, 8),
+        requires_trees=True,
+    ),
+    "Lantern Fly": Availability(
+        month_range(6, 9),
+        requires_trees=True,
+    ),
     "Red Dragonfly": Availability(month_range(9, 11)),
     "Darner Dragonfly": Availability(month_range(6, 8)),
     "Banded Dragonfly": Availability(month_range(7, 8)),
@@ -115,7 +177,9 @@ BUG_AVAILABILITY: dict[str, Availability] = {
     "Pondskater": Availability(month_range(3, 9)),
     "Snail": Availability(
         month_range(4, 9),
-        notes=("Requires rain; weather is not yet progression-gated.",),
+        requires_flowers=True,
+        required_items=frozenset({"Weather Control",}),
+        notes=("Requires rain",),
         high_rng=True
     ),
     "Cricket": Availability(month_range(9, 11)),
@@ -126,15 +190,25 @@ BUG_AVAILABILITY: dict[str, Availability] = {
         notes=("Underground; dig it up before catching it.",),
         high_rng=True,
     ),
-    "Walkingstick": Availability(month_range(7, 11)),
+    "Walkingstick": Availability(
+        month_range(7, 11),
+        requires_trees=True,
+    ),
     "Ladybug": Availability(
         frozenset({3, 4, 5, 6, 7, 10}),
+        requires_flowers=True,
     ),
-    "Fruit Beetle": Availability(month_range(7, 9)),
-    "Scarab Beetle": Availability(month_range(7, 8)),
+    "Fruit Beetle": Availability(
+        month_range(7, 9),
+        requires_trees=True,
+    ),
+    "Scarab Beetle": Availability(
+        month_range(7, 8),
+        requires_trees=True,
+    ),
     "Dung Beetle": Availability(
         month_range(12, 2),
-        notes=("Pushes snowballs; snow is not yet progression-gated.",),
+        notes=("Pushes snowballs.",),
         high_rng=True,
     ),
     "Goliath Beetle": Availability(
@@ -143,16 +217,35 @@ BUG_AVAILABILITY: dict[str, Availability] = {
         notes=("Requires coconut trees.",),
     ),
     "Firefly": Availability(months(6)),
-    "Jewel Beetle": Availability(month_range(7, 8)),
-    "Longhorn Beetle": Availability(month_range(6, 8)),
-    "Saw Stag Beetle": Availability(month_range(7, 8)),
-    "Stag Beetle": Availability(month_range(6, 8)),
+    "Jewel Beetle": Availability(
+        month_range(7, 8),
+        requires_trees=True,
+    ),
+    "Longhorn Beetle": Availability(
+        month_range(6, 8),
+        requires_trees=True,
+    ),
+    "Saw Stag Beetle": Availability(
+        month_range(7, 8),
+        requires_trees=True,
+    ),
+    "Stag Beetle": Availability(
+        month_range(6, 8),
+        requires_trees=True,
+    ),
     "Giant Beetle": Availability(
         month_range(7, 8),
+        requires_trees=True,
         notes=("Rare.",),
     ),
-    "Rainbow Stag Beetle": Availability(month_range(6, 9)),
-    "Dynastid Beetle": Availability(month_range(6, 9)),
+    "Rainbow Stag Beetle": Availability(
+        month_range(6, 9),
+        requires_trees=True,
+    ),
+    "Dynastid Beetle": Availability(
+        month_range(6, 9),
+        requires_trees=True,
+    ),
     "Atlas Beetle": Availability(
         month_range(7, 8),
         required_items=frozenset({"Coconut"}),
@@ -187,9 +280,13 @@ BUG_AVAILABILITY: dict[str, Availability] = {
             "trash or rafflesia can also work naturally.",
         ),
     ),
-    "Cockroach": Availability(ALL_MONTHS),
+    "Cockroach": Availability(
+        ALL_MONTHS,
+        requires_trees=True,
+    ),
     "Spider": Availability(
         month_range(3, 11),
+        requires_trees=True,
         notes=("Shake trees.",),
         high_rng=True
     ),
@@ -290,10 +387,8 @@ FISH_AVAILABILITY: dict[str, Availability] = {
     ),
     "Coelacanth": Availability(
         ALL_MONTHS,
-        notes=(
-            "Requires rain or snow; weather is not yet "
-            "progression-gated.",
-        ),
+        required_items=frozenset({"Weather Control",}),
+        notes=("Requires rain or snow",),
         high_rng=True,
     ),
 }
@@ -391,13 +486,35 @@ def can_catch_bug(
     state: "CollectionState",
     player: int,
     bug_name: str,
+    *,
+    barren_town: bool = False,
 ) -> bool:
     """Return whether AP logic considers the bug naturally catchable."""
-    return _meets_availability_requirements(
+    creature_availability = BUG_AVAILABILITY[bug_name]
+
+    if not _meets_availability_requirements(
         state,
         player,
-        BUG_AVAILABILITY[bug_name],
-    )
+        creature_availability,
+    ):
+        return False
+
+    if not barren_town:
+        return True
+
+    if (
+        creature_availability.requires_flowers
+        and not state.has_any(set(FLOWER_RESOURCE_ITEMS), player)
+    ):
+        return False
+
+    if (
+        creature_availability.requires_trees
+        and not state.has_any(set(TREE_RESOURCE_ITEMS), player)
+    ):
+        return False
+
+    return True
 
 
 def can_catch_fish(

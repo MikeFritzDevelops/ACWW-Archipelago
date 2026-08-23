@@ -15,6 +15,9 @@ class RomProfile:
     game_code: bytes
     revision: int
     memory: MemoryProfile
+    outside_state_address: int
+    bee_attack_data_address: int
+    bee_sequence_address: int
     sha1_hashes: frozenset[str] = frozenset()
 
     def matches_header(
@@ -37,6 +40,9 @@ USA_REV_1 = RomProfile(
     game_code=b"ADME",
     revision=1,
     memory=USA_REV_1_MEMORY,
+    outside_state_address=0x0E416C,
+    bee_attack_data_address=0x259558,
+    bee_sequence_address=0x2595A5,
     sha1_hashes=frozenset({
         "77FDE3E30E1E6068395D1F96EA63BE569B61C351",
     }),

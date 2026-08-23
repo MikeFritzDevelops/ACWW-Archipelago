@@ -28,7 +28,9 @@ MONTH_ITEM_AP_BASE = 4400
 BELL_AP_BASE = 5000
 FRUIT_AP_BASE = 5100
 ENVIRONMENT_AP_BASE = 5200
+CONTROLLER_UNLOCK_AP_BASE = 5300
 CLOTHING_AP_BASE = 6000
+TRAP_AP_BASE = 7000
 
 
 item_table: dict[str, ItemData] = {}
@@ -173,6 +175,25 @@ add_virtual_items(
 
 
 # ---------------------------------------------------------------------------
+# Master Controller unlocks
+# ---------------------------------------------------------------------------
+
+# Virtual utility unlocks handled by the client/Lua Master Controller.
+# Keeping these in their own category makes future controller abilities easy
+# to add without special-casing their AP delivery behavior.
+CONTROLLER_UNLOCKS: list[str] = [
+    "Weather Control",
+]
+
+add_virtual_items(
+    CONTROLLER_UNLOCKS,
+    ap_id_base=CONTROLLER_UNLOCK_AP_BASE,
+    classification=ItemClassification.useful,
+    category="controller_unlock",
+)
+
+
+# ---------------------------------------------------------------------------
 # Museum specimens
 # ---------------------------------------------------------------------------
 
@@ -273,6 +294,9 @@ ENVIRONMENT_ITEMS: list[NamedGameItem] = [
     ("Blue Roses", 0x148A),
     ("Coconut", 0x1548),
     ("Spoiled Turnips", 0x154A),
+    # Appended so existing environment-item AP IDs remain stable.
+    ("Sapling", 0x151D),
+    ("Cedar Sapling", 0x151E),
 ]
 
 add_named_items(
@@ -555,6 +579,26 @@ add_named_items(
 
 
 # ---------------------------------------------------------------------------
+# Trap items
+# ---------------------------------------------------------------------------
+
+# Trap items are virtual client-handled items.  The generator may add repeated
+# copies according to the Trap Count option.  Keep this list as the canonical
+# pool so future trap types can be added without changing generation logic.
+TRAPS: list[str] = [
+    "Bee Trap",
+    "Invisible Bee Trap",
+]
+
+add_virtual_items(
+    TRAPS,
+    ap_id_base=TRAP_AP_BASE,
+    classification=ItemClassification.trap,
+    category="trap",
+)
+
+
+# ---------------------------------------------------------------------------
 # Lookup tables
 # ---------------------------------------------------------------------------
 
@@ -596,6 +640,12 @@ month_item_names = [
     if data["category"] == "month"
 ]
 
+controller_unlock_item_names = [
+    name
+    for name, data in item_table.items()
+    if data["category"] == "controller_unlock"
+]
+
 bell_item_names = [
     name
     for name, data in item_table.items()
@@ -618,4 +668,11 @@ clothing_item_names = [
     name
     for name, data in item_table.items()
     if data["category"] == "clothing"
+]
+
+
+trap_item_names = [
+    name
+    for name, data in item_table.items()
+    if data["category"] == "trap"
 ]

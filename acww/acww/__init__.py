@@ -15,6 +15,7 @@ from .rules import set_acww_rules
 from .items import (
     bell_item_names,
     clothing_item_names,
+    controller_unlock_item_names,
     environment_item_names,
     fruit_item_names,
     golden_tool_item_names,
@@ -22,6 +23,7 @@ from .items import (
     item_table,
     month_item_names,
     starting_tool_item_names,
+    trap_item_names,
 )
 from .locations import (
     BUGS,
@@ -277,6 +279,10 @@ class AnimalCrossingWildWorldWorld(World):
         # Every golden tool remains an independent useful randomized reward.
         item_names.extend(golden_tool_item_names)
 
+        # Master Controller abilities are useful virtual unlocks. They are
+        # placed before traps/filler so trap count can never replace them.
+        item_names.extend(controller_unlock_item_names)
+
         # The configured starting month is granted immediately and excluded
         # from the randomized pool. The remaining eleven months are shuffled
         # as progression items.
@@ -334,6 +340,15 @@ class AnimalCrossingWildWorldWorld(World):
             "Spoiled Turnips": 1,
         }
 
+        # A barren town removes every naturally generated hardwood/fruit tree
+        # and cedar tree. Guarantee one reclaimable planting resource for each
+        # tree family so their bug habitats can be rebuilt through AP.
+        if self.options.barren_town:
+            required_environment_counts.update({
+                "Sapling": 1,
+                "Cedar Sapling": 1,
+            })
+
         unknown_environment_items = (
             set(required_environment_counts)
             - set(environment_item_names)
@@ -347,6 +362,30 @@ class AnimalCrossingWildWorldWorld(World):
 
         for item_name, count in required_environment_counts.items():
             item_names.extend([item_name] * count)
+
+        # Traps replace ordinary filler rather than increasing the total pool.
+        # The available trap list lives in items.py, so adding future trap types
+        # automatically makes them eligible for this random selection.
+        trap_count = int(self.options.trap_count)
+
+        if trap_count > 0:
+            if not trap_item_names:
+                raise ValueError(
+                    "Trap Count is enabled, but ACWW has no implemented traps."
+                )
+
+            available_slots = randomized_location_count - len(item_names)
+            if trap_count > available_slots:
+                raise ValueError(
+                    "Trap Count exceeds the number of filler-capable ACWW "
+                    f"locations ({trap_count} requested, {max(0, available_slots)} "
+                    "available)."
+                )
+
+            item_names.extend(
+                self.random.choice(trap_item_names)
+                for _ in range(trap_count)
+            )
 
         filler_count = max(
             0,
@@ -391,11 +430,14 @@ class AnimalCrossingWildWorldWorld(World):
     def fill_slot_data(self) -> dict:
         """Send generated options and enabled location IDs to the client."""
         return {
-            "client_version": 2,
+            "client_version": 3,
             "enabled_locations": sorted(
                 self.get_enabled_locations().values()
             ),
             "start_with_tools": bool(self.options.start_with_tools),
+            "skip_nook_tutorial": bool(self.options.skip_nook_tutorial),
+            "barren_town": bool(self.options.barren_town),
+            "trap_count": int(self.options.trap_count),
             "four_leaf_clover_check": bool(
                 self.options.four_leaf_clover_check
             ),

@@ -37,6 +37,7 @@ class MemoryProfile:
     house_debt_address: int
     initial_house_debt: int
     post_tutorial_house_debt: int
+    nook_tutorial_flag_address: int
 
     bug_count: int
     fish_count: int
@@ -46,17 +47,31 @@ class MemoryProfile:
     clock_offset_bus_address: int
     time_struct_bus_address: int
 
+    weather_current_bus_address: int
+    weather_target_bus_address: int
+    weather_precipitation_bus_address: int
+
     town_object_bus_address: int
     town_object_slot_count: int
     first_weed_object_id: int
     last_weed_object_id: int
     empty_town_object_id: int
 
+    @property
+    def town_object_base_address(self) -> int:
+        """Return the outdoor town-object table as a Main RAM offset."""
+        return self.town_object_bus_address - MAIN_RAM_BUS_OFFSET
+
     def to_lua_payload(self) -> dict[str, int]:
         """Return the fields used directly by the Lua Master Controller."""
         return {
             "clock_offset_address": self.clock_offset_bus_address,
             "time_struct_address": self.time_struct_bus_address,
+            "weather_current_address": self.weather_current_bus_address,
+            "weather_target_address": self.weather_target_bus_address,
+            "weather_precipitation_address": (
+                self.weather_precipitation_bus_address
+            ),
             "inventory_base_address": (
                 self.inventory_base_address + MAIN_RAM_BUS_OFFSET
             ),
@@ -116,6 +131,7 @@ USA_REV_1_MEMORY = MemoryProfile(
     house_debt_address=0x1E6E38,
     initial_house_debt=19800,
     post_tutorial_house_debt=18400,
+    nook_tutorial_flag_address=0x1ED3BC,
 
     bug_count=56,
     fish_count=56,
@@ -124,6 +140,11 @@ USA_REV_1_MEMORY = MemoryProfile(
 
     clock_offset_bus_address=0x021ED304,
     time_struct_bus_address=0x021D72EC,
+
+    # Runtime outdoor weather manager (verified on USA Rev 1).
+    weather_current_bus_address=0x021F146C,
+    weather_target_bus_address=0x021F1470,
+    weather_precipitation_bus_address=0x021F147C,
 
     town_object_bus_address=0x021E36A4,
     town_object_slot_count=0x1000,

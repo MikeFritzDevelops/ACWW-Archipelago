@@ -1,0 +1,82 @@
+{
+  "fish_donations_layout": {
+    "type": "itemgrid",
+    "item_size": "180,105",
+    "item_margin": "5,5",
+    "h_alignment": "center",
+    "item_h_alignment": "center",
+    "rows": [
+      [
+        "donate_fish_bitterling",
+        "donate_fish_pale_chub",
+        "donate_fish_crucian_carp",
+        "donate_fish_dace",
+        "donate_fish_barbel_steed",
+        "donate_fish_carp",
+        "donate_fish_koi",
+        "donate_fish_goldfish"
+      ],
+      [
+        "donate_fish_popeyed_goldfish",
+        "donate_fish_killifish",
+        "donate_fish_crawfish",
+        "donate_fish_frog",
+        "donate_fish_freshwater_goby",
+        "donate_fish_loach",
+        "donate_fish_catfish",
+        "donate_fish_eel"
+      ],
+      [
+        "donate_fish_giant_snakehead",
+        "donate_fish_bluegill",
+        "donate_fish_yellow_perch",
+        "donate_fish_black_bass",
+        "donate_fish_pond_smelt",
+        "donate_fish_sweetfish",
+        "donate_fish_cherry_salmon",
+        "donate_fish_char"
+      ],
+      [
+        "donate_fish_rainbow_trout",
+        "donate_fish_stringfish",
+        "donate_fish_salmon",
+        "donate_fish_king_salmon",
+        "donate_fish_guppy",
+        "donate_fish_angelfish",
+        "donate_fish_piranha",
+        "donate_fish_arowana"
+      ],
+      [
+        "donate_fish_dorado",
+        "donate_fish_gar",
+        "donate_fish_arapaima",
+        "donate_fish_sea_butterfly",
+        "donate_fish_jellyfish",
+        "donate_fish_seahorse",
+        "donate_fish_clownfish",
+        "donate_fish_zebra_turkeyfish"
+      ],
+      [
+        "donate_fish_pufferfish",
+        "donate_fish_horse_mackerel",
+        "donate_fish_barred_knifejaw",
+        "donate_fish_sea_bass",
+        "donate_fish_red_snapper",
+        "donate_fish_dab",
+        "donate_fish_olive_flounder",
+        "donate_fish_squid"
+      ],
+      [
+        "donate_fish_octopus",
+        "donate_fish_football_fish",
+        "donate_fish_tuna",
+        "donate_fish_blue_marlin",
+        "donate_fish_ocean_sunfish",
+        "donate_fish_hammerhead_shark",
+        "donate_fish_shark",
+        "donate_fish_coelacanth"
+      ]
+    ],
+    "margin": "20,12,20,12"
+  }
+}

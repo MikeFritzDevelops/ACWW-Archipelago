@@ -39,7 +39,12 @@ def _bug_donation_predicate(
 ) -> AccessPredicate:
     return lambda state: (
         state.has(f"Bug: {bug_name}", world.player)
-        and can_catch_bug(state, world.player, bug_name)
+        or can_catch_bug(
+            state,
+            world.player,
+            bug_name,
+            barren_town=bool(world.options.barren_town),
+        )
     )
 
 
@@ -49,7 +54,7 @@ def _fish_donation_predicate(
 ) -> AccessPredicate:
     return lambda state: (
         state.has(f"Fish: {fish_name}", world.player)
-        and can_catch_fish(state, world.player, fish_name)
+        or can_catch_fish(state, world.player, fish_name)
     )
 
 
@@ -94,6 +99,7 @@ def _set_bug_rules(
                         state,
                         world.player,
                         bug_name,
+                        barren_town=bool(world.options.barren_town),
                     ),
             )
 
@@ -167,6 +173,7 @@ def _set_journal_milestone_rules(
                         state,
                         world.player,
                         bug_name,
+                        barren_town=bool(world.options.barren_town),
                     )
             )
             for bug_name in BUGS

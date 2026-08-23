@@ -23,250 +23,7 @@ SOFTWARE.
 -- Animal Crossing: Wild World Archipelago connector
 local SCRIPT_VERSION = 1
 
--- Set to log incoming requests
--- Will cause lag due to large console output
 local DEBUG = false
-
---[[
-This script expects to receive JSON and will send JSON back. A message should
-be a list of 1 or more requests which will be executed in order. Each request
-will have a corresponding response in the same order.
-
-Every individual request and response is a JSON object with at minimum one
-field `type`. The value of `type` determines what other fields may exist.
-
-To get the script version, instead of JSON, send "VERSION" to get the script
-version directly (e.g. "2").
-
-#### Ex. 1
-
-Request: `[{"type": "PING"}]`
-
-Response: `[{"type": "PONG"}]`
-
----
-
-#### Ex. 2
-
-Request: `[{"type": "LOCK"}, {"type": "HASH"}]`
-
-Response: `[{"type": "LOCKED"}, {"type": "HASH_RESPONSE", "value": "F7D18982"}]`
-
----
-
-#### Ex. 3
-
-Request:
-
-```json
-[
-    {"type": "GUARD", "address": 100, "expected_data": "aGVsbG8=", "domain": "System Bus"},
-    {"type": "READ", "address": 500, "size": 4, "domain": "ROM"}
-]
-```
-
-Response:
-
-```json
-[
-    {"type": "GUARD_RESPONSE", "address": 100, "value": true},
-    {"type": "READ_RESPONSE", "value": "dGVzdA=="}
-]
-```
-
----
-
-#### Ex. 4
-
-Request:
-
-```json
-[
-    {"type": "GUARD", "address": 100, "expected_data": "aGVsbG8=", "domain": "System Bus"},
-    {"type": "READ", "address": 500, "size": 4, "domain": "ROM"}
-]
-```
-
-Response:
-
-```json
-[
-    {"type": "GUARD_RESPONSE", "address": 100, "value": false},
-    {"type": "GUARD_RESPONSE", "address": 100, "value": false}
-]
-```
-
----
-
-### Supported Request Types
-
-- `PING`  
-    Does nothing; resets timeout.
-
-    Expected Response Type: `PONG`
-
-- `SYSTEM`  
-    Returns the system of the currently loaded ROM (N64, GBA, etc...).
-
-    Expected Response Type: `SYSTEM_RESPONSE`
-
-- `PREFERRED_CORES`  
-    Returns the user's default cores for systems with multiple cores. If the
-    current ROM's system has multiple cores, the one that is currently
-    running is very probably the preferred core.
-
-    Expected Response Type: `PREFERRED_CORES_RESPONSE`
-
-- `HASH`  
-    Returns the hash of the currently loaded ROM calculated by BizHawk.
-
-    Expected Response Type: `HASH_RESPONSE`
-
-- `MEMORY_SIZE`  
-    Returns the size in bytes of the specified memory domain.
-
-    Expected Response Type: `MEMORY_SIZE_RESPONSE`
-
-    Additional Fields:
-    - `domain` (`string`): The name of the memory domain to check
-
-- `GUARD`  
-    Checks a section of memory against `expected_data`. If the bytes starting
-    at `address` do not match `expected_data`, the response will have `value`
-    set to `false`, and all subsequent requests will not be executed and
-    receive the same `GUARD_RESPONSE`.
-
-    Expected Response Type: `GUARD_RESPONSE`
-
-    Additional Fields:
-    - `address` (`int`): The address of the memory to check
-    - `expected_data` (string): A base64 string of contiguous data
-    - `domain` (`string`): The name of the memory domain the address
-    corresponds to
-
-- `LOCK`  
-    Halts emulation and blocks on incoming requests until an `UNLOCK` request
-    is received or the client times out. All requests processed while locked
-    will happen on the same frame.
-
-    Expected Response Type: `LOCKED`
-
-- `UNLOCK`  
-    Resumes emulation after the current list of requests is done being
-    executed.
-
-    Expected Response Type: `UNLOCKED`
-
-- `READ`  
-    Reads an array of bytes at the provided address.
-
-    Expected Response Type: `READ_RESPONSE`
-
-    Additional Fields:
-    - `address` (`int`): The address of the memory to read
-    - `size` (`int`): The number of bytes to read
-    - `domain` (`string`): The name of the memory domain the address
-    corresponds to
-
-- `WRITE`  
-    Writes an array of bytes to the provided address.
-
-    Expected Response Type: `WRITE_RESPONSE`
-
-    Additional Fields:
-    - `address` (`int`): The address of the memory to write to
-    - `value` (`string`): A base64 string representing the data to write
-    - `domain` (`string`): The name of the memory domain the address
-    corresponds to
-
-- `DISPLAY_MESSAGE`  
-    Adds a message to the message queue which will be displayed using
-    `gui.addmessage` according to the message interval.
-
-    Expected Response Type: `DISPLAY_MESSAGE_RESPONSE`
-
-    Additional Fields:
-    - `message` (`string`): The string to display
-
-- `SET_MESSAGE_INTERVAL`  
-    Sets the minimum amount of time to wait between displaying messages.
-    Potentially useful if you add many messages quickly but want players
-    to be able to read each of them.
-
-    Expected Response Type: `SET_MESSAGE_INTERVAL_RESPONSE`
-
-    Additional Fields:
-    - `value` (`number`): The number of seconds to set the interval to
-
-
-### Response Types
-
-- `PONG`  
-    Acknowledges `PING`.
-
-- `SYSTEM_RESPONSE`  
-    Contains the name of the system for currently running ROM.
-
-    Additional Fields:
-    - `value` (`string`): The returned system name
-
-- `PREFERRED_CORES_RESPONSE`  
-    Contains the user's preferred cores for systems with multiple supported
-    cores. Currently includes NES, SNES, GB, GBC, DGB, SGB, PCE, PCECD, and
-    SGX.
-
-    Additional Fields:
-    - `value` (`{[string]: [string]}`): A dictionary map from system name to
-    core name
-
-- `HASH_RESPONSE`  
-    Contains the hash of the currently loaded ROM calculated by BizHawk.
-
-    Additional Fields:
-    - `value` (`string`): The returned hash
-
-- `MEMORY_SIZE_RESPONSE`  
-    Contains the size in bytes of the specified memory domain.
-
-    Additional Fields:
-    - `value` (`number`): The size of the domain in bytes
-
-- `GUARD_RESPONSE`  
-    The result of an attempted `GUARD` request.
-
-    Additional Fields:
-    - `value` (`boolean`): true if the memory was validated, false if not
-    - `address` (`int`): The address of the memory that was invalid (the same
-    address provided by the `GUARD`, not the address of the individual invalid
-    byte)
-
-- `LOCKED`  
-    Acknowledges `LOCK`.
-
-- `UNLOCKED`  
-    Acknowledges `UNLOCK`.
-
-- `READ_RESPONSE`  
-    Contains the result of a `READ` request.
-
-    Additional Fields:
-    - `value` (`string`): A base64 string representing the read data
-
-- `WRITE_RESPONSE`  
-    Acknowledges `WRITE`.
-
-- `DISPLAY_MESSAGE_RESPONSE`  
-    Acknowledges `DISPLAY_MESSAGE`.
-
-- `SET_MESSAGE_INTERVAL_RESPONSE`  
-    Acknowledges `SET_MESSAGE_INTERVAL`.
-
-- `ERROR`  
-    Signifies that something has gone wrong while processing a request.
-
-    Additional Fields:
-    - `err` (`string`): A description of the problem
-]]
 
 local bizhawk_version = client.getversion()
 local bizhawk_major, bizhawk_minor, bizhawk_patch = bizhawk_version:match("(%d+)%.(%d+)%.?(%d*)")
@@ -468,6 +225,8 @@ local ACWW_RECLAIMABLE_RESOURCES = {
     {name = "Pear", game_id = 0x151A},
     {name = "Peach", game_id = 0x151B},
     {name = "Cherry", game_id = 0x151C},
+    {name = "Sapling", game_id = 0x151D},
+    {name = "Cedar Sapling", game_id = 0x151E},
     {name = "Red Roses", game_id = 0x1483},
     {name = "White Roses", game_id = 0x1484},
     {name = "Pink Roses", game_id = 0x1486},
@@ -485,6 +244,12 @@ local ACWW_RECLAIMABLE_RESOURCES = {
 }
 
 local acww_unlocked_months = {}
+local acww_unlocked_controls = {}
+local acww_weather_control_unlocked = false
+local acww_weather_override_enabled = false
+local acww_weather_button = nil
+local acww_weather_snapshot = nil
+local acww_weather_was_outside = false
 local acww_claimables = {}
 local acww_claimables_by_name = {}
 local acww_claimable_buttons = {}
@@ -1296,11 +1061,195 @@ local function acww_remove_all_weeds()
 end
 
 
+local function acww_has_controller_unlock(name)
+    for _, unlocked_name in ipairs(acww_unlocked_controls) do
+        if unlocked_name == name then
+            return true
+        end
+    end
+    return false
+end
+
+local function acww_weather_kind_for_month(month)
+    if month == 12 or month == 1 or month == 2 then
+        return "Snow", 2
+    end
+    return "Rain", 1
+end
+
+local function acww_is_player_outside()
+    local _, arm9 = acww_get_domains()
+    if arm9 == nil or type(acww_rom_profile) ~= "table" then
+        return false
+    end
+    local address = tonumber(acww_rom_profile["outside_state_address"])
+    if address == nil then
+        return false
+    end
+    return memory.read_u8(address, arm9) == 0
+end
+
+local function acww_read_weather_state()
+    local _, arm9 = acww_get_domains()
+    if arm9 == nil then
+        error("Weather Control could not find ARM9 System Bus.")
+    end
+    local profile = acww_require_memory_profile()
+    return {
+        current = memory.read_u32_le(profile["weather_current_address"], arm9),
+        target = memory.read_u32_le(profile["weather_target_address"], arm9),
+        precipitation = memory.read_u32_le(
+            profile["weather_precipitation_address"],
+            arm9
+        ),
+    }
+end
+
+local function acww_write_weather_state(current, target, precipitation)
+    local _, arm9 = acww_get_domains()
+    if arm9 == nil then
+        error("Weather Control could not find ARM9 System Bus.")
+    end
+    local profile = acww_require_memory_profile()
+    memory.write_u32_le(profile["weather_current_address"], current, arm9)
+    memory.write_u32_le(profile["weather_target_address"], target, arm9)
+    memory.write_u32_le(
+        profile["weather_precipitation_address"],
+        precipitation,
+        arm9
+    )
+end
+
+local function acww_update_weather_button()
+    if acww_weather_button == nil then
+        return
+    end
+
+    forms.setproperty(
+        acww_weather_button,
+        "Enabled",
+        acww_weather_control_unlocked
+    )
+
+    if not acww_weather_control_unlocked then
+        forms.settext(acww_weather_button, "Weather: Locked")
+        return
+    end
+
+    if not acww_weather_override_enabled then
+        forms.settext(acww_weather_button, "Weather: OFF")
+        return
+    end
+
+    local ok, current = pcall(acww_read_game_time)
+    if not ok then
+        forms.settext(acww_weather_button, "Weather: ON")
+        return
+    end
+
+    local weather_name, _ = acww_weather_kind_for_month(current.month)
+    forms.settext(
+        acww_weather_button,
+        "Weather: " .. weather_name .. " ON"
+    )
+end
+
+local function acww_maintain_weather_override()
+    if not acww_weather_override_enabled then
+        acww_weather_was_outside = false
+        return
+    end
+
+    if not acww_weather_control_unlocked then
+        acww_weather_override_enabled = false
+        acww_weather_snapshot = nil
+        acww_weather_was_outside = false
+        acww_update_weather_button()
+        return
+    end
+
+    if not acww_is_player_outside() then
+        -- The outdoor manager is rebuilt across building transitions. Capture
+        -- a fresh natural state after the player returns outside.
+        acww_weather_snapshot = nil
+        acww_weather_was_outside = false
+        return
+    end
+
+    local current_state = acww_read_weather_state()
+    if not acww_weather_was_outside or acww_weather_snapshot == nil then
+        acww_weather_snapshot = current_state
+    end
+
+    local game_time = acww_read_game_time()
+    local _, precipitation = acww_weather_kind_for_month(game_time.month)
+
+    if (
+        current_state.current ~= 4
+        or current_state.target ~= 4
+        or current_state.precipitation ~= precipitation
+    ) then
+        acww_write_weather_state(4, 4, precipitation)
+    end
+
+    acww_weather_was_outside = true
+    acww_update_weather_button()
+end
+
+local function acww_toggle_weather_override()
+    if not acww_weather_control_unlocked then
+        return
+    end
+
+    local ok, message = pcall(function()
+        if acww_weather_override_enabled then
+            acww_weather_override_enabled = false
+
+            if acww_is_player_outside() and acww_weather_snapshot ~= nil then
+                acww_write_weather_state(
+                    acww_weather_snapshot.current,
+                    acww_weather_snapshot.target,
+                    acww_weather_snapshot.precipitation
+                )
+            end
+
+            acww_weather_snapshot = nil
+            acww_weather_was_outside = false
+            forms.settext(
+                acww_status_label,
+                "Weather override disabled; natural weather restored."
+            )
+        else
+            acww_weather_override_enabled = true
+            acww_weather_snapshot = nil
+            acww_weather_was_outside = false
+            acww_maintain_weather_override()
+
+            local game_time = acww_read_game_time()
+            local weather_name, _ = acww_weather_kind_for_month(game_time.month)
+            forms.settext(
+                acww_status_label,
+                weather_name .. " weather override enabled."
+            )
+        end
+
+        acww_update_weather_button()
+    end)
+
+    if not ok then
+        forms.settext(
+            acww_status_label,
+            "ERROR: " .. tostring(message)
+        )
+    end
+end
+
 local function acww_destroy_time_form()
     if acww_time_form ~= nil then
         forms.destroy(acww_time_form)
         acww_time_form = nil
         acww_month_dropdown = nil
+        acww_weather_button = nil
         acww_claimable_buttons = {}
         acww_specimen_category_dropdown = nil
         acww_specimen_dropdown = nil
@@ -1695,13 +1644,23 @@ local function acww_create_time_form()
         35
     )
 
+    acww_weather_button = forms.button(
+        acww_time_form,
+        "Weather: Locked",
+        acww_toggle_weather_override,
+        20,
+        225,
+        170,
+        35
+    )
+
     forms.button(
         acww_time_form,
         "Restore AP Progress",
         acww_restore_ap_progress,
-        20,
+        210,
         225,
-        360,
+        170,
         35
     )
 
@@ -1835,6 +1794,7 @@ local function acww_create_time_form()
         acww_update_month_dropdown()
     end
     acww_update_claimable_buttons()
+    acww_update_weather_button()
     if (
         acww_specimen_category_dropdown ~= nil
         and acww_specimen_dropdown ~= nil
@@ -2063,6 +2023,35 @@ local function acww_set_unlocked_months(months)
 end
 
 
+local function acww_set_unlocked_controls(controls)
+    local sanitized = {}
+    local seen = {}
+
+    if type(controls) == "table" then
+        for _, raw_name in ipairs(controls) do
+            local name = tostring(raw_name)
+            if name ~= "" and not seen[name] then
+                seen[name] = true
+                table.insert(sanitized, name)
+            end
+        end
+    end
+
+    table.sort(sanitized)
+    acww_unlocked_controls = sanitized
+    acww_weather_control_unlocked =
+        acww_has_controller_unlock("Weather Control")
+
+    if not acww_weather_control_unlocked then
+        acww_weather_override_enabled = false
+        acww_weather_snapshot = nil
+        acww_weather_was_outside = false
+    end
+
+    acww_update_weather_button()
+end
+
+
 function lock ()
     locked = true
     client_socket:settimeout(2)
@@ -2198,19 +2187,11 @@ request_handlers = {
 
         acww_rom_profile = profile
         acww_memory = profile["memory"]
-
-        acww_set_unlocked_months(
-            state["unlocked_months"]
-        )
-        acww_set_claimables(
-            state["claimables"]
-        )
-        acww_set_reclaimable_specimens(
-            state["reclaimable_specimens"]
-        )
-        acww_set_restore_progress(
-            state["restore_progress"]
-        )
+        acww_set_unlocked_months(state["unlocked_months"])
+        acww_set_unlocked_controls(state["unlocked_controls"])
+        acww_set_claimables(state["claimables"])
+        acww_set_reclaimable_specimens(state["reclaimable_specimens"])
+        acww_set_restore_progress(state["restore_progress"])
 
         if acww_time_form == nil then
             acww_create_time_form()
@@ -2219,11 +2200,58 @@ request_handlers = {
         if acww_time_form ~= nil then
             acww_update_month_dropdown()
             acww_update_claimable_buttons()
+            acww_update_weather_button()
             acww_update_specimen_dropdown(true)
             acww_refresh_form_labels()
         end
 
         res["type"] = "SET_ACWW_STATE_RESPONSE"
+        return res
+    end,
+
+    ["UPDATE_ACWW_STATE"] = function (req)
+        local res = {}
+        local state =
+            type(req["state"]) == "table"
+            and req["state"]
+            or {}
+
+        -- Incremental updates deliberately touch only the state/UI that
+        -- actually changed. In particular, restore_progress is data-only and
+        -- must not rebuild any Master Controller controls.
+        if state["unlocked_months"] ~= nil then
+            acww_set_unlocked_months(state["unlocked_months"])
+            if acww_time_form ~= nil then
+                acww_update_month_dropdown()
+            end
+        end
+
+        if state["unlocked_controls"] ~= nil then
+            acww_set_unlocked_controls(state["unlocked_controls"])
+        end
+
+        if state["claimables"] ~= nil then
+            acww_set_claimables(state["claimables"])
+            if acww_time_form ~= nil then
+                acww_update_claimable_buttons()
+            end
+        end
+
+        if state["reclaimable_specimens"] ~= nil then
+            acww_set_reclaimable_specimens(
+                state["reclaimable_specimens"]
+            )
+            if acww_time_form ~= nil then
+                acww_previous_specimen_category = nil
+                acww_update_specimen_dropdown(true)
+            end
+        end
+
+        if state["restore_progress"] ~= nil then
+            acww_set_restore_progress(state["restore_progress"])
+        end
+
+        res["type"] = "UPDATE_ACWW_STATE_RESPONSE"
         return res
     end,
 
@@ -2382,8 +2410,17 @@ function send_receive ()
                         failed_guard_response = response
                     end
                 else
-                    if type(response) ~= "string" then response = "Unknown error" end
-                    res[i] = {type = "ERROR", err = response}
+                    local error_text = tostring(response)
+                    print(
+                        "[ACWW DIAG] Request "
+                        .. tostring(req["type"])
+                        .. " failed: "
+                        .. error_text
+                        .. " (Lua type: "
+                        .. type(response)
+                        .. ")"
+                    )
+                    res[i] = {type = "ERROR", err = error_text}
                 end
             end
         end
@@ -2468,6 +2505,7 @@ function main ()
         if acww_time_form ~= nil then
             acww_refresh_form_labels()
             acww_update_specimen_dropdown(false)
+            acww_maintain_weather_override()
         end
         draw_persistent_overlay()
         draw_acww_notification()
@@ -2498,6 +2536,14 @@ else
     end
 
     rom_hash = gameinfo.getromhash()
+    print("[ACWW DIAG] BizHawk version: " .. tostring(bizhawk_version))
+    print("[ACWW DIAG] Lua version: " .. tostring(_VERSION))
+    print("[ACWW DIAG] System ID: " .. tostring(emu.getsystemid()))
+    print("[ACWW DIAG] Loaded ROM hash: " .. tostring(rom_hash))
+    print("[ACWW DIAG] Memory domains:")
+    for _, domain in ipairs(memory.getmemorydomainlist()) do
+        print("[ACWW DIAG]   " .. tostring(domain))
+    end
 
     -- Create the ACWW controller only after SET_ACWW_STATE arrives.
     -- This avoids updating partially initialized .NET form controls.
@@ -2509,7 +2555,9 @@ else
         local status, err = coroutine.resume(co)
 
         if not status and err ~= "cannot resume dead coroutine" then
-            print("\nERROR: "..err)
+            print("\n[ACWW DIAG] Coroutine failure")
+            print("[ACWW DIAG] Error: " .. tostring(err))
+            print("[ACWW DIAG] Error Lua type: " .. type(err))
             print("Consider reporting this crash.\n")
     
             if server ~= nil then

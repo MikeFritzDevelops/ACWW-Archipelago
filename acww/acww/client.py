@@ -92,6 +92,34 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
 
     OVERLAY_UPDATE_INTERVAL_SECONDS = 1.0
     INVENTORY_STABLE_SECONDS = 2.0
+    BEE_TREE_CHECK_INTERVAL_SECONDS = 5.0
+    TRAP_COOLDOWN_SECONDS = 60.0
+    TRAP_OUTSIDE_STABLE_SECONDS = 5.0
+
+    BEE_ATTACK_DATA_VALUE = 0x0011FF00
+    BEE_IDLE_SEQUENCE_VALUE = 0x13
+    BEE_TRAP_SEQUENCE_VALUES = {
+        "Bee Trap": 0x04,
+        "Invisible Bee Trap": 0x02,
+    }
+
+    NORMAL_TREE_OBJECT_ID = 0x002A
+    NORMAL_TREE_WITH_BEEHIVE_OBJECT_ID = 0x0067
+    CEDAR_TREE_OBJECT_ID = 0x0061
+    CEDAR_TREE_WITH_BEEHIVE_OBJECT_ID = 0x006B
+
+    # QoL: immediately mature planted/growing trees. Money trees are
+    # intentionally excluded so this cannot be used to generate instant bells.
+    TREE_GROWTH_TO_MATURE = {
+        **{object_id: 0x002A for object_id in range(0x0025, 0x002A)},  # Normal
+        **{object_id: 0x0033 for object_id in range(0x002F, 0x0033)},  # Peach
+        **{object_id: 0x003B for object_id in range(0x0037, 0x003B)},  # Apple
+        **{object_id: 0x0043 for object_id in range(0x003F, 0x0043)},  # Orange
+        **{object_id: 0x004B for object_id in range(0x0047, 0x004B)},  # Pear
+        **{object_id: 0x0053 for object_id in range(0x004F, 0x0053)},  # Cherry
+        **{object_id: 0x0061 for object_id in range(0x005C, 0x0061)},  # Evergreen
+        **{object_id: 0x00CC for object_id in range(0x00C7, 0x00CC)},  # Coconut
+    }
 
     def _require_rom_profile(self) -> RomProfile:
         profile = self.rom_profile
@@ -570,13 +598,16 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         item_name: str,
         *,
         delivered_to_inventory: bool,
+        detail_line_override: str | None = None,
     ) -> None:
         sender_name = self._player_name(
             ctx,
             network_item.player,
         )
 
-        if delivered_to_inventory:
+        if detail_line_override is not None:
+            detail_line = detail_line_override
+        elif delivered_to_inventory:
             detail_line = "Added to your inventory"
         else:
             detail_line = "Unlock activated"
@@ -651,6 +682,25 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
 
             if month_number is not None:
                 unlocked.add(month_number)
+
+        return sorted(unlocked)
+
+    def _get_unlocked_controller_controls(
+        self,
+        ctx: "BizHawkClientContext",
+    ) -> list[str]:
+        """Return Master Controller abilities permanently unlocked by AP."""
+        unlocked: set[str] = set()
+
+        for network_item in ctx.items_received:
+            item_data = received_item_data_by_ap_id.get(
+                network_item.item
+            )
+            if not item_data:
+                continue
+            if item_data.get("category") != "controller_unlock":
+                continue
+            unlocked.add(str(item_data["name"]))
 
         return sorted(unlocked)
 
@@ -920,10 +970,12 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         self,
         ctx: "BizHawkClientContext",
         unlocked_months: list[int],
+        unlocked_controls: list[str],
         claimables: list[dict[str, int | str]],
         reclaimable_specimens: list[dict[str, int | str]],
         restore_payload: dict[str, list[int]],
     ) -> None:
+        """Initialize the Lua controller once, then send only changed sections."""
         profile = self._require_rom_profile()
 
         controller_state = {
@@ -931,8 +983,12 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                 "key": profile.key,
                 "display_name": profile.display_name,
                 "memory": profile.memory.to_lua_payload(),
+                "outside_state_address": (
+                    0x02000000 + profile.outside_state_address
+                ),
             },
             "unlocked_months": list(unlocked_months),
+            "unlocked_controls": list(unlocked_controls),
             "claimables": [
                 dict(claimable)
                 for claimable in claimables
@@ -947,31 +1003,67 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
             },
         }
 
-        if controller_state == getattr(
+        previous_state = getattr(
             self,
             "_controller_state_sent_to_lua",
             None,
-        ):
+        )
+
+        # The full state is only needed when the Lua controller is first
+        # initialized for this ROM/slot connection.
+        if previous_state is None:
+            responses = await bizhawk.send_requests(
+                ctx.bizhawk_ctx,
+                [{
+                    "type": "SET_ACWW_STATE",
+                    "state": controller_state,
+                }],
+            )
+
+            if (
+                not responses
+                or responses[0].get("type")
+                != "SET_ACWW_STATE_RESPONSE"
+            ):
+                raise bizhawk.SyncError(
+                    "BizHawk connector did not acknowledge "
+                    "SET_ACWW_STATE."
+                )
+
+            self._controller_state_sent_to_lua = controller_state
+            return
+
+        changed_state = {
+            key: controller_state[key]
+            for key in (
+                "unlocked_months",
+                "unlocked_controls",
+                "claimables",
+                "reclaimable_specimens",
+                "restore_progress",
+            )
+            if controller_state[key] != previous_state.get(key)
+        }
+
+        if not changed_state:
             return
 
         responses = await bizhawk.send_requests(
             ctx.bizhawk_ctx,
-            [
-                {
-                    "type": "SET_ACWW_STATE",
-                    "state": controller_state,
-                }
-            ],
+            [{
+                "type": "UPDATE_ACWW_STATE",
+                "state": changed_state,
+            }],
         )
 
         if (
             not responses
             or responses[0].get("type")
-            != "SET_ACWW_STATE_RESPONSE"
+            != "UPDATE_ACWW_STATE_RESPONSE"
         ):
             raise bizhawk.SyncError(
                 "BizHawk connector did not acknowledge "
-                "SET_ACWW_STATE."
+                "UPDATE_ACWW_STATE."
             )
 
         self._controller_state_sent_to_lua = controller_state
@@ -985,19 +1077,20 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
     def _delivery_state_key(
         self,
         ctx: "BizHawkClientContext",
-    ) -> str:
-        """
-        Build a stable key for this generated slot.
+    ) -> str | None:
+        """Build a persistent key only when AP exposes a real seed identity.
 
-        seed_name distinguishes different generated games; team/slot keeps
-        multiplayer slots separate. Fallbacks keep this compatible with
-        slightly different BizHawk context versions.
+        Never persist under a generic fallback: doing so can make unrelated
+        generated seeds with the same team/slot/auth share delivery/trap state.
         """
-        seed_name = str(
+        seed_value = (
             getattr(ctx, "seed_name", None)
             or getattr(ctx, "seed", None)
-            or "unknown-seed"
         )
+        if not seed_value:
+            return None
+
+        seed_name = str(seed_value)
         team = int(getattr(ctx, "team", 0) or 0)
         slot = int(getattr(ctx, "slot", 0) or 0)
         auth = str(getattr(ctx, "auth", "") or "")
@@ -1060,6 +1153,18 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         state_key = self._delivery_state_key(ctx)
         state_data = self._read_delivery_state_file()
 
+        if state_key is None:
+            # No trustworthy seed identity means disk persistence is unsafe.
+            # Preserve the old migration behavior without sharing state across seeds.
+            server_checked = set(
+                getattr(ctx, "checked_locations", set()) or set()
+            )
+            return (
+                len(ctx.items_received)
+                if completed_locations or server_checked
+                else 0
+            )
+
         if state_key in state_data:
             cursor = min(
                 state_data[state_key],
@@ -1103,9 +1208,239 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
         cursor: int,
     ) -> None:
         state_key = self._delivery_state_key(ctx)
+        if state_key is None:
+            return
         state_data = self._read_delivery_state_file()
         state_data[state_key] = max(0, cursor)
         self._write_delivery_state_file(state_data)
+
+    TRAP_STATE_PATH = (
+        Path.home()
+        / ".archipelago"
+        / "acww_trap_state.json"
+    )
+
+    def _read_trap_state_file(self) -> dict[str, dict[str, object]]:
+        try:
+            if not self.TRAP_STATE_PATH.exists():
+                return {}
+
+            raw = json.loads(
+                self.TRAP_STATE_PATH.read_text(encoding="utf-8")
+            )
+            if not isinstance(raw, dict):
+                return {}
+
+            result: dict[str, dict[str, object]] = {}
+            for key, value in raw.items():
+                if isinstance(key, str) and isinstance(value, dict):
+                    result[key] = dict(value)
+            return result
+        except (OSError, ValueError, TypeError):
+            return {}
+
+    def _write_trap_state_file(
+        self,
+        state_data: dict[str, dict[str, object]],
+    ) -> None:
+        self.TRAP_STATE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        temporary_path = self.TRAP_STATE_PATH.with_suffix(".tmp")
+        temporary_path.write_text(
+            json.dumps(state_data, indent=2, sort_keys=True),
+            encoding="utf-8",
+        )
+        temporary_path.replace(self.TRAP_STATE_PATH)
+
+    def _load_trap_runtime_state(
+        self,
+        ctx: "BizHawkClientContext",
+    ) -> None:
+        state_key = self._delivery_state_key(ctx)
+        if state_key is None:
+            if not getattr(self, "_trap_state_memory_only_initialized", False):
+                self._pending_traps = []
+                self._next_trap_allowed_time = 0.0
+                self._trap_outside_since = None
+                self._trap_state_memory_only_initialized = True
+            return
+
+        if getattr(self, "_trap_state_loaded_key", None) == state_key:
+            return
+
+        state_data = self._read_trap_state_file()
+        entry = state_data.get(state_key, {})
+
+        pending_raw = entry.get("pending_traps", [])
+        if not isinstance(pending_raw, list):
+            pending_raw = []
+
+        self._pending_traps = [
+            str(name)
+            for name in pending_raw
+            if str(name) in self.BEE_TRAP_SEQUENCE_VALUES
+        ]
+
+        next_allowed_wall_time = entry.get("next_allowed_wall_time", 0.0)
+        try:
+            remaining = max(
+                0.0,
+                float(next_allowed_wall_time) - time.time(),
+            )
+        except (TypeError, ValueError):
+            remaining = 0.0
+
+        self._next_trap_allowed_time = time.monotonic() + remaining
+        self._trap_state_loaded_key = state_key
+
+        if self._pending_traps:
+            print(
+                "Loaded pending ACWW traps:",
+                ", ".join(self._pending_traps),
+            )
+
+    def _save_trap_runtime_state(
+        self,
+        ctx: "BizHawkClientContext",
+    ) -> None:
+        state_key = self._delivery_state_key(ctx)
+        if state_key is None:
+            return
+        self._load_trap_runtime_state(ctx)
+        state_data = self._read_trap_state_file()
+
+        remaining = max(
+            0.0,
+            getattr(self, "_next_trap_allowed_time", 0.0)
+            - time.monotonic(),
+        )
+
+        pending_traps = list(getattr(self, "_pending_traps", []))
+        if not pending_traps and remaining <= 0.0:
+            state_data.pop(state_key, None)
+        else:
+            state_data[state_key] = {
+                "pending_traps": pending_traps,
+                "next_allowed_wall_time": time.time() + remaining,
+            }
+
+        self._write_trap_state_file(state_data)
+
+    def _clear_trap_runtime_state(
+        self,
+        ctx: "BizHawkClientContext",
+    ) -> None:
+        """Clear queued/cooldown trap state when a genuinely new town starts."""
+        state_key = self._delivery_state_key(ctx)
+        if state_key is not None:
+            state_data = self._read_trap_state_file()
+            if state_key in state_data:
+                state_data.pop(state_key, None)
+                self._write_trap_state_file(state_data)
+
+        self._pending_traps = []
+        self._next_trap_allowed_time = 0.0
+        self._trap_outside_since = None
+        self._trap_state_loaded_key = state_key
+        self._trap_state_memory_only_initialized = True
+        print("Cleared ACWW trap queue for new town.")
+
+    def _queue_trap(
+        self,
+        ctx: "BizHawkClientContext",
+        trap_name: str,
+    ) -> None:
+        self._load_trap_runtime_state(ctx)
+        self._pending_traps.append(trap_name)
+        self._save_trap_runtime_state(ctx)
+        print(
+            f"Queued ACWW trap: {trap_name} "
+            f"({len(self._pending_traps)} pending)"
+        )
+
+    async def _process_pending_traps(
+        self,
+        ctx: "BizHawkClientContext",
+        outside_state: int,
+        now: float,
+    ) -> None:
+        self._load_trap_runtime_state(ctx)
+
+        # 0 can appear during the tail end of a door transition. Require it to
+        # remain continuously outside for a few seconds before consuming a trap.
+        if outside_state != 0:
+            self._trap_outside_since = None
+            return
+
+        outside_since = getattr(self, "_trap_outside_since", None)
+        if outside_since is None:
+            self._trap_outside_since = now
+            return
+
+        if now - outside_since < self.TRAP_OUTSIDE_STABLE_SECONDS:
+            return
+
+        if not self._pending_traps:
+            return
+
+        if now < getattr(self, "_next_trap_allowed_time", 0.0):
+            return
+
+        trap_name = self._pending_traps[0]
+        sequence_value = self.BEE_TRAP_SEQUENCE_VALUES.get(trap_name)
+        if sequence_value is None:
+            print(f"Discarding unsupported queued ACWW trap: {trap_name}")
+            self._pending_traps.pop(0)
+            self._save_trap_runtime_state(ctx)
+            return
+
+        profile = self._require_rom_profile()
+
+        # Do not overwrite an active bee/event sequence. This also ensures the
+        # post-door transition has returned to the observed idle value (0x13).
+        sequence_data = (
+            await bizhawk.read(
+                ctx.bizhawk_ctx,
+                [(
+                    profile.bee_sequence_address,
+                    1,
+                    self.memory.memory_domain,
+                )],
+            )
+        )[0]
+
+        if (
+            not sequence_data
+            or sequence_data[0] != self.BEE_IDLE_SEQUENCE_VALUE
+        ):
+            return
+
+        # The event data must exist before the sequence byte advances. Sending
+        # both writes in one BizHawk batch keeps them on the same watcher pass.
+        await bizhawk.write(
+            ctx.bizhawk_ctx,
+            [
+                (
+                    profile.bee_attack_data_address,
+                    self.BEE_ATTACK_DATA_VALUE.to_bytes(4, byteorder="little"),
+                    self.memory.memory_domain,
+                ),
+                (
+                    profile.bee_sequence_address,
+                    bytes([sequence_value]),
+                    self.memory.memory_domain,
+                ),
+            ],
+        )
+
+        self._pending_traps.pop(0)
+        self._next_trap_allowed_time = now + self.TRAP_COOLDOWN_SECONDS
+        self._save_trap_runtime_state(ctx)
+
+        print(
+            f"Fired ACWW trap: {trap_name}; "
+            f"{len(self._pending_traps)} pending; "
+            f"{self.TRAP_COOLDOWN_SECONDS:.0f}s grace period started."
+        )
 
     def _inventory_contains_item(
         self,
@@ -1142,6 +1477,172 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                 return slot_index
 
         return None
+
+    async def _clear_starting_vegetation(
+        self,
+        ctx: "BizHawkClientContext",
+    ) -> int:
+        """Remove vegetation from the outdoor town-object table once at startup."""
+        table_size = self.memory.town_object_slot_count * 2
+        town_data = bytearray(
+            (
+                await bizhawk.read(
+                    ctx.bizhawk_ctx,
+                    [(
+                        self.memory.town_object_base_address,
+                        table_size,
+                        self.memory.memory_domain,
+                    )],
+                )
+            )[0]
+        )
+
+        empty_bytes = self.memory.empty_town_object_id.to_bytes(
+            2,
+            byteorder="little",
+        )
+        removed_count = 0
+
+        for slot_index in range(self.memory.town_object_slot_count):
+            offset = slot_index * 2
+            object_id = int.from_bytes(
+                town_data[offset:offset + 2],
+                byteorder="little",
+            )
+
+            if (
+                0x0000 <= object_id <= 0x00A5
+                or 0x00C7 <= object_id <= 0x00CF
+            ):
+                town_data[offset:offset + 2] = empty_bytes
+                removed_count += 1
+
+        if removed_count:
+            await bizhawk.write(
+                ctx.bizhawk_ctx,
+                [(
+                    self.memory.town_object_base_address,
+                    bytes(town_data),
+                    self.memory.memory_domain,
+                )],
+            )
+
+        return removed_count
+
+    async def _insta_grow_trees(
+        self,
+        ctx: "BizHawkClientContext",
+    ) -> int:
+        """Immediately mature non-money trees that are still growing."""
+        table_size = self.memory.town_object_slot_count * 2
+        town_data = (
+            await bizhawk.read(
+                ctx.bizhawk_ctx,
+                [(
+                    self.memory.town_object_base_address,
+                    table_size,
+                    self.memory.memory_domain,
+                )],
+            )
+        )[0]
+
+        writes: list[tuple[int, bytes, str]] = []
+
+        for slot_index in range(self.memory.town_object_slot_count):
+            offset = slot_index * 2
+            object_id = int.from_bytes(
+                town_data[offset:offset + 2],
+                byteorder="little",
+            )
+            mature_id = self.TREE_GROWTH_TO_MATURE.get(object_id)
+            if mature_id is None:
+                continue
+
+            writes.append((
+                self.memory.town_object_base_address + offset,
+                mature_id.to_bytes(2, byteorder="little"),
+                self.memory.memory_domain,
+            ))
+
+        if not writes:
+            return 0
+
+        await bizhawk.write(ctx.bizhawk_ctx, writes)
+        print(f"Instant-grew {len(writes)} ACWW tree(s).")
+        return len(writes)
+
+    async def _ensure_bee_tree(
+        self,
+        ctx: "BizHawkClientContext",
+    ) -> bool:
+        """Guarantee one renewable beehive whenever a mature tree exists.
+
+        Natural hive trees are left alone. If no normal or cedar hive tree is
+        present, the first eligible mature normal/cedar tree is converted to
+        its matching hive variant. After the player shakes the hive down and
+        the game restores the tree to its ordinary mature state, a later
+        watcher pass can create another attempt.
+        """
+        table_size = self.memory.town_object_slot_count * 2
+        town_data = (
+            await bizhawk.read(
+                ctx.bizhawk_ctx,
+                [(
+                    self.memory.town_object_base_address,
+                    table_size,
+                    self.memory.memory_domain,
+                )],
+            )
+        )[0]
+
+        eligible_slot: tuple[int, int] | None = None
+        hive_ids = {
+            self.NORMAL_TREE_WITH_BEEHIVE_OBJECT_ID,
+            self.CEDAR_TREE_WITH_BEEHIVE_OBJECT_ID,
+        }
+
+        for slot_index in range(self.memory.town_object_slot_count):
+            offset = slot_index * 2
+            object_id = int.from_bytes(
+                town_data[offset:offset + 2],
+                byteorder="little",
+            )
+
+            if object_id in hive_ids:
+                return False
+
+            if eligible_slot is None:
+                if object_id == self.NORMAL_TREE_OBJECT_ID:
+                    eligible_slot = (
+                        slot_index,
+                        self.NORMAL_TREE_WITH_BEEHIVE_OBJECT_ID,
+                    )
+                elif object_id == self.CEDAR_TREE_OBJECT_ID:
+                    eligible_slot = (
+                        slot_index,
+                        self.CEDAR_TREE_WITH_BEEHIVE_OBJECT_ID,
+                    )
+
+        if eligible_slot is None:
+            return False
+
+        slot_index, hive_object_id = eligible_slot
+        slot_address = self.memory.town_object_base_address + slot_index * 2
+
+        await bizhawk.write(
+            ctx.bizhawk_ctx,
+            [(
+                slot_address,
+                hive_object_id.to_bytes(2, byteorder="little"),
+                self.memory.memory_domain,
+            )],
+        )
+
+        print(
+            "Guaranteed ACWW bee tree:",
+            f"slot {slot_index}, object 0x{hive_object_id:04X}",
+        )
+        return True
 
     async def _ensure_starting_tools(
         self,
@@ -1606,6 +2107,12 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
             "_last_inventory_snapshot",
             "_inventory_stable_since",
             "printed_starter_debug",
+            "_previous_house_debt",
+            "_last_bee_tree_check",
+            "_pending_traps",
+            "_next_trap_allowed_time",
+            "_trap_state_loaded_key",
+            "_trap_outside_since",
         )
 
         for attribute_name in transient_attributes:
@@ -1633,6 +2140,7 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                 museum_data,
                 inventory_data,
                 house_debt_data,
+                outside_state_data,
             ) = await bizhawk.read(
                 ctx.bizhawk_ctx,
                 [
@@ -1657,7 +2165,18 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                         2,
                         self.memory.memory_domain,
                     ),
+                    (
+                        self._require_rom_profile().outside_state_address,
+                        1,
+                        self.memory.memory_domain,
+                    ),
                 ],
+            )
+
+            outside_state = (
+                outside_state_data[0]
+                if outside_state_data
+                else 0xFF
             )
 
             house_debt = int.from_bytes(
@@ -1686,25 +2205,69 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                 >= self.INVENTORY_STABLE_SECONDS
             )
 
-            start_with_tools = bool(
-                ctx.slot_data.get("start_with_tools", False)
+            previous_house_debt = getattr(
+                self,
+                "_previous_house_debt",
+                None,
+            )
+            self._previous_house_debt = house_debt
+
+            new_town_initialized = (
+                previous_house_debt == 0
+                and house_debt == self.memory.initial_house_debt
+            )
+
+            if new_town_initialized:
+                self._clear_trap_runtime_state(ctx)
+                print(
+                    "Detected ACWW new-town initialization:",
+                    f"0 -> {self.memory.initial_house_debt} Bells debt",
+                )
+
+                if bool(ctx.slot_data.get("skip_nook_tutorial", False)):
+                    await bizhawk.write(
+                        ctx.bizhawk_ctx,
+                        [(
+                            self.memory.nook_tutorial_flag_address,
+                            bytes([0]),
+                            self.memory.memory_domain,
+                        )],
+                    )
+                    print("Skipped Tom Nook tutorial for new town.")
+
+                if bool(ctx.slot_data.get("barren_town", False)):
+                    removed_count = await self._clear_starting_vegetation(ctx)
+                    print(
+                        "Cleared starting vegetation for barren town:",
+                        f"{removed_count} town objects removed.",
+                    )
+
+                if bool(ctx.slot_data.get("start_with_tools", False)):
+                    starting_tools_written = (
+                        await self._ensure_starting_tools(
+                            ctx,
+                            inventory_data,
+                        )
+                    )
+
+                    if starting_tools_written:
+                        # The inventory snapshot is now stale. Continue normal
+                        # processing on the next watcher pass.
+                        return
+
+            last_bee_tree_check = getattr(
+                self,
+                "_last_bee_tree_check",
+                0.0,
             )
 
             if (
-                start_with_tools
-                and house_debt < self.memory.initial_house_debt
+                now - last_bee_tree_check
+                >= self.BEE_TREE_CHECK_INTERVAL_SECONDS
             ):
-                starting_tools_written = (
-                    await self._ensure_starting_tools(
-                        ctx,
-                        inventory_data,
-                    )
-                )
-
-                if starting_tools_written:
-                    # The inventory snapshot is now stale. Continue normal
-                    # processing on the next watcher pass.
-                    return
+                self._last_bee_tree_check = now
+                await self._insta_grow_trees(ctx)
+                await self._ensure_bee_tree(ctx)
 
             completed_locations = (
                 self._collect_journal_locations(
@@ -1789,6 +2352,19 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
 
                 self._previous_unlocked_months = unlocked_months
 
+            unlocked_controls = self._get_unlocked_controller_controls(ctx)
+
+            if unlocked_controls != getattr(
+                self,
+                "_previous_unlocked_controls",
+                None,
+            ):
+                print(
+                    "Unlocked ACWW Master Controller controls:",
+                    ", ".join(unlocked_controls) or "None",
+                )
+                self._previous_unlocked_controls = list(unlocked_controls)
+
             unlocked_claimables = self._get_unlocked_claimables(ctx)
 
             if unlocked_claimables != getattr(
@@ -1837,6 +2413,7 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
             await self._update_controller_state(
                 ctx,
                 unlocked_months,
+                unlocked_controls,
                 unlocked_claimables,
                 reclaimable_specimens,
                 restore_payload,
@@ -1847,6 +2424,8 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                     ctx,
                     completed_locations,
                 )
+
+            self._load_trap_runtime_state(ctx)
 
             # Process received items in strict order. A physical item is only
             # acknowledged after it is successfully written to inventory.
@@ -1884,6 +2463,23 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                     self._save_delivery_cursor(
                         ctx,
                         self.delivery_cursor,
+                    )
+                    continue
+
+                if item_category == "trap":
+                    self._queue_trap(ctx, item_name)
+                    self.delivery_cursor += 1
+                    self._save_delivery_cursor(
+                        ctx,
+                        self.delivery_cursor,
+                    )
+
+                    await self._show_received_item_notification(
+                        ctx,
+                        network_item,
+                        item_name,
+                        delivered_to_inventory=False,
+                        detail_line_override="Trap queued",
                     )
                     continue
 
@@ -1963,6 +2559,12 @@ class AnimalCrossingWildWorldClient(BizHawkClient):
                 # inventory_data is the snapshot from the beginning of this
                 # watcher pass. Deliver at most one physical item per pass.
                 break
+
+            await self._process_pending_traps(
+                ctx,
+                outside_state,
+                now,
+            )
 
             if not hasattr(
                 self,

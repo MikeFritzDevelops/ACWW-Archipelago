@@ -1,0 +1,82 @@
+{
+  "bug_donations_layout": {
+    "type": "itemgrid",
+    "item_size": "180,105",
+    "item_margin": "5,5",
+    "h_alignment": "center",
+    "item_h_alignment": "center",
+    "rows": [
+      [
+        "donate_bug_common_butterfly",
+        "donate_bug_yellow_butterfly",
+        "donate_bug_tiger_butterfly",
+        "donate_bug_peacock_butterfly",
+        "donate_bug_monarch_butterfly",
+        "donate_bug_emperor_butterfly",
+        "donate_bug_agrias_butterfly",
+        "donate_bug_birdwing_butterfly"
+      ],
+      [
+        "donate_bug_moth",
+        "donate_bug_oak_silk_moth",
+        "donate_bug_honeybee",
+        "donate_bug_bee",
+        "donate_bug_long_locust",
+        "donate_bug_migratory_locust",
+        "donate_bug_mantis",
+        "donate_bug_orchid_mantis"
+      ],
+      [
+        "donate_bug_brown_cicada",
+        "donate_bug_robust_cicada",
+        "donate_bug_walker_cicada",
+        "donate_bug_evening_cicada",
+        "donate_bug_lantern_fly",
+        "donate_bug_red_dragonfly",
+        "donate_bug_darner_dragonfly",
+        "donate_bug_banded_dragonfly"
+      ],
+      [
+        "donate_bug_ant",
+        "donate_bug_pondskater",
+        "donate_bug_snail",
+        "donate_bug_cricket",
+        "donate_bug_bell_cricket",
+        "donate_bug_grasshopper",
+        "donate_bug_mole_cricket",
+        "donate_bug_walkingstick"
+      ],
+      [
+        "donate_bug_ladybug",
+        "donate_bug_fruit_beetle",
+        "donate_bug_scarab_beetle",
+        "donate_bug_dung_beetle",
+        "donate_bug_goliath_beetle",
+        "donate_bug_firefly",
+        "donate_bug_jewel_beetle",
+        "donate_bug_longhorn_beetle"
+      ],
+      [
+        "donate_bug_saw_stag_beetle",
+        "donate_bug_stag_beetle",
+        "donate_bug_giant_beetle",
+        "donate_bug_rainbow_stag_beetle",
+        "donate_bug_dynastid_beetle",
+        "donate_bug_atlas_beetle",
+        "donate_bug_elephant_beetle",
+        "donate_bug_hercules_beetle"
+      ],
+      [
+        "donate_bug_flea",
+        "donate_bug_pill_bug",
+        "donate_bug_mosquito",
+        "donate_bug_fly",
+        "donate_bug_cockroach",
+        "donate_bug_spider",
+        "donate_bug_tarantula",
+        "donate_bug_scorpion"
+      ]
+    ],
+    "margin": "20,12,20,12"
+  }
+}

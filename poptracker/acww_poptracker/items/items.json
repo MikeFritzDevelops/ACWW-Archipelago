@@ -1,0 +1,4105 @@
+[
+  {
+    "name": "Golden Shovel",
+    "type": "toggle",
+    "img": "/images/placeholders/golden_shovel.png",
+    "codes": "golden_shovel"
+  },
+  {
+    "name": "Golden Axe",
+    "type": "toggle",
+    "img": "/images/placeholders/golden_axe.png",
+    "codes": "golden_axe"
+  },
+  {
+    "name": "Golden Fishing Rod",
+    "type": "toggle",
+    "img": "/images/placeholders/golden_rod.png",
+    "codes": "golden_fishing_rod"
+  },
+  {
+    "name": "Golden Net",
+    "type": "toggle",
+    "img": "/images/placeholders/golden_net.png",
+    "codes": "golden_net"
+  },
+  {
+    "name": "Golden Watering Can",
+    "type": "toggle",
+    "img": "/images/placeholders/golden_watering_can.png",
+    "codes": "golden_watering_can"
+  },
+  {
+    "name": "Golden Slingshot",
+    "type": "toggle",
+    "img": "/images/placeholders/golden_slingshot.png",
+    "codes": "golden_slingshot"
+  },
+  {
+    "name": "January",
+    "type": "toggle",
+    "img": "/images/placeholders/january.png",
+    "codes": "month_january",
+    "disabled_img": "/images/placeholders/january_gray.png"
+  },
+  {
+    "name": "February",
+    "type": "toggle",
+    "img": "/images/placeholders/february.png",
+    "codes": "month_february",
+    "disabled_img": "/images/placeholders/february_gray.png"
+  },
+  {
+    "name": "March",
+    "type": "toggle",
+    "img": "/images/placeholders/march.png",
+    "codes": "month_march",
+    "disabled_img": "/images/placeholders/march_gray.png"
+  },
+  {
+    "name": "April",
+    "type": "toggle",
+    "img": "/images/placeholders/april.png",
+    "codes": "month_april",
+    "disabled_img": "/images/placeholders/april_gray.png"
+  },
+  {
+    "name": "May",
+    "type": "toggle",
+    "img": "/images/placeholders/may.png",
+    "codes": "month_may",
+    "disabled_img": "/images/placeholders/may_gray.png"
+  },
+  {
+    "name": "June",
+    "type": "toggle",
+    "img": "/images/placeholders/june.png",
+    "codes": "month_june",
+    "disabled_img": "/images/placeholders/june_gray.png"
+  },
+  {
+    "name": "July",
+    "type": "toggle",
+    "img": "/images/placeholders/july.png",
+    "codes": "month_july",
+    "disabled_img": "/images/placeholders/july_gray.png"
+  },
+  {
+    "name": "August",
+    "type": "toggle",
+    "img": "/images/placeholders/august.png",
+    "codes": "month_august",
+    "disabled_img": "/images/placeholders/august_gray.png"
+  },
+  {
+    "name": "September",
+    "type": "toggle",
+    "img": "/images/placeholders/september.png",
+    "codes": "month_september",
+    "disabled_img": "/images/placeholders/september_gray.png"
+  },
+  {
+    "name": "October",
+    "type": "toggle",
+    "img": "/images/placeholders/october.png",
+    "codes": "month_october",
+    "disabled_img": "/images/placeholders/october_gray.png"
+  },
+  {
+    "name": "November",
+    "type": "toggle",
+    "img": "/images/placeholders/november.png",
+    "codes": "month_november",
+    "disabled_img": "/images/placeholders/november_gray.png"
+  },
+  {
+    "name": "December",
+    "type": "toggle",
+    "img": "/images/placeholders/december.png",
+    "codes": "month_december",
+    "disabled_img": "/images/placeholders/december_gray.png"
+  },
+  {
+    "name": "Apple",
+    "type": "toggle",
+    "img": "/images/placeholders/apple.png",
+    "codes": "resource_apple",
+    "disabled_img": "/images/placeholders/apple_gray.png"
+  },
+  {
+    "name": "Orange",
+    "type": "toggle",
+    "img": "/images/placeholders/orange.png",
+    "codes": "resource_orange",
+    "disabled_img": "/images/placeholders/orange_gray.png"
+  },
+  {
+    "name": "Pear",
+    "type": "toggle",
+    "img": "/images/placeholders/pear.png",
+    "codes": "resource_pear",
+    "disabled_img": "/images/placeholders/pear_gray.png"
+  },
+  {
+    "name": "Peach",
+    "type": "toggle",
+    "img": "/images/placeholders/peach.png",
+    "codes": "resource_peach",
+    "disabled_img": "/images/placeholders/peach_gray.png"
+  },
+  {
+    "name": "Cherry",
+    "type": "toggle",
+    "img": "/images/placeholders/cherry.png",
+    "codes": "resource_cherry",
+    "disabled_img": "/images/placeholders/cherry_gray.png"
+  },
+  {
+    "name": "Coconut",
+    "type": "toggle",
+    "img": "/images/placeholders/coconut.png",
+    "codes": "resource_coconut",
+    "disabled_img": "/images/placeholders/coconut_gray.png"
+  },
+  {
+    "name": "Red Roses",
+    "type": "toggle",
+    "img": "/images/placeholders/red_roses.png",
+    "codes": "resource_red_roses",
+    "disabled_img": "/images/placeholders/red_roses_gray.png"
+  },
+  {
+    "name": "White Roses",
+    "type": "toggle",
+    "img": "/images/placeholders/white_roses.png",
+    "codes": "resource_white_roses",
+    "disabled_img": "/images/placeholders/white_roses_gray.png"
+  },
+  {
+    "name": "Pink Roses",
+    "type": "toggle",
+    "img": "/images/placeholders/pink_roses.png",
+    "codes": "resource_pink_roses",
+    "disabled_img": "/images/placeholders/pink_roses_gray.png"
+  },
+  {
+    "name": "Purple Roses",
+    "type": "toggle",
+    "img": "/images/placeholders/purple_roses.png",
+    "codes": "resource_purple_roses",
+    "disabled_img": "/images/placeholders/purple_roses_gray.png"
+  },
+  {
+    "name": "Black Roses",
+    "type": "toggle",
+    "img": "/images/placeholders/black_roses.png",
+    "codes": "resource_black_roses",
+    "disabled_img": "/images/placeholders/black_roses_gray.png"
+  },
+  {
+    "name": "Blue Roses",
+    "type": "toggle",
+    "img": "/images/placeholders/blue_roses.png",
+    "codes": "resource_blue_roses",
+    "disabled_img": "/images/placeholders/blue_roses_gray.png"
+  },
+  {
+    "name": "Spoiled Turnips",
+    "type": "toggle",
+    "img": "/images/placeholders/spoiled_turnips.png",
+    "codes": "resource_spoiled_turnips",
+    "disabled_img": "/images/placeholders/spoiled_turnips_gray.png"
+  },
+  {
+    "name": "Bugs Museum Progress",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Bugs: 0/56 (0%)",
+        "img": "/images/overview/bugs_00.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 1/56 (2%)",
+        "img": "/images/overview/bugs_01.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 2/56 (4%)",
+        "img": "/images/overview/bugs_02.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 3/56 (5%)",
+        "img": "/images/overview/bugs_03.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 4/56 (7%)",
+        "img": "/images/overview/bugs_04.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 5/56 (9%)",
+        "img": "/images/overview/bugs_05.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 6/56 (11%)",
+        "img": "/images/overview/bugs_06.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 7/56 (12%)",
+        "img": "/images/overview/bugs_07.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 8/56 (14%)",
+        "img": "/images/overview/bugs_08.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 9/56 (16%)",
+        "img": "/images/overview/bugs_09.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 10/56 (18%)",
+        "img": "/images/overview/bugs_10.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 11/56 (20%)",
+        "img": "/images/overview/bugs_11.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 12/56 (21%)",
+        "img": "/images/overview/bugs_12.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 13/56 (23%)",
+        "img": "/images/overview/bugs_13.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 14/56 (25%)",
+        "img": "/images/overview/bugs_14.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 15/56 (27%)",
+        "img": "/images/overview/bugs_15.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 16/56 (29%)",
+        "img": "/images/overview/bugs_16.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 17/56 (30%)",
+        "img": "/images/overview/bugs_17.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 18/56 (32%)",
+        "img": "/images/overview/bugs_18.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 19/56 (34%)",
+        "img": "/images/overview/bugs_19.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 20/56 (36%)",
+        "img": "/images/overview/bugs_20.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 21/56 (38%)",
+        "img": "/images/overview/bugs_21.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 22/56 (39%)",
+        "img": "/images/overview/bugs_22.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 23/56 (41%)",
+        "img": "/images/overview/bugs_23.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 24/56 (43%)",
+        "img": "/images/overview/bugs_24.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 25/56 (45%)",
+        "img": "/images/overview/bugs_25.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 26/56 (46%)",
+        "img": "/images/overview/bugs_26.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 27/56 (48%)",
+        "img": "/images/overview/bugs_27.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 28/56 (50%)",
+        "img": "/images/overview/bugs_28.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 29/56 (52%)",
+        "img": "/images/overview/bugs_29.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 30/56 (54%)",
+        "img": "/images/overview/bugs_30.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 31/56 (55%)",
+        "img": "/images/overview/bugs_31.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 32/56 (57%)",
+        "img": "/images/overview/bugs_32.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 33/56 (59%)",
+        "img": "/images/overview/bugs_33.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 34/56 (61%)",
+        "img": "/images/overview/bugs_34.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 35/56 (62%)",
+        "img": "/images/overview/bugs_35.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 36/56 (64%)",
+        "img": "/images/overview/bugs_36.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 37/56 (66%)",
+        "img": "/images/overview/bugs_37.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 38/56 (68%)",
+        "img": "/images/overview/bugs_38.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 39/56 (70%)",
+        "img": "/images/overview/bugs_39.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 40/56 (71%)",
+        "img": "/images/overview/bugs_40.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 41/56 (73%)",
+        "img": "/images/overview/bugs_41.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 42/56 (75%)",
+        "img": "/images/overview/bugs_42.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 43/56 (77%)",
+        "img": "/images/overview/bugs_43.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 44/56 (79%)",
+        "img": "/images/overview/bugs_44.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 45/56 (80%)",
+        "img": "/images/overview/bugs_45.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 46/56 (82%)",
+        "img": "/images/overview/bugs_46.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 47/56 (84%)",
+        "img": "/images/overview/bugs_47.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 48/56 (86%)",
+        "img": "/images/overview/bugs_48.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 49/56 (88%)",
+        "img": "/images/overview/bugs_49.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 50/56 (89%)",
+        "img": "/images/overview/bugs_50.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 51/56 (91%)",
+        "img": "/images/overview/bugs_51.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 52/56 (93%)",
+        "img": "/images/overview/bugs_52.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 53/56 (95%)",
+        "img": "/images/overview/bugs_53.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 54/56 (96%)",
+        "img": "/images/overview/bugs_54.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 55/56 (98%)",
+        "img": "/images/overview/bugs_55.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bugs: 56/56 (100%)",
+        "img": "/images/overview/bugs_56.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "museum_progress_bugs"
+  },
+  {
+    "name": "Fish Museum Progress",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Fish: 0/56 (0%)",
+        "img": "/images/overview/fish_00.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 1/56 (2%)",
+        "img": "/images/overview/fish_01.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 2/56 (4%)",
+        "img": "/images/overview/fish_02.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 3/56 (5%)",
+        "img": "/images/overview/fish_03.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 4/56 (7%)",
+        "img": "/images/overview/fish_04.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 5/56 (9%)",
+        "img": "/images/overview/fish_05.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 6/56 (11%)",
+        "img": "/images/overview/fish_06.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 7/56 (12%)",
+        "img": "/images/overview/fish_07.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 8/56 (14%)",
+        "img": "/images/overview/fish_08.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 9/56 (16%)",
+        "img": "/images/overview/fish_09.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 10/56 (18%)",
+        "img": "/images/overview/fish_10.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 11/56 (20%)",
+        "img": "/images/overview/fish_11.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 12/56 (21%)",
+        "img": "/images/overview/fish_12.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 13/56 (23%)",
+        "img": "/images/overview/fish_13.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 14/56 (25%)",
+        "img": "/images/overview/fish_14.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 15/56 (27%)",
+        "img": "/images/overview/fish_15.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 16/56 (29%)",
+        "img": "/images/overview/fish_16.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 17/56 (30%)",
+        "img": "/images/overview/fish_17.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 18/56 (32%)",
+        "img": "/images/overview/fish_18.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 19/56 (34%)",
+        "img": "/images/overview/fish_19.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 20/56 (36%)",
+        "img": "/images/overview/fish_20.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 21/56 (38%)",
+        "img": "/images/overview/fish_21.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 22/56 (39%)",
+        "img": "/images/overview/fish_22.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 23/56 (41%)",
+        "img": "/images/overview/fish_23.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 24/56 (43%)",
+        "img": "/images/overview/fish_24.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 25/56 (45%)",
+        "img": "/images/overview/fish_25.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 26/56 (46%)",
+        "img": "/images/overview/fish_26.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 27/56 (48%)",
+        "img": "/images/overview/fish_27.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 28/56 (50%)",
+        "img": "/images/overview/fish_28.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 29/56 (52%)",
+        "img": "/images/overview/fish_29.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 30/56 (54%)",
+        "img": "/images/overview/fish_30.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 31/56 (55%)",
+        "img": "/images/overview/fish_31.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 32/56 (57%)",
+        "img": "/images/overview/fish_32.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 33/56 (59%)",
+        "img": "/images/overview/fish_33.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 34/56 (61%)",
+        "img": "/images/overview/fish_34.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 35/56 (62%)",
+        "img": "/images/overview/fish_35.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 36/56 (64%)",
+        "img": "/images/overview/fish_36.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 37/56 (66%)",
+        "img": "/images/overview/fish_37.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 38/56 (68%)",
+        "img": "/images/overview/fish_38.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 39/56 (70%)",
+        "img": "/images/overview/fish_39.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 40/56 (71%)",
+        "img": "/images/overview/fish_40.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 41/56 (73%)",
+        "img": "/images/overview/fish_41.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 42/56 (75%)",
+        "img": "/images/overview/fish_42.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 43/56 (77%)",
+        "img": "/images/overview/fish_43.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 44/56 (79%)",
+        "img": "/images/overview/fish_44.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 45/56 (80%)",
+        "img": "/images/overview/fish_45.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 46/56 (82%)",
+        "img": "/images/overview/fish_46.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 47/56 (84%)",
+        "img": "/images/overview/fish_47.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 48/56 (86%)",
+        "img": "/images/overview/fish_48.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 49/56 (88%)",
+        "img": "/images/overview/fish_49.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 50/56 (89%)",
+        "img": "/images/overview/fish_50.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 51/56 (91%)",
+        "img": "/images/overview/fish_51.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 52/56 (93%)",
+        "img": "/images/overview/fish_52.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 53/56 (95%)",
+        "img": "/images/overview/fish_53.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 54/56 (96%)",
+        "img": "/images/overview/fish_54.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 55/56 (98%)",
+        "img": "/images/overview/fish_55.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fish: 56/56 (100%)",
+        "img": "/images/overview/fish_56.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "museum_progress_fish"
+  },
+  {
+    "name": "Art Museum Progress",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Art: 0/20 (0%)",
+        "img": "/images/overview/art_00.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 1/20 (5%)",
+        "img": "/images/overview/art_01.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 2/20 (10%)",
+        "img": "/images/overview/art_02.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 3/20 (15%)",
+        "img": "/images/overview/art_03.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 4/20 (20%)",
+        "img": "/images/overview/art_04.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 5/20 (25%)",
+        "img": "/images/overview/art_05.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 6/20 (30%)",
+        "img": "/images/overview/art_06.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 7/20 (35%)",
+        "img": "/images/overview/art_07.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 8/20 (40%)",
+        "img": "/images/overview/art_08.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 9/20 (45%)",
+        "img": "/images/overview/art_09.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 10/20 (50%)",
+        "img": "/images/overview/art_10.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 11/20 (55%)",
+        "img": "/images/overview/art_11.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 12/20 (60%)",
+        "img": "/images/overview/art_12.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 13/20 (65%)",
+        "img": "/images/overview/art_13.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 14/20 (70%)",
+        "img": "/images/overview/art_14.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 15/20 (75%)",
+        "img": "/images/overview/art_15.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 16/20 (80%)",
+        "img": "/images/overview/art_16.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 17/20 (85%)",
+        "img": "/images/overview/art_17.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 18/20 (90%)",
+        "img": "/images/overview/art_18.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 19/20 (95%)",
+        "img": "/images/overview/art_19.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Art: 20/20 (100%)",
+        "img": "/images/overview/art_20.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "museum_progress_art"
+  },
+  {
+    "name": "Fossils Museum Progress",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Fossils: 0/52 (0%)",
+        "img": "/images/overview/fossils_00.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 1/52 (2%)",
+        "img": "/images/overview/fossils_01.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 2/52 (4%)",
+        "img": "/images/overview/fossils_02.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 3/52 (6%)",
+        "img": "/images/overview/fossils_03.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 4/52 (8%)",
+        "img": "/images/overview/fossils_04.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 5/52 (10%)",
+        "img": "/images/overview/fossils_05.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 6/52 (12%)",
+        "img": "/images/overview/fossils_06.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 7/52 (13%)",
+        "img": "/images/overview/fossils_07.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 8/52 (15%)",
+        "img": "/images/overview/fossils_08.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 9/52 (17%)",
+        "img": "/images/overview/fossils_09.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 10/52 (19%)",
+        "img": "/images/overview/fossils_10.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 11/52 (21%)",
+        "img": "/images/overview/fossils_11.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 12/52 (23%)",
+        "img": "/images/overview/fossils_12.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 13/52 (25%)",
+        "img": "/images/overview/fossils_13.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 14/52 (27%)",
+        "img": "/images/overview/fossils_14.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 15/52 (29%)",
+        "img": "/images/overview/fossils_15.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 16/52 (31%)",
+        "img": "/images/overview/fossils_16.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 17/52 (33%)",
+        "img": "/images/overview/fossils_17.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 18/52 (35%)",
+        "img": "/images/overview/fossils_18.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 19/52 (37%)",
+        "img": "/images/overview/fossils_19.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 20/52 (38%)",
+        "img": "/images/overview/fossils_20.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 21/52 (40%)",
+        "img": "/images/overview/fossils_21.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 22/52 (42%)",
+        "img": "/images/overview/fossils_22.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 23/52 (44%)",
+        "img": "/images/overview/fossils_23.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 24/52 (46%)",
+        "img": "/images/overview/fossils_24.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 25/52 (48%)",
+        "img": "/images/overview/fossils_25.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 26/52 (50%)",
+        "img": "/images/overview/fossils_26.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 27/52 (52%)",
+        "img": "/images/overview/fossils_27.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 28/52 (54%)",
+        "img": "/images/overview/fossils_28.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 29/52 (56%)",
+        "img": "/images/overview/fossils_29.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 30/52 (58%)",
+        "img": "/images/overview/fossils_30.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 31/52 (60%)",
+        "img": "/images/overview/fossils_31.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 32/52 (62%)",
+        "img": "/images/overview/fossils_32.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 33/52 (63%)",
+        "img": "/images/overview/fossils_33.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 34/52 (65%)",
+        "img": "/images/overview/fossils_34.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 35/52 (67%)",
+        "img": "/images/overview/fossils_35.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 36/52 (69%)",
+        "img": "/images/overview/fossils_36.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 37/52 (71%)",
+        "img": "/images/overview/fossils_37.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 38/52 (73%)",
+        "img": "/images/overview/fossils_38.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 39/52 (75%)",
+        "img": "/images/overview/fossils_39.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 40/52 (77%)",
+        "img": "/images/overview/fossils_40.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 41/52 (79%)",
+        "img": "/images/overview/fossils_41.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 42/52 (81%)",
+        "img": "/images/overview/fossils_42.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 43/52 (83%)",
+        "img": "/images/overview/fossils_43.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 44/52 (85%)",
+        "img": "/images/overview/fossils_44.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 45/52 (87%)",
+        "img": "/images/overview/fossils_45.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 46/52 (88%)",
+        "img": "/images/overview/fossils_46.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 47/52 (90%)",
+        "img": "/images/overview/fossils_47.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 48/52 (92%)",
+        "img": "/images/overview/fossils_48.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 49/52 (94%)",
+        "img": "/images/overview/fossils_49.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 50/52 (96%)",
+        "img": "/images/overview/fossils_50.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 51/52 (98%)",
+        "img": "/images/overview/fossils_51.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fossils: 52/52 (100%)",
+        "img": "/images/overview/fossils_52.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "museum_progress_fossils"
+  },
+  {
+    "name": "Donate Common Butterfly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Common Butterfly Needed",
+        "img": "/images/bug/donations/01_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Common Butterfly Donated",
+        "img": "/images/bug/donations/01_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_common_butterfly"
+  },
+  {
+    "name": "Donate Yellow Butterfly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Yellow Butterfly Needed",
+        "img": "/images/bug/donations/02_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Yellow Butterfly Donated",
+        "img": "/images/bug/donations/02_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_yellow_butterfly"
+  },
+  {
+    "name": "Donate Tiger Butterfly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Tiger Butterfly Needed",
+        "img": "/images/bug/donations/03_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Tiger Butterfly Donated",
+        "img": "/images/bug/donations/03_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_tiger_butterfly"
+  },
+  {
+    "name": "Donate Peacock Butterfly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Peacock Butterfly Needed",
+        "img": "/images/bug/donations/04_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Peacock Butterfly Donated",
+        "img": "/images/bug/donations/04_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_peacock_butterfly"
+  },
+  {
+    "name": "Donate Monarch Butterfly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Monarch Butterfly Needed",
+        "img": "/images/bug/donations/05_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Monarch Butterfly Donated",
+        "img": "/images/bug/donations/05_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_monarch_butterfly"
+  },
+  {
+    "name": "Donate Emperor Butterfly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Emperor Butterfly Needed",
+        "img": "/images/bug/donations/06_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Emperor Butterfly Donated",
+        "img": "/images/bug/donations/06_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_emperor_butterfly"
+  },
+  {
+    "name": "Donate Agrias Butterfly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Agrias Butterfly Needed",
+        "img": "/images/bug/donations/07_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Agrias Butterfly Donated",
+        "img": "/images/bug/donations/07_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_agrias_butterfly"
+  },
+  {
+    "name": "Donate Birdwing Butterfly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Birdwing Butterfly Needed",
+        "img": "/images/bug/donations/08_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Birdwing Butterfly Donated",
+        "img": "/images/bug/donations/08_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_birdwing_butterfly"
+  },
+  {
+    "name": "Donate Moth",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Moth Needed",
+        "img": "/images/bug/donations/09_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Moth Donated",
+        "img": "/images/bug/donations/09_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_moth"
+  },
+  {
+    "name": "Donate Oak Silk Moth",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Oak Silk Moth Needed",
+        "img": "/images/bug/donations/10_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Oak Silk Moth Donated",
+        "img": "/images/bug/donations/10_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_oak_silk_moth"
+  },
+  {
+    "name": "Donate Honeybee",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Honeybee Needed",
+        "img": "/images/bug/donations/11_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Honeybee Donated",
+        "img": "/images/bug/donations/11_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_honeybee"
+  },
+  {
+    "name": "Donate Bee",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Bee Needed",
+        "img": "/images/bug/donations/12_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bee Donated",
+        "img": "/images/bug/donations/12_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_bee"
+  },
+  {
+    "name": "Donate Long Locust",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Long Locust Needed",
+        "img": "/images/bug/donations/13_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Long Locust Donated",
+        "img": "/images/bug/donations/13_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_long_locust"
+  },
+  {
+    "name": "Donate Migratory Locust",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Migratory Locust Needed",
+        "img": "/images/bug/donations/14_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Migratory Locust Donated",
+        "img": "/images/bug/donations/14_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_migratory_locust"
+  },
+  {
+    "name": "Donate Mantis",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Mantis Needed",
+        "img": "/images/bug/donations/15_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Mantis Donated",
+        "img": "/images/bug/donations/15_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_mantis"
+  },
+  {
+    "name": "Donate Orchid Mantis",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Orchid Mantis Needed",
+        "img": "/images/bug/donations/16_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Orchid Mantis Donated",
+        "img": "/images/bug/donations/16_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_orchid_mantis"
+  },
+  {
+    "name": "Donate Brown Cicada",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Brown Cicada Needed",
+        "img": "/images/bug/donations/17_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Brown Cicada Donated",
+        "img": "/images/bug/donations/17_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_brown_cicada"
+  },
+  {
+    "name": "Donate Robust Cicada",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Robust Cicada Needed",
+        "img": "/images/bug/donations/18_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Robust Cicada Donated",
+        "img": "/images/bug/donations/18_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_robust_cicada"
+  },
+  {
+    "name": "Donate Walker Cicada",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Walker Cicada Needed",
+        "img": "/images/bug/donations/19_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Walker Cicada Donated",
+        "img": "/images/bug/donations/19_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_walker_cicada"
+  },
+  {
+    "name": "Donate Evening Cicada",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Evening Cicada Needed",
+        "img": "/images/bug/donations/20_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Evening Cicada Donated",
+        "img": "/images/bug/donations/20_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_evening_cicada"
+  },
+  {
+    "name": "Donate Lantern Fly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Lantern Fly Needed",
+        "img": "/images/bug/donations/21_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Lantern Fly Donated",
+        "img": "/images/bug/donations/21_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_lantern_fly"
+  },
+  {
+    "name": "Donate Red Dragonfly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Red Dragonfly Needed",
+        "img": "/images/bug/donations/22_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Red Dragonfly Donated",
+        "img": "/images/bug/donations/22_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_red_dragonfly"
+  },
+  {
+    "name": "Donate Darner Dragonfly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Darner Dragonfly Needed",
+        "img": "/images/bug/donations/23_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Darner Dragonfly Donated",
+        "img": "/images/bug/donations/23_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_darner_dragonfly"
+  },
+  {
+    "name": "Donate Banded Dragonfly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Banded Dragonfly Needed",
+        "img": "/images/bug/donations/24_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Banded Dragonfly Donated",
+        "img": "/images/bug/donations/24_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_banded_dragonfly"
+  },
+  {
+    "name": "Donate Ant",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Ant Needed",
+        "img": "/images/bug/donations/25_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Ant Donated",
+        "img": "/images/bug/donations/25_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_ant"
+  },
+  {
+    "name": "Donate Pondskater",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Pondskater Needed",
+        "img": "/images/bug/donations/26_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Pondskater Donated",
+        "img": "/images/bug/donations/26_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_pondskater"
+  },
+  {
+    "name": "Donate Snail",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Snail Needed",
+        "img": "/images/bug/donations/27_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Snail Donated",
+        "img": "/images/bug/donations/27_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_snail"
+  },
+  {
+    "name": "Donate Cricket",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Cricket Needed",
+        "img": "/images/bug/donations/28_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Cricket Donated",
+        "img": "/images/bug/donations/28_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_cricket"
+  },
+  {
+    "name": "Donate Bell Cricket",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Bell Cricket Needed",
+        "img": "/images/bug/donations/29_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bell Cricket Donated",
+        "img": "/images/bug/donations/29_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_bell_cricket"
+  },
+  {
+    "name": "Donate Grasshopper",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Grasshopper Needed",
+        "img": "/images/bug/donations/30_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Grasshopper Donated",
+        "img": "/images/bug/donations/30_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_grasshopper"
+  },
+  {
+    "name": "Donate Mole Cricket",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Mole Cricket Needed",
+        "img": "/images/bug/donations/31_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Mole Cricket Donated",
+        "img": "/images/bug/donations/31_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_mole_cricket"
+  },
+  {
+    "name": "Donate Walkingstick",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Walkingstick Needed",
+        "img": "/images/bug/donations/32_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Walkingstick Donated",
+        "img": "/images/bug/donations/32_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_walkingstick"
+  },
+  {
+    "name": "Donate Ladybug",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Ladybug Needed",
+        "img": "/images/bug/donations/33_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Ladybug Donated",
+        "img": "/images/bug/donations/33_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_ladybug"
+  },
+  {
+    "name": "Donate Fruit Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Fruit Beetle Needed",
+        "img": "/images/bug/donations/34_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fruit Beetle Donated",
+        "img": "/images/bug/donations/34_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_fruit_beetle"
+  },
+  {
+    "name": "Donate Scarab Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Scarab Beetle Needed",
+        "img": "/images/bug/donations/35_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Scarab Beetle Donated",
+        "img": "/images/bug/donations/35_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_scarab_beetle"
+  },
+  {
+    "name": "Donate Dung Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Dung Beetle Needed",
+        "img": "/images/bug/donations/36_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Dung Beetle Donated",
+        "img": "/images/bug/donations/36_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_dung_beetle"
+  },
+  {
+    "name": "Donate Goliath Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Goliath Beetle Needed",
+        "img": "/images/bug/donations/37_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Goliath Beetle Donated",
+        "img": "/images/bug/donations/37_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_goliath_beetle"
+  },
+  {
+    "name": "Donate Firefly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Firefly Needed",
+        "img": "/images/bug/donations/38_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Firefly Donated",
+        "img": "/images/bug/donations/38_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_firefly"
+  },
+  {
+    "name": "Donate Jewel Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Jewel Beetle Needed",
+        "img": "/images/bug/donations/39_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Jewel Beetle Donated",
+        "img": "/images/bug/donations/39_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_jewel_beetle"
+  },
+  {
+    "name": "Donate Longhorn Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Longhorn Beetle Needed",
+        "img": "/images/bug/donations/40_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Longhorn Beetle Donated",
+        "img": "/images/bug/donations/40_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_longhorn_beetle"
+  },
+  {
+    "name": "Donate Saw Stag Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Saw Stag Beetle Needed",
+        "img": "/images/bug/donations/41_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Saw Stag Beetle Donated",
+        "img": "/images/bug/donations/41_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_saw_stag_beetle"
+  },
+  {
+    "name": "Donate Stag Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Stag Beetle Needed",
+        "img": "/images/bug/donations/42_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Stag Beetle Donated",
+        "img": "/images/bug/donations/42_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_stag_beetle"
+  },
+  {
+    "name": "Donate Giant Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Giant Beetle Needed",
+        "img": "/images/bug/donations/43_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Giant Beetle Donated",
+        "img": "/images/bug/donations/43_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_giant_beetle"
+  },
+  {
+    "name": "Donate Rainbow Stag Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Rainbow Stag Beetle Needed",
+        "img": "/images/bug/donations/44_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Rainbow Stag Beetle Donated",
+        "img": "/images/bug/donations/44_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_rainbow_stag_beetle"
+  },
+  {
+    "name": "Donate Dynastid Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Dynastid Beetle Needed",
+        "img": "/images/bug/donations/45_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Dynastid Beetle Donated",
+        "img": "/images/bug/donations/45_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_dynastid_beetle"
+  },
+  {
+    "name": "Donate Atlas Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Atlas Beetle Needed",
+        "img": "/images/bug/donations/46_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Atlas Beetle Donated",
+        "img": "/images/bug/donations/46_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_atlas_beetle"
+  },
+  {
+    "name": "Donate Elephant Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Elephant Beetle Needed",
+        "img": "/images/bug/donations/47_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Elephant Beetle Donated",
+        "img": "/images/bug/donations/47_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_elephant_beetle"
+  },
+  {
+    "name": "Donate Hercules Beetle",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Hercules Beetle Needed",
+        "img": "/images/bug/donations/48_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Hercules Beetle Donated",
+        "img": "/images/bug/donations/48_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_hercules_beetle"
+  },
+  {
+    "name": "Donate Flea",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Flea Needed",
+        "img": "/images/bug/donations/49_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Flea Donated",
+        "img": "/images/bug/donations/49_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_flea"
+  },
+  {
+    "name": "Donate Pill Bug",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Pill Bug Needed",
+        "img": "/images/bug/donations/50_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Pill Bug Donated",
+        "img": "/images/bug/donations/50_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_pill_bug"
+  },
+  {
+    "name": "Donate Mosquito",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Mosquito Needed",
+        "img": "/images/bug/donations/51_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Mosquito Donated",
+        "img": "/images/bug/donations/51_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_mosquito"
+  },
+  {
+    "name": "Donate Fly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Fly Needed",
+        "img": "/images/bug/donations/52_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Fly Donated",
+        "img": "/images/bug/donations/52_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_fly"
+  },
+  {
+    "name": "Donate Cockroach",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Cockroach Needed",
+        "img": "/images/bug/donations/53_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Cockroach Donated",
+        "img": "/images/bug/donations/53_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_cockroach"
+  },
+  {
+    "name": "Donate Spider",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Spider Needed",
+        "img": "/images/bug/donations/54_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Spider Donated",
+        "img": "/images/bug/donations/54_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_spider"
+  },
+  {
+    "name": "Donate Tarantula",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Tarantula Needed",
+        "img": "/images/bug/donations/55_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Tarantula Donated",
+        "img": "/images/bug/donations/55_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_tarantula"
+  },
+  {
+    "name": "Donate Scorpion",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Scorpion Needed",
+        "img": "/images/bug/donations/56_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Scorpion Donated",
+        "img": "/images/bug/donations/56_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_bug_scorpion"
+  },
+  {
+    "name": "Donate Bitterling",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Bitterling Needed",
+        "img": "/images/fish/donations/01_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bitterling Donated",
+        "img": "/images/fish/donations/01_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_bitterling"
+  },
+  {
+    "name": "Donate Pale Chub",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Pale Chub Needed",
+        "img": "/images/fish/donations/02_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Pale Chub Donated",
+        "img": "/images/fish/donations/02_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_pale_chub"
+  },
+  {
+    "name": "Donate Crucian Carp",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Crucian Carp Needed",
+        "img": "/images/fish/donations/03_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Crucian Carp Donated",
+        "img": "/images/fish/donations/03_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_crucian_carp"
+  },
+  {
+    "name": "Donate Dace",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Dace Needed",
+        "img": "/images/fish/donations/04_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Dace Donated",
+        "img": "/images/fish/donations/04_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_dace"
+  },
+  {
+    "name": "Donate Barbel Steed",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Barbel Steed Needed",
+        "img": "/images/fish/donations/05_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Barbel Steed Donated",
+        "img": "/images/fish/donations/05_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_barbel_steed"
+  },
+  {
+    "name": "Donate Carp",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Carp Needed",
+        "img": "/images/fish/donations/06_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Carp Donated",
+        "img": "/images/fish/donations/06_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_carp"
+  },
+  {
+    "name": "Donate Koi",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Koi Needed",
+        "img": "/images/fish/donations/07_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Koi Donated",
+        "img": "/images/fish/donations/07_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_koi"
+  },
+  {
+    "name": "Donate Goldfish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Goldfish Needed",
+        "img": "/images/fish/donations/08_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Goldfish Donated",
+        "img": "/images/fish/donations/08_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_goldfish"
+  },
+  {
+    "name": "Donate Popeyed Goldfish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Popeyed Goldfish Needed",
+        "img": "/images/fish/donations/09_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Popeyed Goldfish Donated",
+        "img": "/images/fish/donations/09_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_popeyed_goldfish"
+  },
+  {
+    "name": "Donate Killifish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Killifish Needed",
+        "img": "/images/fish/donations/10_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Killifish Donated",
+        "img": "/images/fish/donations/10_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_killifish"
+  },
+  {
+    "name": "Donate Crawfish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Crawfish Needed",
+        "img": "/images/fish/donations/11_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Crawfish Donated",
+        "img": "/images/fish/donations/11_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_crawfish"
+  },
+  {
+    "name": "Donate Frog",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Frog Needed",
+        "img": "/images/fish/donations/12_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Frog Donated",
+        "img": "/images/fish/donations/12_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_frog"
+  },
+  {
+    "name": "Donate Freshwater Goby",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Freshwater Goby Needed",
+        "img": "/images/fish/donations/13_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Freshwater Goby Donated",
+        "img": "/images/fish/donations/13_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_freshwater_goby"
+  },
+  {
+    "name": "Donate Loach",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Loach Needed",
+        "img": "/images/fish/donations/14_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Loach Donated",
+        "img": "/images/fish/donations/14_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_loach"
+  },
+  {
+    "name": "Donate Catfish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Catfish Needed",
+        "img": "/images/fish/donations/15_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Catfish Donated",
+        "img": "/images/fish/donations/15_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_catfish"
+  },
+  {
+    "name": "Donate Eel",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Eel Needed",
+        "img": "/images/fish/donations/16_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Eel Donated",
+        "img": "/images/fish/donations/16_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_eel"
+  },
+  {
+    "name": "Donate Giant Snakehead",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Giant Snakehead Needed",
+        "img": "/images/fish/donations/17_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Giant Snakehead Donated",
+        "img": "/images/fish/donations/17_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_giant_snakehead"
+  },
+  {
+    "name": "Donate Bluegill",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Bluegill Needed",
+        "img": "/images/fish/donations/18_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Bluegill Donated",
+        "img": "/images/fish/donations/18_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_bluegill"
+  },
+  {
+    "name": "Donate Yellow Perch",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Yellow Perch Needed",
+        "img": "/images/fish/donations/19_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Yellow Perch Donated",
+        "img": "/images/fish/donations/19_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_yellow_perch"
+  },
+  {
+    "name": "Donate Black Bass",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Black Bass Needed",
+        "img": "/images/fish/donations/20_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Black Bass Donated",
+        "img": "/images/fish/donations/20_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_black_bass"
+  },
+  {
+    "name": "Donate Pond Smelt",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Pond Smelt Needed",
+        "img": "/images/fish/donations/21_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Pond Smelt Donated",
+        "img": "/images/fish/donations/21_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_pond_smelt"
+  },
+  {
+    "name": "Donate Sweetfish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Sweetfish Needed",
+        "img": "/images/fish/donations/22_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Sweetfish Donated",
+        "img": "/images/fish/donations/22_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_sweetfish"
+  },
+  {
+    "name": "Donate Cherry Salmon",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Cherry Salmon Needed",
+        "img": "/images/fish/donations/23_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Cherry Salmon Donated",
+        "img": "/images/fish/donations/23_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_cherry_salmon"
+  },
+  {
+    "name": "Donate Char",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Char Needed",
+        "img": "/images/fish/donations/24_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Char Donated",
+        "img": "/images/fish/donations/24_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_char"
+  },
+  {
+    "name": "Donate Rainbow Trout",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Rainbow Trout Needed",
+        "img": "/images/fish/donations/25_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Rainbow Trout Donated",
+        "img": "/images/fish/donations/25_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_rainbow_trout"
+  },
+  {
+    "name": "Donate Stringfish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Stringfish Needed",
+        "img": "/images/fish/donations/26_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Stringfish Donated",
+        "img": "/images/fish/donations/26_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_stringfish"
+  },
+  {
+    "name": "Donate Salmon",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Salmon Needed",
+        "img": "/images/fish/donations/27_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Salmon Donated",
+        "img": "/images/fish/donations/27_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_salmon"
+  },
+  {
+    "name": "Donate King Salmon",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "King Salmon Needed",
+        "img": "/images/fish/donations/28_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "King Salmon Donated",
+        "img": "/images/fish/donations/28_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_king_salmon"
+  },
+  {
+    "name": "Donate Guppy",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Guppy Needed",
+        "img": "/images/fish/donations/29_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Guppy Donated",
+        "img": "/images/fish/donations/29_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_guppy"
+  },
+  {
+    "name": "Donate Angelfish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Angelfish Needed",
+        "img": "/images/fish/donations/30_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Angelfish Donated",
+        "img": "/images/fish/donations/30_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_angelfish"
+  },
+  {
+    "name": "Donate Piranha",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Piranha Needed",
+        "img": "/images/fish/donations/31_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Piranha Donated",
+        "img": "/images/fish/donations/31_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_piranha"
+  },
+  {
+    "name": "Donate Arowana",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Arowana Needed",
+        "img": "/images/fish/donations/32_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Arowana Donated",
+        "img": "/images/fish/donations/32_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_arowana"
+  },
+  {
+    "name": "Donate Dorado",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Dorado Needed",
+        "img": "/images/fish/donations/33_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Dorado Donated",
+        "img": "/images/fish/donations/33_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_dorado"
+  },
+  {
+    "name": "Donate Gar",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Gar Needed",
+        "img": "/images/fish/donations/34_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Gar Donated",
+        "img": "/images/fish/donations/34_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_gar"
+  },
+  {
+    "name": "Donate Arapaima",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Arapaima Needed",
+        "img": "/images/fish/donations/35_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Arapaima Donated",
+        "img": "/images/fish/donations/35_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_arapaima"
+  },
+  {
+    "name": "Donate Sea Butterfly",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Sea Butterfly Needed",
+        "img": "/images/fish/donations/36_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Sea Butterfly Donated",
+        "img": "/images/fish/donations/36_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_sea_butterfly"
+  },
+  {
+    "name": "Donate Jellyfish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Jellyfish Needed",
+        "img": "/images/fish/donations/37_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Jellyfish Donated",
+        "img": "/images/fish/donations/37_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_jellyfish"
+  },
+  {
+    "name": "Donate Seahorse",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Seahorse Needed",
+        "img": "/images/fish/donations/38_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Seahorse Donated",
+        "img": "/images/fish/donations/38_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_seahorse"
+  },
+  {
+    "name": "Donate Clownfish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Clownfish Needed",
+        "img": "/images/fish/donations/39_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Clownfish Donated",
+        "img": "/images/fish/donations/39_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_clownfish"
+  },
+  {
+    "name": "Donate Zebra Turkeyfish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Zebra Turkeyfish Needed",
+        "img": "/images/fish/donations/40_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Zebra Turkeyfish Donated",
+        "img": "/images/fish/donations/40_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_zebra_turkeyfish"
+  },
+  {
+    "name": "Donate Pufferfish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Pufferfish Needed",
+        "img": "/images/fish/donations/41_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Pufferfish Donated",
+        "img": "/images/fish/donations/41_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_pufferfish"
+  },
+  {
+    "name": "Donate Horse Mackerel",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Horse Mackerel Needed",
+        "img": "/images/fish/donations/42_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Horse Mackerel Donated",
+        "img": "/images/fish/donations/42_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_horse_mackerel"
+  },
+  {
+    "name": "Donate Barred Knifejaw",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Barred Knifejaw Needed",
+        "img": "/images/fish/donations/43_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Barred Knifejaw Donated",
+        "img": "/images/fish/donations/43_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_barred_knifejaw"
+  },
+  {
+    "name": "Donate Sea Bass",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Sea Bass Needed",
+        "img": "/images/fish/donations/44_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Sea Bass Donated",
+        "img": "/images/fish/donations/44_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_sea_bass"
+  },
+  {
+    "name": "Donate Red Snapper",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Red Snapper Needed",
+        "img": "/images/fish/donations/45_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Red Snapper Donated",
+        "img": "/images/fish/donations/45_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_red_snapper"
+  },
+  {
+    "name": "Donate Dab",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Dab Needed",
+        "img": "/images/fish/donations/46_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Dab Donated",
+        "img": "/images/fish/donations/46_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_dab"
+  },
+  {
+    "name": "Donate Olive Flounder",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Olive Flounder Needed",
+        "img": "/images/fish/donations/47_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Olive Flounder Donated",
+        "img": "/images/fish/donations/47_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_olive_flounder"
+  },
+  {
+    "name": "Donate Squid",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Squid Needed",
+        "img": "/images/fish/donations/48_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Squid Donated",
+        "img": "/images/fish/donations/48_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_squid"
+  },
+  {
+    "name": "Donate Octopus",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Octopus Needed",
+        "img": "/images/fish/donations/49_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Octopus Donated",
+        "img": "/images/fish/donations/49_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_octopus"
+  },
+  {
+    "name": "Donate Football Fish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Football Fish Needed",
+        "img": "/images/fish/donations/50_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Football Fish Donated",
+        "img": "/images/fish/donations/50_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_football_fish"
+  },
+  {
+    "name": "Donate Tuna",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Tuna Needed",
+        "img": "/images/fish/donations/51_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Tuna Donated",
+        "img": "/images/fish/donations/51_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_tuna"
+  },
+  {
+    "name": "Donate Blue Marlin",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Blue Marlin Needed",
+        "img": "/images/fish/donations/52_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Blue Marlin Donated",
+        "img": "/images/fish/donations/52_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_blue_marlin"
+  },
+  {
+    "name": "Donate Ocean Sunfish",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Ocean Sunfish Needed",
+        "img": "/images/fish/donations/53_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Ocean Sunfish Donated",
+        "img": "/images/fish/donations/53_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_ocean_sunfish"
+  },
+  {
+    "name": "Donate Hammerhead Shark",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Hammerhead Shark Needed",
+        "img": "/images/fish/donations/54_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Hammerhead Shark Donated",
+        "img": "/images/fish/donations/54_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_hammerhead_shark"
+  },
+  {
+    "name": "Donate Shark",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Shark Needed",
+        "img": "/images/fish/donations/55_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Shark Donated",
+        "img": "/images/fish/donations/55_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_shark"
+  },
+  {
+    "name": "Donate Coelacanth",
+    "type": "progressive",
+    "allow_disabled": false,
+    "loop": false,
+    "initial_stage_idx": 0,
+    "stages": [
+      {
+        "name": "Coelacanth Needed",
+        "img": "/images/fish/donations/56_needed.png",
+        "inherit_codes": false
+      },
+      {
+        "name": "Coelacanth Donated",
+        "img": "/images/fish/donations/56_donated.png",
+        "inherit_codes": false
+      }
+    ],
+    "codes": "donate_fish_coelacanth"
+  },
+  {
+    "name": "Received Bug: Common Butterfly",
+    "type": "toggle",
+    "img": "/images/bug/donations/01_needed.png",
+    "codes": "received_bug_common_butterfly"
+  },
+  {
+    "name": "Received Bug: Yellow Butterfly",
+    "type": "toggle",
+    "img": "/images/bug/donations/02_needed.png",
+    "codes": "received_bug_yellow_butterfly"
+  },
+  {
+    "name": "Received Bug: Tiger Butterfly",
+    "type": "toggle",
+    "img": "/images/bug/donations/03_needed.png",
+    "codes": "received_bug_tiger_butterfly"
+  },
+  {
+    "name": "Received Bug: Peacock Butterfly",
+    "type": "toggle",
+    "img": "/images/bug/donations/04_needed.png",
+    "codes": "received_bug_peacock_butterfly"
+  },
+  {
+    "name": "Received Bug: Monarch Butterfly",
+    "type": "toggle",
+    "img": "/images/bug/donations/05_needed.png",
+    "codes": "received_bug_monarch_butterfly"
+  },
+  {
+    "name": "Received Bug: Emperor Butterfly",
+    "type": "toggle",
+    "img": "/images/bug/donations/06_needed.png",
+    "codes": "received_bug_emperor_butterfly"
+  },
+  {
+    "name": "Received Bug: Agrias Butterfly",
+    "type": "toggle",
+    "img": "/images/bug/donations/07_needed.png",
+    "codes": "received_bug_agrias_butterfly"
+  },
+  {
+    "name": "Received Bug: Birdwing Butterfly",
+    "type": "toggle",
+    "img": "/images/bug/donations/08_needed.png",
+    "codes": "received_bug_birdwing_butterfly"
+  },
+  {
+    "name": "Received Bug: Moth",
+    "type": "toggle",
+    "img": "/images/bug/donations/09_needed.png",
+    "codes": "received_bug_moth"
+  },
+  {
+    "name": "Received Bug: Oak Silk Moth",
+    "type": "toggle",
+    "img": "/images/bug/donations/10_needed.png",
+    "codes": "received_bug_oak_silk_moth"
+  },
+  {
+    "name": "Received Bug: Honeybee",
+    "type": "toggle",
+    "img": "/images/bug/donations/11_needed.png",
+    "codes": "received_bug_honeybee"
+  },
+  {
+    "name": "Received Bug: Bee",
+    "type": "toggle",
+    "img": "/images/bug/donations/12_needed.png",
+    "codes": "received_bug_bee"
+  },
+  {
+    "name": "Received Bug: Long Locust",
+    "type": "toggle",
+    "img": "/images/bug/donations/13_needed.png",
+    "codes": "received_bug_long_locust"
+  },
+  {
+    "name": "Received Bug: Migratory Locust",
+    "type": "toggle",
+    "img": "/images/bug/donations/14_needed.png",
+    "codes": "received_bug_migratory_locust"
+  },
+  {
+    "name": "Received Bug: Mantis",
+    "type": "toggle",
+    "img": "/images/bug/donations/15_needed.png",
+    "codes": "received_bug_mantis"
+  },
+  {
+    "name": "Received Bug: Orchid Mantis",
+    "type": "toggle",
+    "img": "/images/bug/donations/16_needed.png",
+    "codes": "received_bug_orchid_mantis"
+  },
+  {
+    "name": "Received Bug: Brown Cicada",
+    "type": "toggle",
+    "img": "/images/bug/donations/17_needed.png",
+    "codes": "received_bug_brown_cicada"
+  },
+  {
+    "name": "Received Bug: Robust Cicada",
+    "type": "toggle",
+    "img": "/images/bug/donations/18_needed.png",
+    "codes": "received_bug_robust_cicada"
+  },
+  {
+    "name": "Received Bug: Walker Cicada",
+    "type": "toggle",
+    "img": "/images/bug/donations/19_needed.png",
+    "codes": "received_bug_walker_cicada"
+  },
+  {
+    "name": "Received Bug: Evening Cicada",
+    "type": "toggle",
+    "img": "/images/bug/donations/20_needed.png",
+    "codes": "received_bug_evening_cicada"
+  },
+  {
+    "name": "Received Bug: Lantern Fly",
+    "type": "toggle",
+    "img": "/images/bug/donations/21_needed.png",
+    "codes": "received_bug_lantern_fly"
+  },
+  {
+    "name": "Received Bug: Red Dragonfly",
+    "type": "toggle",
+    "img": "/images/bug/donations/22_needed.png",
+    "codes": "received_bug_red_dragonfly"
+  },
+  {
+    "name": "Received Bug: Darner Dragonfly",
+    "type": "toggle",
+    "img": "/images/bug/donations/23_needed.png",
+    "codes": "received_bug_darner_dragonfly"
+  },
+  {
+    "name": "Received Bug: Banded Dragonfly",
+    "type": "toggle",
+    "img": "/images/bug/donations/24_needed.png",
+    "codes": "received_bug_banded_dragonfly"
+  },
+  {
+    "name": "Received Bug: Ant",
+    "type": "toggle",
+    "img": "/images/bug/donations/25_needed.png",
+    "codes": "received_bug_ant"
+  },
+  {
+    "name": "Received Bug: Pondskater",
+    "type": "toggle",
+    "img": "/images/bug/donations/26_needed.png",
+    "codes": "received_bug_pondskater"
+  },
+  {
+    "name": "Received Bug: Snail",
+    "type": "toggle",
+    "img": "/images/bug/donations/27_needed.png",
+    "codes": "received_bug_snail"
+  },
+  {
+    "name": "Received Bug: Cricket",
+    "type": "toggle",
+    "img": "/images/bug/donations/28_needed.png",
+    "codes": "received_bug_cricket"
+  },
+  {
+    "name": "Received Bug: Bell Cricket",
+    "type": "toggle",
+    "img": "/images/bug/donations/29_needed.png",
+    "codes": "received_bug_bell_cricket"
+  },
+  {
+    "name": "Received Bug: Grasshopper",
+    "type": "toggle",
+    "img": "/images/bug/donations/30_needed.png",
+    "codes": "received_bug_grasshopper"
+  },
+  {
+    "name": "Received Bug: Mole Cricket",
+    "type": "toggle",
+    "img": "/images/bug/donations/31_needed.png",
+    "codes": "received_bug_mole_cricket"
+  },
+  {
+    "name": "Received Bug: Walkingstick",
+    "type": "toggle",
+    "img": "/images/bug/donations/32_needed.png",
+    "codes": "received_bug_walkingstick"
+  },
+  {
+    "name": "Received Bug: Ladybug",
+    "type": "toggle",
+    "img": "/images/bug/donations/33_needed.png",
+    "codes": "received_bug_ladybug"
+  },
+  {
+    "name": "Received Bug: Fruit Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/34_needed.png",
+    "codes": "received_bug_fruit_beetle"
+  },
+  {
+    "name": "Received Bug: Scarab Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/35_needed.png",
+    "codes": "received_bug_scarab_beetle"
+  },
+  {
+    "name": "Received Bug: Dung Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/36_needed.png",
+    "codes": "received_bug_dung_beetle"
+  },
+  {
+    "name": "Received Bug: Goliath Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/37_needed.png",
+    "codes": "received_bug_goliath_beetle"
+  },
+  {
+    "name": "Received Bug: Firefly",
+    "type": "toggle",
+    "img": "/images/bug/donations/38_needed.png",
+    "codes": "received_bug_firefly"
+  },
+  {
+    "name": "Received Bug: Jewel Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/39_needed.png",
+    "codes": "received_bug_jewel_beetle"
+  },
+  {
+    "name": "Received Bug: Longhorn Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/40_needed.png",
+    "codes": "received_bug_longhorn_beetle"
+  },
+  {
+    "name": "Received Bug: Saw Stag Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/41_needed.png",
+    "codes": "received_bug_saw_stag_beetle"
+  },
+  {
+    "name": "Received Bug: Stag Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/42_needed.png",
+    "codes": "received_bug_stag_beetle"
+  },
+  {
+    "name": "Received Bug: Giant Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/43_needed.png",
+    "codes": "received_bug_giant_beetle"
+  },
+  {
+    "name": "Received Bug: Rainbow Stag Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/44_needed.png",
+    "codes": "received_bug_rainbow_stag_beetle"
+  },
+  {
+    "name": "Received Bug: Dynastid Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/45_needed.png",
+    "codes": "received_bug_dynastid_beetle"
+  },
+  {
+    "name": "Received Bug: Atlas Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/46_needed.png",
+    "codes": "received_bug_atlas_beetle"
+  },
+  {
+    "name": "Received Bug: Elephant Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/47_needed.png",
+    "codes": "received_bug_elephant_beetle"
+  },
+  {
+    "name": "Received Bug: Hercules Beetle",
+    "type": "toggle",
+    "img": "/images/bug/donations/48_needed.png",
+    "codes": "received_bug_hercules_beetle"
+  },
+  {
+    "name": "Received Bug: Flea",
+    "type": "toggle",
+    "img": "/images/bug/donations/49_needed.png",
+    "codes": "received_bug_flea"
+  },
+  {
+    "name": "Received Bug: Pill Bug",
+    "type": "toggle",
+    "img": "/images/bug/donations/50_needed.png",
+    "codes": "received_bug_pill_bug"
+  },
+  {
+    "name": "Received Bug: Mosquito",
+    "type": "toggle",
+    "img": "/images/bug/donations/51_needed.png",
+    "codes": "received_bug_mosquito"
+  },
+  {
+    "name": "Received Bug: Fly",
+    "type": "toggle",
+    "img": "/images/bug/donations/52_needed.png",
+    "codes": "received_bug_fly"
+  },
+  {
+    "name": "Received Bug: Cockroach",
+    "type": "toggle",
+    "img": "/images/bug/donations/53_needed.png",
+    "codes": "received_bug_cockroach"
+  },
+  {
+    "name": "Received Bug: Spider",
+    "type": "toggle",
+    "img": "/images/bug/donations/54_needed.png",
+    "codes": "received_bug_spider"
+  },
+  {
+    "name": "Received Bug: Tarantula",
+    "type": "toggle",
+    "img": "/images/bug/donations/55_needed.png",
+    "codes": "received_bug_tarantula"
+  },
+  {
+    "name": "Received Bug: Scorpion",
+    "type": "toggle",
+    "img": "/images/bug/donations/56_needed.png",
+    "codes": "received_bug_scorpion"
+  },
+  {
+    "name": "Received Fish: Bitterling",
+    "type": "toggle",
+    "img": "/images/fish/donations/01_needed.png",
+    "codes": "received_fish_bitterling"
+  },
+  {
+    "name": "Received Fish: Pale Chub",
+    "type": "toggle",
+    "img": "/images/fish/donations/02_needed.png",
+    "codes": "received_fish_pale_chub"
+  },
+  {
+    "name": "Received Fish: Crucian Carp",
+    "type": "toggle",
+    "img": "/images/fish/donations/03_needed.png",
+    "codes": "received_fish_crucian_carp"
+  },
+  {
+    "name": "Received Fish: Dace",
+    "type": "toggle",
+    "img": "/images/fish/donations/04_needed.png",
+    "codes": "received_fish_dace"
+  },
+  {
+    "name": "Received Fish: Barbel Steed",
+    "type": "toggle",
+    "img": "/images/fish/donations/05_needed.png",
+    "codes": "received_fish_barbel_steed"
+  },
+  {
+    "name": "Received Fish: Carp",
+    "type": "toggle",
+    "img": "/images/fish/donations/06_needed.png",
+    "codes": "received_fish_carp"
+  },
+  {
+    "name": "Received Fish: Koi",
+    "type": "toggle",
+    "img": "/images/fish/donations/07_needed.png",
+    "codes": "received_fish_koi"
+  },
+  {
+    "name": "Received Fish: Goldfish",
+    "type": "toggle",
+    "img": "/images/fish/donations/08_needed.png",
+    "codes": "received_fish_goldfish"
+  },
+  {
+    "name": "Received Fish: Popeyed Goldfish",
+    "type": "toggle",
+    "img": "/images/fish/donations/09_needed.png",
+    "codes": "received_fish_popeyed_goldfish"
+  },
+  {
+    "name": "Received Fish: Killifish",
+    "type": "toggle",
+    "img": "/images/fish/donations/10_needed.png",
+    "codes": "received_fish_killifish"
+  },
+  {
+    "name": "Received Fish: Crawfish",
+    "type": "toggle",
+    "img": "/images/fish/donations/11_needed.png",
+    "codes": "received_fish_crawfish"
+  },
+  {
+    "name": "Received Fish: Frog",
+    "type": "toggle",
+    "img": "/images/fish/donations/12_needed.png",
+    "codes": "received_fish_frog"
+  },
+  {
+    "name": "Received Fish: Freshwater Goby",
+    "type": "toggle",
+    "img": "/images/fish/donations/13_needed.png",
+    "codes": "received_fish_freshwater_goby"
+  },
+  {
+    "name": "Received Fish: Loach",
+    "type": "toggle",
+    "img": "/images/fish/donations/14_needed.png",
+    "codes": "received_fish_loach"
+  },
+  {
+    "name": "Received Fish: Catfish",
+    "type": "toggle",
+    "img": "/images/fish/donations/15_needed.png",
+    "codes": "received_fish_catfish"
+  },
+  {
+    "name": "Received Fish: Eel",
+    "type": "toggle",
+    "img": "/images/fish/donations/16_needed.png",
+    "codes": "received_fish_eel"
+  },
+  {
+    "name": "Received Fish: Giant Snakehead",
+    "type": "toggle",
+    "img": "/images/fish/donations/17_needed.png",
+    "codes": "received_fish_giant_snakehead"
+  },
+  {
+    "name": "Received Fish: Bluegill",
+    "type": "toggle",
+    "img": "/images/fish/donations/18_needed.png",
+    "codes": "received_fish_bluegill"
+  },
+  {
+    "name": "Received Fish: Yellow Perch",
+    "type": "toggle",
+    "img": "/images/fish/donations/19_needed.png",
+    "codes": "received_fish_yellow_perch"
+  },
+  {
+    "name": "Received Fish: Black Bass",
+    "type": "toggle",
+    "img": "/images/fish/donations/20_needed.png",
+    "codes": "received_fish_black_bass"
+  },
+  {
+    "name": "Received Fish: Pond Smelt",
+    "type": "toggle",
+    "img": "/images/fish/donations/21_needed.png",
+    "codes": "received_fish_pond_smelt"
+  },
+  {
+    "name": "Received Fish: Sweetfish",
+    "type": "toggle",
+    "img": "/images/fish/donations/22_needed.png",
+    "codes": "received_fish_sweetfish"
+  },
+  {
+    "name": "Received Fish: Cherry Salmon",
+    "type": "toggle",
+    "img": "/images/fish/donations/23_needed.png",
+    "codes": "received_fish_cherry_salmon"
+  },
+  {
+    "name": "Received Fish: Char",
+    "type": "toggle",
+    "img": "/images/fish/donations/24_needed.png",
+    "codes": "received_fish_char"
+  },
+  {
+    "name": "Received Fish: Rainbow Trout",
+    "type": "toggle",
+    "img": "/images/fish/donations/25_needed.png",
+    "codes": "received_fish_rainbow_trout"
+  },
+  {
+    "name": "Received Fish: Stringfish",
+    "type": "toggle",
+    "img": "/images/fish/donations/26_needed.png",
+    "codes": "received_fish_stringfish"
+  },
+  {
+    "name": "Received Fish: Salmon",
+    "type": "toggle",
+    "img": "/images/fish/donations/27_needed.png",
+    "codes": "received_fish_salmon"
+  },
+  {
+    "name": "Received Fish: King Salmon",
+    "type": "toggle",
+    "img": "/images/fish/donations/28_needed.png",
+    "codes": "received_fish_king_salmon"
+  },
+  {
+    "name": "Received Fish: Guppy",
+    "type": "toggle",
+    "img": "/images/fish/donations/29_needed.png",
+    "codes": "received_fish_guppy"
+  },
+  {
+    "name": "Received Fish: Angelfish",
+    "type": "toggle",
+    "img": "/images/fish/donations/30_needed.png",
+    "codes": "received_fish_angelfish"
+  },
+  {
+    "name": "Received Fish: Piranha",
+    "type": "toggle",
+    "img": "/images/fish/donations/31_needed.png",
+    "codes": "received_fish_piranha"
+  },
+  {
+    "name": "Received Fish: Arowana",
+    "type": "toggle",
+    "img": "/images/fish/donations/32_needed.png",
+    "codes": "received_fish_arowana"
+  },
+  {
+    "name": "Received Fish: Dorado",
+    "type": "toggle",
+    "img": "/images/fish/donations/33_needed.png",
+    "codes": "received_fish_dorado"
+  },
+  {
+    "name": "Received Fish: Gar",
+    "type": "toggle",
+    "img": "/images/fish/donations/34_needed.png",
+    "codes": "received_fish_gar"
+  },
+  {
+    "name": "Received Fish: Arapaima",
+    "type": "toggle",
+    "img": "/images/fish/donations/35_needed.png",
+    "codes": "received_fish_arapaima"
+  },
+  {
+    "name": "Received Fish: Sea Butterfly",
+    "type": "toggle",
+    "img": "/images/fish/donations/36_needed.png",
+    "codes": "received_fish_sea_butterfly"
+  },
+  {
+    "name": "Received Fish: Jellyfish",
+    "type": "toggle",
+    "img": "/images/fish/donations/37_needed.png",
+    "codes": "received_fish_jellyfish"
+  },
+  {
+    "name": "Received Fish: Seahorse",
+    "type": "toggle",
+    "img": "/images/fish/donations/38_needed.png",
+    "codes": "received_fish_seahorse"
+  },
+  {
+    "name": "Received Fish: Clownfish",
+    "type": "toggle",
+    "img": "/images/fish/donations/39_needed.png",
+    "codes": "received_fish_clownfish"
+  },
+  {
+    "name": "Received Fish: Zebra Turkeyfish",
+    "type": "toggle",
+    "img": "/images/fish/donations/40_needed.png",
+    "codes": "received_fish_zebra_turkeyfish"
+  },
+  {
+    "name": "Received Fish: Pufferfish",
+    "type": "toggle",
+    "img": "/images/fish/donations/41_needed.png",
+    "codes": "received_fish_pufferfish"
+  },
+  {
+    "name": "Received Fish: Horse Mackerel",
+    "type": "toggle",
+    "img": "/images/fish/donations/42_needed.png",
+    "codes": "received_fish_horse_mackerel"
+  },
+  {
+    "name": "Received Fish: Barred Knifejaw",
+    "type": "toggle",
+    "img": "/images/fish/donations/43_needed.png",
+    "codes": "received_fish_barred_knifejaw"
+  },
+  {
+    "name": "Received Fish: Sea Bass",
+    "type": "toggle",
+    "img": "/images/fish/donations/44_needed.png",
+    "codes": "received_fish_sea_bass"
+  },
+  {
+    "name": "Received Fish: Red Snapper",
+    "type": "toggle",
+    "img": "/images/fish/donations/45_needed.png",
+    "codes": "received_fish_red_snapper"
+  },
+  {
+    "name": "Received Fish: Dab",
+    "type": "toggle",
+    "img": "/images/fish/donations/46_needed.png",
+    "codes": "received_fish_dab"
+  },
+  {
+    "name": "Received Fish: Olive Flounder",
+    "type": "toggle",
+    "img": "/images/fish/donations/47_needed.png",
+    "codes": "received_fish_olive_flounder"
+  },
+  {
+    "name": "Received Fish: Squid",
+    "type": "toggle",
+    "img": "/images/fish/donations/48_needed.png",
+    "codes": "received_fish_squid"
+  },
+  {
+    "name": "Received Fish: Octopus",
+    "type": "toggle",
+    "img": "/images/fish/donations/49_needed.png",
+    "codes": "received_fish_octopus"
+  },
+  {
+    "name": "Received Fish: Football Fish",
+    "type": "toggle",
+    "img": "/images/fish/donations/50_needed.png",
+    "codes": "received_fish_football_fish"
+  },
+  {
+    "name": "Received Fish: Tuna",
+    "type": "toggle",
+    "img": "/images/fish/donations/51_needed.png",
+    "codes": "received_fish_tuna"
+  },
+  {
+    "name": "Received Fish: Blue Marlin",
+    "type": "toggle",
+    "img": "/images/fish/donations/52_needed.png",
+    "codes": "received_fish_blue_marlin"
+  },
+  {
+    "name": "Received Fish: Ocean Sunfish",
+    "type": "toggle",
+    "img": "/images/fish/donations/53_needed.png",
+    "codes": "received_fish_ocean_sunfish"
+  },
+  {
+    "name": "Received Fish: Hammerhead Shark",
+    "type": "toggle",
+    "img": "/images/fish/donations/54_needed.png",
+    "codes": "received_fish_hammerhead_shark"
+  },
+  {
+    "name": "Received Fish: Shark",
+    "type": "toggle",
+    "img": "/images/fish/donations/55_needed.png",
+    "codes": "received_fish_shark"
+  },
+  {
+    "name": "Received Fish: Coelacanth",
+    "type": "toggle",
+    "img": "/images/fish/donations/56_needed.png",
+    "codes": "received_fish_coelacanth"
+  }
+]

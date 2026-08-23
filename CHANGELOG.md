@@ -1,5 +1,26 @@
 # Changelog
 
+## v0.1.2-alpha
+
+## Added
+
+- Added an option to Skip Tom Nook's Tutorial
+- Added an option to set 'Barren Town' which removes all plants and trees from town at start, requiring player to sculpt their town to their desire to hunt bugs requiring flowers and trees.
+- Added QoL feature to guarantee at least 1 tree in town always has a bee hive to make Bee hunting less of a grind.
+- Added QoL feature to instantly grow trees to full mature state.
+- Added Bee and Invisible Bee Traps as optional trap settings.
+- Added Weather Control to Master Controller to allow for forced rain/snow.
+
+## Changed
+
+- Updated availability logic for weather-dependent bugs and fish to account for Weather Control.
+
+## Fixed
+
+- Fixed a bug that caused tools to be repeatedly added to inventory if one was lost/equipped.
+- Fixed an issue where every check caused a full refresh of the Master Controller leading to performance issues.
+- Fixed poptracker availability for some fish and bugs, and improved clarity of images.
+
 ## v0.1.1-alpha
 
 ### Added

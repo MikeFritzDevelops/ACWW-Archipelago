@@ -1,0 +1,188 @@
+[
+  {
+    "name": "Museum Scene",
+    "location_size": 1,
+    "location_border_thickness": 0,
+    "img": "images/overview/museum_scene.png"
+  },
+  {
+    "name": "Bug Donations",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bug Donations.png"
+  },
+  {
+    "name": "Fish Donations",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/Fish Donations.png"
+  },
+  {
+    "name": "Bug Journal",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bug Journal.png"
+  },
+  {
+    "name": "Fish Journal",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/Fish Journal.png"
+  },
+  {
+    "name": "Fossil Donations",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/Fossil Donations.png"
+  },
+  {
+    "name": "Painting Donations",
+    "location_size": 28,
+    "location_border_thickness": 2,
+    "img": "images/maps/Painting Donations.png"
+  },
+  {
+    "name": "Bug Journal - January",
+    "location_size": 24,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bugs-01.png"
+  },
+  {
+    "name": "Bug Journal - February",
+    "location_size": 24,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bugs-02.png"
+  },
+  {
+    "name": "Bug Journal - March",
+    "location_size": 24,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bugs-03.png"
+  },
+  {
+    "name": "Bug Journal - April",
+    "location_size": 24,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bugs-04.png"
+  },
+  {
+    "name": "Bug Journal - May",
+    "location_size": 24,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bugs-05.png"
+  },
+  {
+    "name": "Bug Journal - June",
+    "location_size": 24,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bugs-06.png"
+  },
+  {
+    "name": "Bug Journal - July",
+    "location_size": 24,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bugs-07.png"
+  },
+  {
+    "name": "Bug Journal - August",
+    "location_size": 24,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bugs-08.png"
+  },
+  {
+    "name": "Bug Journal - September",
+    "location_size": 24,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bugs-09.png"
+  },
+  {
+    "name": "Bug Journal - October",
+    "location_size": 24,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bugs-10.png"
+  },
+  {
+    "name": "Bug Journal - November",
+    "location_size": 24,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bugs-11.png"
+  },
+  {
+    "name": "Bug Journal - December",
+    "location_size": 24,
+    "location_border_thickness": 2,
+    "img": "images/maps/Bugs-12.png"
+  },
+  {
+    "name": "Fish Journal - January",
+    "location_size": 34,
+    "location_border_thickness": 3,
+    "img": "images/maps/Fish-01.png"
+  },
+  {
+    "name": "Fish Journal - February",
+    "location_size": 34,
+    "location_border_thickness": 3,
+    "img": "images/maps/Fish-02.png"
+  },
+  {
+    "name": "Fish Journal - March",
+    "location_size": 34,
+    "location_border_thickness": 3,
+    "img": "images/maps/Fish-03.png"
+  },
+  {
+    "name": "Fish Journal - April",
+    "location_size": 34,
+    "location_border_thickness": 3,
+    "img": "images/maps/Fish-04.png"
+  },
+  {
+    "name": "Fish Journal - May",
+    "location_size": 34,
+    "location_border_thickness": 3,
+    "img": "images/maps/Fish-05.png"
+  },
+  {
+    "name": "Fish Journal - June",
+    "location_size": 34,
+    "location_border_thickness": 3,
+    "img": "images/maps/Fish-06.png"
+  },
+  {
+    "name": "Fish Journal - July",
+    "location_size": 34,
+    "location_border_thickness": 3,
+    "img": "images/maps/Fish-07.png"
+  },
+  {
+    "name": "Fish Journal - August",
+    "location_size": 34,
+    "location_border_thickness": 3,
+    "img": "images/maps/Fish-08.png"
+  },
+  {
+    "name": "Fish Journal - September",
+    "location_size": 34,
+    "location_border_thickness": 3,
+    "img": "images/maps/Fish-09.png"
+  },
+  {
+    "name": "Fish Journal - October",
+    "location_size": 34,
+    "location_border_thickness": 3,
+    "img": "images/maps/Fish-10.png"
+  },
+  {
+    "name": "Fish Journal - November",
+    "location_size": 34,
+    "location_border_thickness": 3,
+    "img": "images/maps/Fish-11.png"
+  },
+  {
+    "name": "Fish Journal - December",
+    "location_size": 34,
+    "location_border_thickness": 3,
+    "img": "images/maps/Fish-12.png"
+  }
+]

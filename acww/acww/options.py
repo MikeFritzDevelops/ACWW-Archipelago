@@ -99,6 +99,18 @@ class StartWithTools(DefaultOnToggle):
     display_name = "Start with Tools"
 
 
+class SkipNookTutorial(Toggle):
+    """Skip Tom Nook's opening work tutorial in a new town."""
+
+    display_name = "Skip Nook Tutorial"
+
+
+class BarrenTown(Toggle):
+    """Remove starting vegetation when a new town is initialized."""
+
+    display_name = "Barren Town"
+
+
 class StartingMonth(Choice):
     """
     Determines which month is available to the player at the start.
@@ -152,6 +164,15 @@ class Goal(Choice):
     default = 0
 
 
+class TrapCount(Range):
+    """Number of trap items added to the randomized item pool."""
+
+    display_name = "Trap Count"
+    range_start = 0
+    range_end = 50
+    default = 0
+
+
 class GoalPercentage(Range):
     """
     Percentage of enabled museum donations required for the
@@ -183,7 +204,10 @@ class ACWWOptions(PerGameCommonOptions):
     museum_percentage_milestones: MuseumPercentageMilestones
 
     start_with_tools: StartWithTools
+    skip_nook_tutorial: SkipNookTutorial
+    barren_town: BarrenTown
     starting_month: StartingMonth
+    trap_count: TrapCount
 
     goal: Goal
     goal_percentage: GoalPercentage

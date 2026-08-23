@@ -1,0 +1,336 @@
+{
+  "tracker_default": {
+    "type": "container",
+    "background": "#000000",
+    "content": {
+      "type": "dock",
+      "dropshadow": true,
+      "content": [
+        {
+          "type": "dock",
+          "dock": "bottom",
+          "content": [
+            {
+              "type": "group",
+              "header": "Tools",
+              "dock": "left",
+              "margin": "0,0,3,0",
+              "content": {
+                "type": "layout",
+                "h_alignment": "center",
+                "v_alignment": "center",
+                "key": "items_layout"
+              }
+            },
+            {
+              "type": "group",
+              "header": "Months",
+              "dock": "left",
+              "margin": "0,0,3,0",
+              "content": {
+                "type": "layout",
+                "h_alignment": "center",
+                "v_alignment": "center",
+                "key": "months_layout"
+              }
+            },
+            {
+              "type": "group",
+              "header": "Resources",
+              "dock": "left",
+              "margin": "0,0,3,0",
+              "content": {
+                "type": "layout",
+                "h_alignment": "center",
+                "v_alignment": "center",
+                "key": "resources_layout"
+              }
+            }
+          ]
+        },
+        {
+          "type": "tabbed",
+          "tabs": [
+            {
+              "title": "Museum Overview",
+              "content": {
+                "type": "layout",
+                "h_alignment": "center",
+                "v_alignment": "top",
+                "key": "museum_overview_layout"
+              }
+            },
+            {
+              "title": "Bug Donations",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Bug Donations"
+                ]
+              }
+            },
+            {
+              "title": "Fish Donations",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Fish Donations"
+                ]
+              }
+            },
+            {
+              "title": "Fossil Donations",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Fossil Donations"
+                ]
+              }
+            },
+            {
+              "title": "Painting Donations",
+              "content": {
+                "type": "map",
+                "maps": [
+                  "Painting Donations"
+                ]
+              }
+            },
+            {
+              "title": "Bug Journal",
+              "content": {
+                "type": "tabbed",
+                "tabs": [
+                  {
+                    "title": "Jan",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Bug Journal - January"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Feb",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Bug Journal - February"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Mar",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Bug Journal - March"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Apr",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Bug Journal - April"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "May",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Bug Journal - May"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Jun",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Bug Journal - June"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Jul",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Bug Journal - July"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Aug",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Bug Journal - August"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Sep",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Bug Journal - September"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Oct",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Bug Journal - October"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Nov",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Bug Journal - November"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Dec",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Bug Journal - December"
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "title": "Fish Journal",
+              "content": {
+                "type": "tabbed",
+                "tabs": [
+                  {
+                    "title": "Jan",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Fish Journal - January"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Feb",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Fish Journal - February"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Mar",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Fish Journal - March"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Apr",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Fish Journal - April"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "May",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Fish Journal - May"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Jun",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Fish Journal - June"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Jul",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Fish Journal - July"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Aug",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Fish Journal - August"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Sep",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Fish Journal - September"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Oct",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Fish Journal - October"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Nov",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Fish Journal - November"
+                      ]
+                    }
+                  },
+                  {
+                    "title": "Dec",
+                    "content": {
+                      "type": "map",
+                      "maps": [
+                        "Fish Journal - December"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
