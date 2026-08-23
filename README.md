@@ -136,6 +136,14 @@ For the complete roadmap, see ROADMAP.md.
 
 Mike Fritz
 
+### Contributions
+
+Shoutout to everyone for playing and testing the AP! Specifically, thank you to:
+- Aidan - Found bugs in code, memory addresses for new features, and plenty of features recommended that have been added or planned.
+- palex00 - Bug testing for yaml generations.
+- SeasawEffect - Information on APworld building.
+- laxabby - Tons of feedback from playthroughs to find errors for fixes.
+
 ### Inspiration
 
 After discovering Archipelago through Dark Souls Remastered, I quickly fell in love with the cooperative multiworld experience. Animal Crossing: Wild World was one of my favorite games growing up, and I wanted to experience it again through the unique progression and teamwork that Archipelago provides.
